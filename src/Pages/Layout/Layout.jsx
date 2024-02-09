@@ -5,9 +5,12 @@ import Header from "../../Components/Header/Header.jsx";
 const Layout = ({children})=>{
     return(
         <>
+        <div className="w-screen h-screen m-0 p-0 overflow-x-hidden">
             <Header />
                 {children}
             <Footer />
+        </div>
+            
         </>
     );
 }
