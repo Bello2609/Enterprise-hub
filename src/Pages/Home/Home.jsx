@@ -141,17 +141,93 @@ const Home = ()=>{
                   </div>
                   {/* why choose us end */}
                   {/* building area start */}
-                  <div className="flex flex-col items-center">
-                    <h4 className="text-[#252524] font-sans font-bold text-4xl">
+                  <div className="flex flex-col items-center bg-[#F3F9F1] py-10">
+                    <h4 className="text-[#252524] font-sans font-bold text-4xl mb-5">
                         Building & Area
                     </h4>
-                    <p className="text-base font-normal font-sans flex-wrap w-[510px] mt-5">
-                        Our private offices, dedicated desks, virtual offices and co-working<br /> 
-                        spaces provide flexible solutions for passionate people.
+                    <p className="text-base text-[#252524] font-normal font-sans flex-wrap w-[510px]">
+                        Our private offices, dedicated desks, virtual offices and co-working
                     </p>
-                    <p className="text-base font-normal font-sans justify-center flex-wrap w-[510px] mt-5">
-                        spaces provide flexible solutions for passionate people.
+                    <p className="flex items-center text-[#252524] text-base font-normal font-sans justify-center flex-wrap w-[510px]">
+                            spaces provide flexible solutions for passionate people.
                     </p>
+                    <div className="grid grid-cols-4 mt-16">
+                        <div className="flex flex-col items-center w-[187px] h-[182px] ">
+                            <img src={images.StateoftheartOffice} alt="state of the art" width="50px" height="50px" />
+                            <p className="flex-wrap w-[145px] font-medium text-base text-[#616161] mt-5">State of the art</p>
+                            <p className="flex justify-center w-[145px] font-medium text-base text-[#616161]">Offices</p>
+                        </div>
+                        <div className="flex flex-col items-center w-[187px] h-[182px] ">
+                            <img src={images.StateoftheartOffice1} alt="state of the art" width="50px" height="50px" />
+                            <p className="flex justify-center w-[145px] font-medium text-base text-[#616161] mt-5">Eco-friendly </p>
+                            <p className="flex justify-center w-[145px] font-medium text-base text-[#616161]">Environment</p>
+                        </div>
+                        <div className="flex flex-col items-center w-[187px] h-[182px] ">
+                            <img src={images.ModernAesthetics} alt="state of the art" width="50px" height="50px" />
+                            <p className="flex-wrap w-[145px] font-medium text-base text-[#616161] mt-5">Modern Aesthetics</p>
+                        </div>
+                        <div className="flex flex-col items-center w-[187px] h-[182px] ">
+                            <img src={images.parkingSpace} alt="state of the art" width="50px" height="50px" />
+                            <p className="flex justify-center w-[145px] font-medium text-base text-[#616161] mt-5">Parking Space</p>
+                        </div>
+                        {/* 1 */}
+                        <div className="flex flex-col items-center w-[187px] h-[182px] ">
+                            <img src={images.restaurant} alt="state of the art" width="50px" height="50px" />
+                            <p className="flex justify-center w-[145px] font-medium text-base text-[#616161] mt-5">Restaurant</p>
+                        </div>
+                        <div className="flex flex-col items-center w-[187px] h-[182px] ">
+                            <img src={images.greatReception} alt="state of the art" width="50px" height="50px" />
+                            <p className="flex-wrap w-[145px] font-medium text-base text-[#616161] mt-5">Great Reception</p>
+                        </div>
+                        <div className="flex flex-col items-center w-[187px] h-[182px] ">
+                            <img src={images.dedicatedDesk} alt="state of the art" width="50px" height="50px" />
+                            <p className="flex-wrap w-[145px] font-medium text-base text-[#616161] mt-5">Dedicated Desks</p>
+                        </div>
+                        <div className="flex flex-col items-center w-[187px] h-[182px] ">
+                            <img src={images.conferenceroom} alt="state of the art" width="50px" height="50px" />
+                            <p className="flex-wrap w-[145px] font-medium text-base text-[#616161] mt-5">Conference Rooms</p>
+                        </div>
+                        {/* 2 */}
+                        <div className="flex flex-col items-center w-[187px] h-[182px] ">
+                            <img src={images.StateoftheartOffice} alt="state of the art" width="50px" height="50px" />
+                            <p className="flex justify-center w-[145px] font-medium text-base text-[#616161] mt-5">Well Secured</p>
+                        </div>
+                        <div className="flex flex-col items-center w-[187px] h-[182px] ">
+                            <img src={images.StateoftheartOffice1} alt="state of the art" width="50px" height="50px" />
+                            <p className="flex justify-center w-[145px] font-medium text-base text-[#616161] mt-5">Access to </p>
+                            <p className="flex justify-center w-[145px] font-medium text-base text-[#616161]">Networking</p>
+                        </div>
+                        <div className="flex flex-col items-center w-[187px] h-[182px] ">
+                            <img src={images.flexibleMemberaship} alt="state of the art" width="50px" height="50px" />
+                            <p className="flex justify-center w-[145px] font-medium text-base text-[#616161] mt-5">Flexible </p>
+                            <p className="flex justify-center w-[145px] font-medium text-base text-[#616161]">Membership</p>
+                        </div>
+                        <div className="flex flex-col items-center w-[187px] h-[182px] ">
+                            <img src={images.privateCall} alt="state of the art" width="50px" height="50px" />
+                            <p className="flex justify-center w-[145px] font-medium text-base text-[#616161] mt-5">Private Calls</p>
+                        </div>
+                        {/* 3 */}
+                        <div class="grid grid-cols-subgrid col-span-3">
+                            <div class="col-start-2">
+                                <div className="flex flex-col items-center w-[187px] h-[182px] ">
+                                    <img src={images.PrintingScanningPhotocopying} alt="state of the art" width="50px" height="50px" />
+                                    <p className="flex justify-center w-[145px] font-medium text-base text-[#616161] mt-5">Printing, Scanning,</p>
+                                    <p className="flex justify-center w-[145px] font-medium text-base text-[#616161]">Photocopying</p>
+                                </div>
+                            </div>
+                            <div class="col-start-3">
+                                <div className="flex flex-col items-center w-[187px] h-[182px] ">
+                                    <img src={images.Whiteboards} alt="state of the art" width="50px" height="50px" />
+                                    <p className="flex justify-center w-[145px] font-medium text-base text-[#616161] mt-5">Flexible </p>
+                                    <p className="flex justify-center w-[145px] font-medium text-base text-[#616161]">Membership</p>
+                                </div>
+                            </div>
+                        </div>
+                        
+
+
+                    </div>
+                    
                   </div>
                   {/* building area end */}
 

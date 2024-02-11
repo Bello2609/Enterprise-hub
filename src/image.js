@@ -8,6 +8,20 @@ import map from "./assets/map.png";
 import board from "./assets/board.png";
 import maskgroup from "./assets/Maskgroup.png";
 import group6 from "./assets/Group6.png";
+import conferenceroom from "./assets/ConferenceRooms.png";
+import dedicatedDesk from "./assets/DedicatedDesks.png";
+import greatReception from "./assets/GreatReception.png";
+import ModernAesthetics from "./assets/ModernAesthetics.png";
+import parkingSpace from "./assets/ParkingSpace.png";
+import restaurant from "./assets/Restaurant.png";
+import StateoftheartOffice from "./assets/StateoftheartOffice.png";
+import StateoftheartOffice1 from "./assets/StateoftheartOffice(1).png";
+import wellSecured from "./assets/WellSecured.png";
+import Networking from "./assets/Networking.png";
+import flexibleMemberaship from "./assets/FlexibleMembership.png";
+import privateCall from "./assets/PrivateCalls.png";
+import PrintingScanningPhotocopying from "./assets/PrintingScanningPhotocopying.png";
+import Whiteboards from "./assets/Whiteboards.png";
 
 export {
     Enterprise,
@@ -19,5 +33,19 @@ export {
     map,
     board,
     maskgroup,
-    group6
+    group6,
+    conferenceroom,
+    dedicatedDesk,
+    greatReception,
+    ModernAesthetics,
+    parkingSpace,
+    restaurant,
+    StateoftheartOffice,
+    StateoftheartOffice1,
+    wellSecured,
+    Networking,
+    flexibleMemberaship,
+    privateCall,
+    PrintingScanningPhotocopying,
+    Whiteboards
 }
