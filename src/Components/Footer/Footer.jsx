@@ -1,5 +1,8 @@
 import React from "react";
 import * as images from "../../image";
+import { FaLinkedin } from "react-icons/fa";
+import { AiFillInstagram } from "react-icons/ai";
+import { FaFacebookSquare } from "react-icons/fa";
 const Footer = ()=>{
     return(
         <>
@@ -12,7 +15,11 @@ const Footer = ()=>{
                             of online and physical resource centres for emerging enterprises in 
                             Nigeria and beyondcd
                         </p>
-                        <div className="flex"></div>
+                        <div className="flex text-[#DE2223] text-3xl">
+                            <p><FaLinkedin /></p>
+                            <p><AiFillInstagram /></p>
+                            <p><FaFacebookSquare /></p>
+                        </div>
                     </div>
                     <div className="flex flex-col">
                         <h4 className="text-base font-sans text-[#DE2223] font-bold">Visit Our Office</h4>
