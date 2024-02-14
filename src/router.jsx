@@ -24,7 +24,7 @@ const Router = () => {
                }
             />
             <Route
-               path="sign-in"
+               path="/sign-in"
                exact
                element={
                   <Suspense>
@@ -35,7 +35,7 @@ const Router = () => {
                }
             />
             <Route
-               path="sign-up"
+               path="/sign-up"
                exact
                element={
                   <Suspense>
