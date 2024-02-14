@@ -1,42 +1,18 @@
-#root {
-  max-width: 1280px;
-  margin: 0 auto;
-  padding: 2rem;
-  text-align: center;
+.signup-layout-container {
+   left: -3px;
+   background-image: url("https://s3-alpha-sig.figma.com/img/8ba2/97f7/15f1dbe6d2e50463cd70c058e84a7cd6?Expires=1708905600&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=juysydnRyWNUyhaEwqlCbUrQgpAKidd3oK2CFJ4SqJhRzZptV3bKzNknUPlJwi7f6DC3nakfavwqNk3CmkGZS4LS6yXJQdwjEDYA3OUyBC0Krb~6KRlqA-Bn-ICszgQNoGjAApcjCqFkaAt~alOitHuUBkPmLwSoHsZEEYgsxKC~-noowUV0h3TrU3JtRQAQZdfHAnzuvfc2CCW2ohmSiLktHh0L7ey4RyK2Vh9k~HLtMti2cMrHfDBLahWJ23zUstLWGCfypvt4Feju-xS~AhaVRxF1PziAlJeaa5u3TIeym0mcmQYxLEYIc3w0EavPWe8GsUN5X2U1fyvlRaqHEQ__");
+   background-size: 2546px 1422px;
+   background-position-x: -1410px;
+   background-position-y: -461px;
+   background-repeat: no-repeat;
+   transform: rotateY(180deg);
 }
 
-.logo {
-  height: 6em;
-  padding: 1.5em;
-  will-change: filter;
-  transition: filter 300ms;
-}
-.logo:hover {
-  filter: drop-shadow(0 0 2em #646cffaa);
-}
-.logo.react:hover {
-  filter: drop-shadow(0 0 2em #61dafbaa);
+.form-container {
+   width: calc(100% - 543px);
 }
 
-@keyframes logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  a:nth-of-type(2) .logo {
-    animation: logo-spin infinite 20s linear;
-  }
-}
-
-.card {
-  padding: 2em;
-}
-
-.read-the-docs {
-  color: #888;
+input::placeholder {
+   color: #616161;
+   font-size: 16px;
 }
