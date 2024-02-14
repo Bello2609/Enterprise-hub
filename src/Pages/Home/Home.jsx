@@ -1,11 +1,35 @@
-import React from "react";
+import React, {useState} from "react";
 import { Link } from "react-router-dom";
 import * as images from "../../image";
 import { FaArrowRightLong } from "react-icons/fa6";
+import { IoIosArrowBack } from "react-icons/io";
+import { IoIosArrowForward } from "react-icons/io";
 
+const items = [
+    {
+      title: 'How much is it to rent an office space?',
+      content: 'We have a range of price points which vary depending on the type of office space you need. These are determined by its size, location, and where it’s situated in the center (by the windows or in the interior of the building). Our office space experts can help you find the right rental solution for your needs at the right price.',
+    },
+    {
+      title: 'Can you rent office space to yourself?',
+      content: 'Content for Accordion Item 2',
+    },
+    {
+      title: 'Can you rent office space to yourself?',
+      content: 'Content for Accordion Item 3',
+    },
+    {
+        title: 'Can you rent office space to yourself?',
+        content: 'Content for Accordion Item 3',
+    },
+  ];
 
 const Home = ()=>{
     // const imagesss = images.bg1;
+    const [activeIndex, setActiveIndex] = useState(null);
+    const handleClick = (index) => {
+        setActiveIndex(index === activeIndex ? null : index);
+      };
     return(
         <>
             <div className="flex flex-col w-full h-fit">
@@ -223,14 +247,194 @@ const Home = ()=>{
                                 </div>
                             </div>
                         </div>
-                        
-
-
                     </div>
-                    
                   </div>
                   {/* building area end */}
-
+                  {/* what our customer are saying */}
+                  <div className="flex flex-col py-10">
+                    <div className="w-full">
+                        <img src={images.Qotes} alt="quotes" className="pl-24 border-2 border-red-500" />
+                    </div>
+                    <div className="flex justify-evenly">
+                        <div className="flex flex-col mt-10">
+                            <p className="font-sans font-bold text-xl w-[216px] flex-wrap">
+                                What our customers are saying
+                            </p>
+                            <div className="flex text-2xl">
+                                <p><IoIosArrowBack /></p>
+                                <p className="text-[#DE2223]"><IoIosArrowForward /></p>
+                            </div>
+                        </div>
+                        <div className="flex flex-col font-sans">
+                            <p className="font-normal text-xl w-[520px]">
+                                Working from Enterprise Hubs has been amazing, the facilities and staff are great, 
+                                likewise the working space is comfortable with good ambience
+                            </p>
+                            <div className="flex flex-col mt-5">
+                                <p className="text-lg font-bold text-[#FF4B4D]">Funmi Osibaja</p>
+                                <p className="text-base font-medium text-[#616161]">Stargate Chauffeur</p>
+                            </div>
+                        </div>
+                        <div className="flex flex-col font-sans bg-[#ffffff] opacity-25">
+                            <p className="font-normal text-xl w-[400px] text-[#202020]">
+                                The offices at Enterprise Hubs are airy, well-lit and very serene. 
+                                I think the edge it has over over other co-working spaces is the proximity to Lekki 
+                                and environs. If you want to work, read or study, please visit Enterprise Hubs. 
+                                Their internet is fast, toilets are clean, kitchen is tidy and if you get board, they 
+                                have a wide range of novels, books and journals in their study to choose from. If you 
+                                enjoy reading, you will love this place. Their library is a treasure.
+                            </p>
+                            <div className="flex flex-col mt-5">
+                                <p className="text-lg font-bold text-[#FF4B4D]">Funmi Osibaja</p>
+                                <p className="text-base font-medium text-[#616161]">Stargate Chauffeur</p>
+                            </div>
+                        </div>   
+                    </div>
+                  </div>
+                  {/* what our customer are saying ends */}
+                  {/*  */}
+                  {/* news and insight */}
+                  <div className="flex flex-col items-center bg-[#F3F9F1] py-10">
+                    <h4 className="text-[#252524] font-sans font-bold text-4xl mb-5">
+                        News and Insights
+                    </h4>
+                    <p className="text-base text-[#252524] font-normal font-sans flex-wrap my-5">
+                        We regularly publish business tips and corporate articles for your consumption
+                    </p>
+                    <div className="grid grid-cols-3 gap-2">
+                        <div className="flex flex-col col-span-2 bg-[url('/src/assets/roomInterior.png')] h-[446px] w-[757px] rounded-xl p-10">
+                            {/* <div className="bg-[#000000] w-full h-full opacity-40 rounded-xl"> */}
+                                <p className="font-sans text-base text-[#81C167] font-bold">
+                                    ARTICLE | 👨🏼‍🦰Barki Taiwo | 12 Jan 2024
+                                </p>
+                                <h4 className="font-sans font-bold text-xl text-[#ffffff] w-[312px] my-5">
+                                    Enterprise Hubs Hosts Baykins Pharmacy
+                                </h4>
+                                <p className="text-[#DEDEDE] font-sans font-normal w-[301px]">
+                                    We had the pleasure of serving Baykins Pharmacy with our best as 
+                                    they held their staff retreat on Friday September …
+                                </p>
+                            {/* </div> */}
+                        </div>
+                        <div className="flex flex-col rounded-xl border border-[#DADADA] h-fit">
+                            <img src={images.manbag} alt="A man carrying a bag" className="rounded-t-xl" />
+                            <div className="p-8">
+                                <p className="font-sans text-base text-[#81C167] font-bold">
+                                    ARTICLE | 👨🏼‍🦰Barki Taiwo | 12 Jan 2024
+                                </p>
+                                <h4 className="font-sans font-bold text-xl text-[#252524] w-[312px] my-5">
+                                    Enterprise Hubs Hosts Baykins Pharmacy
+                                </h4>
+                                <p className="text-[#616161] font-sans font-normal w-[301px]">
+                                    We had the pleasure of serving Baykins Pharmacy with our best as 
+                                    they held their staff retreat on Friday September …
+                                </p>
+                            </div>
+                        </div>
+                        <div className="flex flex-col rounded-xl border border-[#DADADA] h-fit">
+                            <img src={images.manbag} alt="A man carrying a bag" className="rounded-t-xl" />
+                            <div className="p-8">
+                                <p className="font-sans text-base text-[#81C167] font-bold">
+                                    ARTICLE | 👨🏼‍🦰Barki Taiwo | 12 Jan 2024
+                                </p>
+                                <h4 className="font-sans font-bold text-xl text-[#252524] w-[312px] my-5">
+                                    Enterprise Hubs Hosts Baykins Pharmacy
+                                </h4>
+                                <p className="text-[#616161] font-sans font-normal w-[301px]">
+                                    We had the pleasure of serving Baykins Pharmacy with our best as 
+                                    they held their staff retreat on Friday September …
+                                </p>
+                            </div>
+                        </div>
+                        <div className="flex flex-col rounded-xl border border-[#DADADA] h-fit">
+                            <img src={images.manbag} alt="A man carrying a bag" className="rounded-t-xl" />
+                            <div className="p-8">
+                                <p className="font-sans text-base text-[#81C167] font-bold">
+                                    ARTICLE | 👨🏼‍🦰Barki Taiwo | 12 Jan 2024
+                                </p>
+                                <h4 className="font-sans font-bold text-xl text-[#252524] w-[312px] my-5">
+                                    Enterprise Hubs Hosts Baykins Pharmacy
+                                </h4>
+                                <p className="text-[#616161] font-sans font-normal w-[301px]">
+                                    We had the pleasure of serving Baykins Pharmacy with our best as 
+                                    they held their staff retreat on Friday September …
+                                </p>
+                            </div>
+                        </div>
+                        <div className="flex flex-col rounded-xl border border-[#DADADA] h-fit">
+                            <img src={images.manbag} alt="A man carrying a bag" className="rounded-t-xl" />
+                            <div className="p-8">
+                                <p className="font-sans text-base text-[#81C167] font-bold">
+                                    ARTICLE | 👨🏼‍🦰Barki Taiwo | 12 Jan 2024
+                                </p>
+                                <h4 className="font-sans font-bold text-xl text-[#252524] w-[312px] my-5">
+                                    Enterprise Hubs Hosts Baykins Pharmacy
+                                </h4>
+                                <p className="text-[#616161] font-sans font-normal w-[301px]">
+                                    We had the pleasure of serving Baykins Pharmacy with our best as 
+                                    they held their staff retreat on Friday September …
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    <p className="text-base text-[#252524] font-normal font-sans flex-wrap my-10">
+                        Insights to help you do what you do better, faster and more profitably. Read Full Blog
+                    </p>
+                  </div>
+                  {/* news and insight */}
+                  {/* faq section */}
+                  <div className="flex flex-col py-10 items-center border border-[#E3E3E3]">
+                    <div className="flex flex-col items-center">
+                        <img src={images.album} alt="albumm" />
+                        <p className="text-wrap my-5 ">Unlock a new chapter - Join the Network of successful entrepreneurs like you</p>
+                        <Link to="/contact us" className="flex items-center justify-center bg-[#DE2223] text-[#ffffff] w-60 h-12 rounded-md">Join Enterprise Hubs</Link>
+                    </div>
+                    <div className="flex mt-10">
+                        <div className="flex flex-col">
+                            <h4 className="flex-wrap w-[517px] text-4xl font-bold text-[#252524]">
+                                Have a question about renting office space.
+                            </h4>
+                            <p className="w-[413px] flex-wrap font-normal text-base text-[#616161] my-4">
+                                Can't see an answer to your question? Get in touch with our team, who 
+                                are always happy to help.
+                            </p>
+                            <Link className="flex justify-center items-center w-[176px] h-[57px] font-medium bg-[#DE2223] text-[#fff] p-3 w-40 h-12 rounded-md ">
+                                Talk to us
+                            </Link>
+                        </div>
+                        <div className="w-full max-w-md mx-auto">
+                        {items.map((item, index) => (
+                            <div key={index} className="border border-gray-300 mb-2 rounded">
+                            <div
+                                className="flex justify-between items-center p-4 cursor-pointer"
+                                onClick={() => handleClick(index)}
+                            >
+                                <span className="font-semibold">{item.title}</span>
+                                <svg
+                                className={`w-6 h-6 ${activeIndex === index ? 'transform rotate-180' : ''}`}
+                                xmlns="http://www.w3.org/2000/svg"
+                                viewBox="0 0 24 24"
+                                fill="none"
+                                stroke="currentColor"
+                                strokeWidth="2"
+                                strokeLinecap="round"
+                                strokeLinejoin="round"
+                                >
+                                <polyline points="6 9 12 15 18 9" />
+                                </svg>
+                            </div>
+                            {activeIndex === index && (
+                                <div className="p-4 border-t border-gray-300">
+                                    <p>{item.content}</p>
+                                </div>
+                            )}
+                            </div>
+                        ))}
+                        </div>
+                    </div>
+                    
+                  {/* faq section end */}
+                </div>
             </div>
         </>
     );

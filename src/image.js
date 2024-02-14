@@ -22,6 +22,10 @@ import flexibleMemberaship from "./assets/FlexibleMembership.png";
 import privateCall from "./assets/PrivateCalls.png";
 import PrintingScanningPhotocopying from "./assets/PrintingScanningPhotocopying.png";
 import Whiteboards from "./assets/Whiteboards.png";
+import Qotes from "./assets/Qotes.png";
+import roomInterior from "./assets/roomInterior.png";
+import manbag from "./assets/manbag.png";
+import album from "./assets/album.png";
 
 export {
     Enterprise,
@@ -47,5 +51,9 @@ export {
     flexibleMemberaship,
     privateCall,
     PrintingScanningPhotocopying,
-    Whiteboards
+    Whiteboards,
+    Qotes,
+    roomInterior,
+    manbag,
+    album
 }
