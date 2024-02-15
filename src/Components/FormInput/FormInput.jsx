@@ -11,12 +11,12 @@ const FormInput = ({
    value,
 }) => {
    return (
-      <div className="flex flex-col gap-2">
-         <div className="flex">
+      <div className="flex flex-col gap-3">
+         <div className="flex mt-3">
             <label className="font-medium text-[#252524]">{label}</label>
          </div>
 
-         <div className="border-solid border border-[#DFDFDF] rounded-lg px-5 py-3">
+         <div className="border-solid border border-[#DFDFDF] rounded-lg px-5 py-3 mt-3">
             <input
                className={`${error && error[name] ? "error" : ""}`}
                placeholder={placeholder}

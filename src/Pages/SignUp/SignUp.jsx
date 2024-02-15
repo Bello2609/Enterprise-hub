@@ -2,19 +2,21 @@
 import FormInput from "../../Components/FormInput/FormInput";
 import CustomButton from "../../Components/customButton";
 import { Link } from "react-router-dom";
+import * as images from "../../image"
 
 const SignUp = () => {
    return (
-      <div className="w-[569px] flex flex-col gap-7">
-         <div className="flex flex-col items-center gap-4">
-            <img />
-            <h3 className="font-bold text-3xl text-[#56923E]">Join Us!</h3>
+      <div className="w-[569px] flex flex-col">
+         <div className="flex flex-col items-center">
+            {/* <img /> */}
+            <img src={images.Enterprise} alt="enterprise" />
+            <h3 className="font-bold text-3xl text-[#56923E] my-5">Join Us!</h3>
             <p className="text-[#616161] w-[411px] text-center">
                Become a prestigious member by registering for our Virtual Office
                today
             </p>
          </div>
-         <div className="flex flex-col gap-4">
+         <div className="flex flex-col">
             <FormInput
                type="text"
                label="Email"
@@ -33,10 +35,10 @@ const SignUp = () => {
             <FormInput
                type=""
                label="Phone number"
-               placeholder="Enter your password"
+               placeholder="Enter your phone number"
             />
 
-            <div className="flex items-center gap-3">
+            <div className="flex items-center my-2">
                <div className="w-full h-[1px] bg-[#DFDFDF]"></div>
                <span className="text-[#616161]">or</span>
                <div className="w-full h-[1px] bg-[#DFDFDF]"></div>
@@ -61,7 +63,7 @@ const SignUp = () => {
                </span>
             </div>
 
-            <p>
+            <p className="my-3">
                {"Already have an account? "}
                <span>
                   <Link className="text-[#56923E] underline">Sign in</Link>

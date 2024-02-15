@@ -7,7 +7,7 @@ const CustomButton = ({
    isSignInBtn,
 }) => {
    const buttonClassName = `
-      w-full rounded-lg px-5 py-3
+      w-full rounded-lg px-5 py-3 my-3
       ${
          isSignInWithGoogle
             ? "border-solid border border-[#DFDFDF] rounded-lg text-start flex items-center gap-3"

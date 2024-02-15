@@ -7,6 +7,7 @@ const Layout = lazy(() => import("./Pages/Layout/Layout.jsx"));
 const SignUpLayout = lazy(() => import("./Pages/Layout/SignUpLayout.jsx"));
 const SignIn = lazy(() => import("./Pages/SignIn/SignIn.jsx"));
 const SignUp = lazy(() => import("./Pages/SignUp/SignUp.jsx"));
+const Services = lazy(()=> import("./Pages/Services/Services.jsx"));
 
 const Router = () => {
    return (
@@ -24,8 +25,18 @@ const Router = () => {
                }
             />
             <Route
-               path="/sign-in"
+               path="/services"
                exact
+               element={
+                  <Suspense>
+                     <Layout>
+                        <Services />
+                     </Layout>
+                  </Suspense>
+               }
+            />
+            <Route
+               path="/sign-in"
                element={
                   <Suspense>
                      <SignUpLayout>
@@ -36,7 +47,6 @@ const Router = () => {
             />
             <Route
                path="/sign-up"
-               exact
                element={
                   <Suspense>
                      <SignUpLayout>
