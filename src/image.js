@@ -26,6 +26,10 @@ import Qotes from "./assets/Qotes.png";
 import roomInterior from "./assets/roomInterior.png";
 import manbag from "./assets/manbag.png";
 import album from "./assets/album.png";
+import frame38 from "./assets/Frame38.png";
+import Maskgroup1 from "./assets/Maskgroup1.png";
+import Group39534 from "./assets/Group39534.png";
+
 
 export {
     Enterprise,
@@ -55,5 +59,9 @@ export {
     Qotes,
     roomInterior,
     manbag,
-    album
+    album,
+    frame38,
+    Maskgroup1,
+    Group39534,
+   
 }
