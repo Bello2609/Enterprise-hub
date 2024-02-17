@@ -29,6 +29,7 @@ import album from "./assets/album.png";
 import frame38 from "./assets/Frame38.png";
 import Maskgroup1 from "./assets/Maskgroup1.png";
 import Group39534 from "./assets/Group39534.png";
+import profilePic from "./assets/profilePic.png";
 
 
 export {
@@ -63,5 +64,6 @@ export {
     frame38,
     Maskgroup1,
     Group39534,
+    profilePic
    
 }

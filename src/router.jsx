@@ -8,7 +8,9 @@ const SignUpLayout = lazy(() => import("./Pages/Layout/SignUpLayout.jsx"));
 const SignIn = lazy(() => import("./Pages/SignIn/SignIn.jsx"));
 const SignUp = lazy(() => import("./Pages/SignUp/SignUp.jsx"));
 const Services = lazy(()=> import("./Pages/Services/Services.jsx"));
-const AboutUs = lazy(()=> import ("./Pages/About us/AboutUs.jsx"))
+const AboutUs = lazy(()=> import ("./Pages/About us/AboutUs.jsx"));
+const UserProfile = lazy(()=> import ("./Pages/UserProfile/UserProfile.jsx"));
+
 
 const Router = () => {
    return (
@@ -43,6 +45,17 @@ const Router = () => {
                   <Suspense>
                      <Layout>
                         <AboutUs />
+                     </Layout>
+                  </Suspense>
+               }
+            />
+            <Route
+               path="/user-profile/:name"
+               exact
+               element={
+                  <Suspense>
+                     <Layout>
+                        <UserProfile />
                      </Layout>
                   </Suspense>
                }
