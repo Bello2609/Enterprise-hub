@@ -10,6 +10,7 @@ const SignUp = lazy(() => import("./Pages/SignUp/SignUp.jsx"));
 const Services = lazy(()=> import("./Pages/Services/Services.jsx"));
 const AboutUs = lazy(()=> import ("./Pages/About us/AboutUs.jsx"));
 const UserProfile = lazy(()=> import ("./Pages/UserProfile/UserProfile.jsx"));
+const UserProfileEdit = lazy(()=> import ("./Pages/UserProfileEdit/UserProfileEdit.jsx"));
 
 
 const Router = () => {
@@ -56,6 +57,17 @@ const Router = () => {
                   <Suspense>
                      <Layout>
                         <UserProfile />
+                     </Layout>
+                  </Suspense>
+               }
+            />
+            <Route
+               path="/user-profile-edit"
+               exact
+               element={
+                  <Suspense>
+                     <Layout>
+                        <UserProfileEdit />
                      </Layout>
                   </Suspense>
                }

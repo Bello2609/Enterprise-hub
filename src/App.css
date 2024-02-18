@@ -16,3 +16,7 @@ input::placeholder {
    color: #616161;
    font-size: 16px;
 }
+label::after {
+   content: "*";
+   color: #FF4B4D;
+}
