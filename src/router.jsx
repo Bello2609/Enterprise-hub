@@ -11,6 +11,9 @@ const Services = lazy(()=> import("./Pages/Services/Services.jsx"));
 const AboutUs = lazy(()=> import ("./Pages/About us/AboutUs.jsx"));
 const UserProfile = lazy(()=> import ("./Pages/UserProfile/UserProfile.jsx"));
 const UserProfileEdit = lazy(()=> import ("./Pages/UserProfileEdit/UserProfileEdit.jsx"));
+const BookSpace = lazy(()=> import ("./Pages/BookSpace/BookSpace.jsx"));
+const Professional = lazy(()=> import ("./Pages/Professional/Professional.jsx"));
+const Franchise = lazy(()=> import("./Pages/Franchise/Franchise.jsx"));
 
 
 const Router = () => {
@@ -29,7 +32,7 @@ const Router = () => {
                }
             />
             <Route
-               path="/services"
+               path="/service"
                exact
                element={
                   <Suspense>
@@ -68,6 +71,39 @@ const Router = () => {
                   <Suspense>
                      <Layout>
                         <UserProfileEdit />
+                     </Layout>
+                  </Suspense>
+               }
+            />
+            <Route
+               path="/book-space"
+               exact
+               element={
+                  <Suspense>
+                     <Layout>
+                        <BookSpace />
+                     </Layout>
+                  </Suspense>
+               }
+            />
+            <Route
+               path="/professional"
+               exact
+               element={
+                  <Suspense>
+                     <Layout>
+                        <Professional />
+                     </Layout>
+                  </Suspense>
+               }
+            />
+            <Route
+               path="/franchise"
+               exact
+               element={
+                  <Suspense>
+                     <Layout>
+                        <Franchise />
                      </Layout>
                   </Suspense>
                }

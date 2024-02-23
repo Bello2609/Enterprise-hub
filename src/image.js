@@ -30,6 +30,13 @@ import frame38 from "./assets/Frame38.png";
 import Maskgroup1 from "./assets/Maskgroup1.png";
 import Group39534 from "./assets/Group39534.png";
 import profilePic from "./assets/profilePic.png";
+import pro1 from "./assets/professional/pro1.png";
+import pro2 from "./assets/professional/pro2.png"
+import pro3 from "./assets/professional/pro3.png"
+import pro4 from "./assets/professional/pro4.png"
+import pro5 from "./assets/professional/pro5.png"
+import pro6 from "./assets/professional/pro6.png"
+import pro7 from "./assets/professional/pro7.png"
 
 
 export {
@@ -64,6 +71,12 @@ export {
     frame38,
     Maskgroup1,
     Group39534,
-    profilePic
-   
+    profilePic,
+    pro1,
+    pro2,
+    pro3,
+    pro4,
+    pro5,
+    pro6,
+    pro7
 }

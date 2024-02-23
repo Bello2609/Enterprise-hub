@@ -20,3 +20,8 @@ label::after {
    content: "*";
    color: #FF4B4D;
 }
+
+input[type=radio] {
+   background-color: #81C167;
+   padding: 10px;
+}
