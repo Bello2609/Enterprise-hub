@@ -14,6 +14,10 @@ const UserProfileEdit = lazy(()=> import ("./Pages/UserProfileEdit/UserProfileEd
 const BookSpace = lazy(()=> import ("./Pages/BookSpace/BookSpace.jsx"));
 const Professional = lazy(()=> import ("./Pages/Professional/Professional.jsx"));
 const Franchise = lazy(()=> import("./Pages/Franchise/Franchise.jsx"));
+const AllBlog = lazy(()=> import("./Pages/Blog/AllBlog.jsx"));
+const Articles = lazy(()=> import("./Pages/Blog/Articles.jsx"));
+const News = lazy(()=> import("./Pages/Blog/News.jsx"));
+const EachArticle = lazy(()=> import("./Pages/Blog/EachArticle.jsx"));
 
 
 const Router = () => {
@@ -104,6 +108,50 @@ const Router = () => {
                   <Suspense>
                      <Layout>
                         <Franchise />
+                     </Layout>
+                  </Suspense>
+               }
+            />
+            <Route
+               path="/blog"
+               exact
+               element={
+                  <Suspense>
+                     <Layout>
+                        <AllBlog />
+                     </Layout>
+                  </Suspense>
+               }
+            />
+            <Route
+               path="/articles"
+               exact
+               element={
+                  <Suspense>
+                     <Layout>
+                        <Articles />
+                     </Layout>
+                  </Suspense>
+               }
+            />
+            <Route
+               path="/articles/:id"
+               exact
+               element={
+                  <Suspense>
+                     <Layout>
+                        <EachArticle />
+                     </Layout>
+                  </Suspense>
+               }
+            />
+            <Route
+               path="/news"
+               exact
+               element={
+                  <Suspense>
+                     <Layout>
+                        <News />
                      </Layout>
                   </Suspense>
                }

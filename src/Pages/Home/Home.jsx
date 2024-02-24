@@ -302,7 +302,7 @@ const Home = ()=>{
                     <p className="text-base text-[#252524] font-normal font-sans flex-wrap my-5">
                         We regularly publish business tips and corporate articles for your consumption
                     </p>
-                    <div className="grid grid-cols-3 gap-2">
+                    <div className="grid grid-cols-3 gap-2 bg-[#fff]">
                         <div className="flex flex-col col-span-2 bg-[url('/src/assets/roomInterior.png')] h-[446px] w-[757px] rounded-xl p-10">
                             {/* <div className="bg-[#000000] w-full h-full opacity-40 rounded-xl"> */}
                                 <p className="font-sans text-base text-[#81C167] font-bold">
