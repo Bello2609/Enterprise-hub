@@ -37,6 +37,10 @@ import pro4 from "./assets/professional/pro4.png"
 import pro5 from "./assets/professional/pro5.png"
 import pro6 from "./assets/professional/pro6.png"
 import pro7 from "./assets/professional/pro7.png"
+import started1 from "./assets/started1.png";
+import started2 from "./assets/started2.png";
+import started3 from "./assets/started3.png";
+import book from "./assets/book.png";
 
 
 export {
@@ -78,5 +82,9 @@ export {
     pro4,
     pro5,
     pro6,
-    pro7
+    pro7,
+    started1,
+    started2,
+    started3,
+    book
 }

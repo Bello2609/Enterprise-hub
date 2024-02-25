@@ -18,6 +18,7 @@ const AllBlog = lazy(()=> import("./Pages/Blog/AllBlog.jsx"));
 const Articles = lazy(()=> import("./Pages/Blog/Articles.jsx"));
 const News = lazy(()=> import("./Pages/Blog/News.jsx"));
 const EachArticle = lazy(()=> import("./Pages/Blog/EachArticle.jsx"));
+const GetStarted = lazy(()=> import("./Pages/GetStarted/GetStarted.jsx"));
 
 
 const Router = () => {
@@ -152,6 +153,17 @@ const Router = () => {
                   <Suspense>
                      <Layout>
                         <News />
+                     </Layout>
+                  </Suspense>
+               }
+            />
+            <Route
+               path="/get-started"
+               exact
+               element={
+                  <Suspense>
+                     <Layout>
+                        <GetStarted />
                      </Layout>
                   </Suspense>
                }
