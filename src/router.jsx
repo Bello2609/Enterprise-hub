@@ -19,6 +19,9 @@ const Articles = lazy(()=> import("./Pages/Blog/Articles.jsx"));
 const News = lazy(()=> import("./Pages/Blog/News.jsx"));
 const EachArticle = lazy(()=> import("./Pages/Blog/EachArticle.jsx"));
 const GetStarted = lazy(()=> import("./Pages/GetStarted/GetStarted.jsx"));
+const Lagos = lazy(()=> import("./Pages/Lagos/Lagos.jsx"));
+const Kano = lazy(()=> import("./Pages/Kano/Kano.jsx"));
+const Abuja = lazy(()=> import("./Pages/Abuja/Abuja.jsx"));
 
 
 const Router = () => {
@@ -153,6 +156,39 @@ const Router = () => {
                   <Suspense>
                      <Layout>
                         <News />
+                     </Layout>
+                  </Suspense>
+               }
+            />
+            <Route
+               path="/lagos"
+               exact
+               element={
+                  <Suspense>
+                     <Layout>
+                        <Lagos />
+                     </Layout>
+                  </Suspense>
+               }
+            />
+            <Route
+               path="/abuja"
+               exact
+               element={
+                  <Suspense>
+                     <Layout>
+                        <Abuja />
+                     </Layout>
+                  </Suspense>
+               }
+            />
+            <Route
+               path="/kano"
+               exact
+               element={
+                  <Suspense>
+                     <Layout>
+                        <Kano />
                      </Layout>
                   </Suspense>
                }
