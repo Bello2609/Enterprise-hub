@@ -44,6 +44,7 @@ import book from "./assets/book.png";
 import office1 from "./assets/office/office1.png";
 import office2 from "./assets/office/office2.png";
 import office3 from "./assets/office/office3.png";
+import map1 from "./assets/map1.png";
 
 
 export {
@@ -92,5 +93,6 @@ export {
     book,
     office1,
     office2,
-    office3
+    office3,
+    map1
 }

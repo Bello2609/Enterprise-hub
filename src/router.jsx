@@ -22,6 +22,7 @@ const GetStarted = lazy(()=> import("./Pages/GetStarted/GetStarted.jsx"));
 const Lagos = lazy(()=> import("./Pages/Lagos/Lagos.jsx"));
 const Kano = lazy(()=> import("./Pages/Kano/Kano.jsx"));
 const Abuja = lazy(()=> import("./Pages/Abuja/Abuja.jsx"));
+const ContactUs = lazy(()=> import("./Pages/ContactUs/ContactUs.jsx"));
 
 
 const Router = () => {
@@ -51,7 +52,7 @@ const Router = () => {
                }
             />
             <Route
-               path="/About-us"
+               path="/about-us"
                exact
                element={
                   <Suspense>
@@ -134,6 +135,17 @@ const Router = () => {
                   <Suspense>
                      <Layout>
                         <Articles />
+                     </Layout>
+                  </Suspense>
+               }
+            />
+            <Route
+               path="/contact-us"
+               exact
+               element={
+                  <Suspense>
+                     <Layout>
+                        <ContactUs />
                      </Layout>
                   </Suspense>
                }

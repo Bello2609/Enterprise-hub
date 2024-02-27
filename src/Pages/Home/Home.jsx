@@ -90,7 +90,7 @@ const Home = ()=>{
                             <p className="w-[200px] my-3 text-[#252524] flex-wrap">
                                 We support entrepreneurs, by offering professional services at a reduced cost
                             </p>
-                            <Link className="flex justify-center items-center w-[176px] h-[57px] text-[#fff] font-medium bg-[#E8332C] p-3 w-28 h-11 rounded-md ">
+                            <Link to="/professional" className="flex justify-center items-center w-[176px] h-[57px] text-[#fff] font-medium bg-[#E8332C] p-3 w-28 h-11 rounded-md ">
                                 Book now
                             </Link>
                         </div>

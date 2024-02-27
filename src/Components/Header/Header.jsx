@@ -12,13 +12,13 @@ const Header = ()=>{
                 <div className="text-base text-[#000000] font-sans font-medium">
                     
                         <NavLink to="/" className="ml-4">Home</NavLink>
-                        <NavLink to="/about" className="ml-4">About</NavLink>
+                        <NavLink to="/about-us" className="ml-4">About</NavLink>
                         <NavLink to="/service" className="ml-4">Service</NavLink>
                         <NavLink to="/location" className="ml-4">Location</NavLink>
                         <NavLink to="/gallery" className="ml-4">Gallery</NavLink>
                         <NavLink to="/blog" className="ml-4">Blog</NavLink>
                         <NavLink to="/franchise" className="ml-4">Frachise</NavLink>
-                        <NavLink to="/contact us" className="p-3 mx-4 bg-[#DE2223] text-[#ffffff] w-40 h-12 rounded-md">Contact Us</NavLink>
+                        <NavLink to="/contact-us" className="p-3 mx-4 bg-[#DE2223] text-[#ffffff] w-40 h-12 rounded-md">Contact Us</NavLink>
                    
                 </div>
             </div>
