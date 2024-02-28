@@ -1,11 +1,14 @@
-import React from "react";
+import React, { useState } from "react";
 import * as images from "../../image";
 import { Link } from "react-router-dom";
 import { FaPhone } from "react-icons/fa6";
 import { IoMail } from "react-icons/io5";
 import { LuUpload } from "react-icons/lu";
 import { IoCheckmarkCircle } from "react-icons/io5";
+import CancelPaymentModal from "../../Components/Modal/PaymentModal/CancelPaymentModal";
+import { useDisclosure } from "@chakra-ui/react";
 const UserProfile = ()=>{
+    const { isOpen, onOpen, onClose } = useDisclosure()
     return(
         <>
             <div className="flex flex-col bg-[#DFDFDF] items-center justify-center w-full h-fit">
@@ -54,12 +57,16 @@ const UserProfile = ()=>{
                             <Link className="flex justify-center items-center border border-[#CBCBCB] w-60 h-[57px] text-[#252524] font-medium bg-[#F4F4F4] p-3 w-40 h-12 rounded-md ">
                                 View Receipt📄
                             </Link>
-                            <Link className="flex justify-center items-center mt-3 border border-[#CBCBCB] w-60 h-[57px] text-[#E8332C] font-medium bg-[#F4F4F4] p-3 w-40 h-12 rounded-md ">
+                            <p onClick={onOpen} className="flex justify-center cursor-pointer items-center mt-3 border border-[#CBCBCB] w-60 h-[57px] text-[#E8332C] font-medium bg-[#F4F4F4] p-3 w-40 h-12 rounded-md ">
                                 Cancel Plan
-                            </Link>
+                            </p>
                         </div>
                     </div>
                 </div>
+                {/* cancel payment modal */}
+                
+                   <CancelPaymentModal isOpen={isOpen} onClose={onClose} /> 
+               
             </div>
         </>
     )
