@@ -6,9 +6,11 @@ import { IoMail } from "react-icons/io5";
 import { LuUpload } from "react-icons/lu";
 import { IoCheckmarkCircle } from "react-icons/io5";
 import CancelPaymentModal from "../../Components/Modal/PaymentModal/CancelPaymentModal";
+import ConfirmPaymentModal from "../../Components/Modal/PaymentModal/ConfirmPaymentModal";
 import { useDisclosure } from "@chakra-ui/react";
 const UserProfile = ()=>{
-    const { isOpen, onOpen, onClose } = useDisclosure()
+    const { isOpen: isPaymentOpen, onOpen: onPaymentOpen, onClose: onPaymentClose } = useDisclosure();
+    const { isOpen: isConfirmOpen, onOpen: onConfirmOpen, onClose: onConfirmClose } = useDisclosure();
     return(
         <>
             <div className="flex flex-col bg-[#DFDFDF] items-center justify-center w-full h-fit">
@@ -54,10 +56,10 @@ const UserProfile = ()=>{
                             <p className="text-sm font-light text-[#252524]">Next billing date is 24th September, 2024</p>
                         </div>
                         <div className="flex flex-col">
-                            <Link className="flex justify-center items-center border border-[#CBCBCB] w-60 h-[57px] text-[#252524] font-medium bg-[#F4F4F4] p-3 w-40 h-12 rounded-md ">
+                            <p onClick={onConfirmOpen} className="flex justify-center items-center cursor-pointer border border-[#CBCBCB] w-60 h-[57px] text-[#252524] font-medium bg-[#F4F4F4] p-3 w-40 h-12 rounded-md ">
                                 View Receipt📄
-                            </Link>
-                            <p onClick={onOpen} className="flex justify-center cursor-pointer items-center mt-3 border border-[#CBCBCB] w-60 h-[57px] text-[#E8332C] font-medium bg-[#F4F4F4] p-3 w-40 h-12 rounded-md ">
+                            </p>
+                            <p onClick={onPaymentOpen} className="flex justify-center cursor-pointer items-center mt-3 border border-[#CBCBCB] w-60 h-[57px] text-[#E8332C] font-medium bg-[#F4F4F4] p-3 w-40 h-12 rounded-md ">
                                 Cancel Plan
                             </p>
                         </div>
@@ -65,7 +67,8 @@ const UserProfile = ()=>{
                 </div>
                 {/* cancel payment modal */}
                 
-                   <CancelPaymentModal isOpen={isOpen} onClose={onClose} /> 
+                   <CancelPaymentModal isOpen={isPaymentOpen} onClose={onPaymentClose} />
+                   <ConfirmPaymentModal status="success" isOpen={isConfirmOpen} onClose={onConfirmClose} />
                
             </div>
         </>

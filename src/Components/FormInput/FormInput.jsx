@@ -11,8 +11,8 @@ const FormInput = ({
    value,
 }) => {
    return (
-      <div className="flex flex-col gap-3">
-         <div className="flex mt-3">
+      <div className="flex flex-col gap-4 mt-3">
+         <div className="flex">
             <label className="font-medium text-[#252524]">{label}</label>
          </div>
 

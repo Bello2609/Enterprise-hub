@@ -23,6 +23,8 @@ const Lagos = lazy(()=> import("./Pages/Lagos/Lagos.jsx"));
 const Kano = lazy(()=> import("./Pages/Kano/Kano.jsx"));
 const Abuja = lazy(()=> import("./Pages/Abuja/Abuja.jsx"));
 const ContactUs = lazy(()=> import("./Pages/ContactUs/ContactUs.jsx"));
+const AddBlog = lazy(()=> import("./Pages/AddBlog/AddBlog.jsx"));
+const AddTestimonials = lazy(()=> import("./Pages/AddTestimonials/AddTestimonials.jsx"));
 
 
 const Router = () => {
@@ -124,6 +126,29 @@ const Router = () => {
                   <Suspense>
                      <Layout>
                         <AllBlog />
+                     </Layout>
+                  </Suspense>
+               }
+            />
+            {/* this is a private route */}
+            <Route
+               path="/admin/add-blog"
+               exact
+               element={
+                  <Suspense>
+                     <Layout>
+                        <AddBlog />
+                     </Layout>
+                  </Suspense>
+               }
+            />
+             <Route
+               path="/admin/add-testimonials"
+               exact
+               element={
+                  <Suspense>
+                     <Layout>
+                        <AddTestimonials />
                      </Layout>
                   </Suspense>
                }

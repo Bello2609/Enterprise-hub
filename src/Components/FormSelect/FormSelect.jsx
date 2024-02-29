@@ -4,12 +4,12 @@ import Select from "react-dropdown-select";
 const style = {
    height: "44px"
 }
-const FormSelect = ({options, label})=>{
+const FormSelect = ({options, label, width})=>{
    const [selectedOption, setSelectedOption] = useState("Hustle Hall (Co-working Hub)");
     return(
       <>
-         <div className="flex flex-col gap-4">
-            <div className="flex mt-3">
+         <div className="flex flex-col gap-5 w-full mt-3">
+            <div className="flex">
                <label className="font-medium text-[#252524]">{label}</label>
             </div>
          <div className="border-solid rounded-lg  h-11 w-full ">
@@ -33,7 +33,7 @@ const FormSelect = ({options, label})=>{
             className={style}
             /> */}
             <Select options={options} onChange={(values) => console.log(values) } style={{
-               width: "300px",
+               width: width,
                border: "1px solid #DFDFDF",
                height: "50px",
                borderRadius: "8px",

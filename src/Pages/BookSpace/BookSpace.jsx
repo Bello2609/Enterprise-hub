@@ -70,8 +70,8 @@ const BookSpace = ()=>{
                         </div> */}
                         <div className="bg-[#DFDFDF] h-px my-5"></div>
                         <div className="flex justify-between">
-                            <FormSelect label="Category" options={categoryOption} />
-                            <FormSelect label="Unit" options={unitOption} />
+                            <FormSelect label="Category" options={categoryOption} width="300px" />
+                            <FormSelect label="Unit" options={unitOption} width="300px" />
                         </div>
                         <div className="flex flex-col my-5">
                             <FormInput type="email" label="Email" />

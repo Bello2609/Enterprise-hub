@@ -46,6 +46,8 @@ import office2 from "./assets/office/office2.png";
 import office3 from "./assets/office/office3.png";
 import map1 from "./assets/map1.png";
 import modalimg from "./assets/modalimg.png";
+import check from "./assets/check.png";
+import checkred from "./assets/checkred.png";
 
 
 export {
@@ -96,5 +98,7 @@ export {
     office2,
     office3,
     map1,
-    modalimg 
+    modalimg,
+    check,
+    checkred
 }
