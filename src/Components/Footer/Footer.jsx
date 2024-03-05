@@ -6,8 +6,8 @@ import { FaFacebookSquare } from "react-icons/fa";
 const Footer = ()=>{
     return(
         <>
-            <div className="flex flex-col w-screen h-[400px] bg-[#FFEBEA] justify-evenly overflow-x-hidden">
-                <div className="flex justify-evenly mt-10">
+            <div className="flex flex-col w-screen h-[400px] md:h-fit sm:h-fit bg-[#FFEBEA] justify-evenly overflow-x-hidden">
+                <div className="flex lg:flex-row md:flex-col sm:flex-col min-[500px]:flex-col justify-evenly md:items-start sm:items-start md:ml-10 sm:ml-10 mt-10">
                     <div>
                         <img src={images.Enterprise} alt="enterprise" />
                         <p className="w-72 flex-wrap text-[#616161] font-sans text-base my-3">

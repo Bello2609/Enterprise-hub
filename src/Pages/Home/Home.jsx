@@ -35,10 +35,10 @@ const Home = ()=>{
         <>
             <div className="flex flex-col w-full h-fit">
                 {/* where entrepreneur go section */}
-                <div className="flex w-full">
+                <div className="flex w-full justify-evenly">
                     <div className="basis-1/2">
-                        <div className="flex flex-col  bg-[#56923E] p-20">
-                            <h4 className="flex-wrap w-[517px] text-6xl font-bold text-[#fff]">
+                        <div className="flex flex-col  bg-[#56923E] p-20 flex-wrap shrink">
+                            <h4 className="md:w-[517px] text-6xl font-bold text-[#fff]">
                                 Where entrepreneurs go to grow
                             </h4>
                             <p className="w-[413px] flex-wrap font-normal text-base text-[#ffffff] my-4">
@@ -52,7 +52,7 @@ const Home = ()=>{
                         </div>
                         <div className="bg-[#72B955] h-[20px]"></div>
                     </div>
-                    <div className="basis-1/2">
+                    <div className="basis-1/2 shrink">
                         <div className="bg-[url('/src/assets/bg1.png')] bg-right bg-cover bg-no-repeat h-[525px]">
                             {/* <img src={images.bg1} alt="linkedin" className="h-full w-full" /> */}
                         </div>
@@ -61,11 +61,11 @@ const Home = ()=>{
                 </div>
                  {/* where entrepreneur go section ended */}
                  {/* what are you looking for section */}
-                 <div className="flex flex-col h-[500px] p-16">
+                 <div className="flex flex-col h-fit p-16">
                     <h4 className="font-sans font-bold text-3xl text-[#252524]">
                         What are you looking for today?
                     </h4>
-                    <div className="grid grid-cols-4 gap-3 h-fit">
+                    <div className="grid md:grid-cols-2 sm:grid-cols-1 lg:grid-cols-4 gap-3 h-fit ">
                         <div className="flex flex-col w-[220px] h-[fit] bg-[#DFFFD4] p-5 mt-5">
                             <img src={images.table} alt="table" className="rounded-full" width="100px" height="100px" />
                             <h4 className="font-xl font-semibold font-sans mt-3">Office Space</h4>
@@ -108,18 +108,18 @@ const Home = ()=>{
                  </div>
                   {/* what are you looking for section end*/}
                   {/* a system that is redefining */}
-                  <div className="bg-[url('/src/assets/interior.png')] w-full bg-no-repeat bg-center h-[506px] flex items-end">
-                    <div className="flex flex-col bg-[#C81F20] h-[435px] w-[633px] ml-16">
+                  <div className="bg-[url('/src/assets/interior.png')] w-full bg-no-repeat bg-center h-[506px] flex  items-end">
+                    <div className="flex flex-col bg-[#C81F20] h-[435px] w-[633px] lg:w-[633px] sm:w-full ml-16 sm:ml-0 ">
                         <div className="flex w-12 h-12 justify-end w-[633px]">
                             <div className="flex bg-[#E1D634] w-12 h-12">
                                 
                             </div>
                         </div>
                         <div className="flex flex-col flex-wrap p-10 font-sans text-[#fff]">
-                            <h4 className="text-3xl font-bold  flex-wrap w-[360px]">
+                            <h4 className="text-3xl font-bold  text-wrap w-[360px]">
                                 A system that is redefining the way we live, work and learn.
                             </h4>
-                            <p className="text-base w-[533px] my-3">
+                            <p className="text-base w-[533px] sm:w-fit my-3">
                                 Enterprise Hubs owned by Pedestal Africa Limited is an integrated 
                                 network of online and physical resource centres for emerging enterprises 
                                 in Nigeria and beyond. A platform for promotion of businesses across Africa, 
@@ -138,18 +138,18 @@ const Home = ()=>{
                   </div>
                   {/* a system that is redefining end*/}
                   {/* why choose us */}
-                  <div className="flex w-full h-[400px]">
-                    <div className="basis-1/4 bg-[#EFE553] ">
-                        <div className="flex items-end justify-center w-full h-full">
+                  <div className="flex lg:flex-row md:flex-col sm:flex-col min-[400px]:flex-col justify-between  w-full h-[400px] sm:h-fit">
+                    <div className="bg-[#EFE553] ">
+                        <div className="flex items-end justify-center md:justify-center sm:justify-center w-[485px] md:w-[360px] h-[400px] md:w-[359px]">
                             <img src={images.maskgroup} alt="masked group"  width="186px" height="202px"/>
                         </div>
                     </div>
-                    <div className="basis-1/2">
-                        <div className="flex flex-col h-full justify-center ml-16">
+                    <div>
+                        <div className="flex flex-col h-full justify-center ml-16 lg:mt-0 md:mt-10 sm:mt-10">
                             <h4 className="text-[#252524] font-sans font-bold text-4xl">
                                 Why Choose Us
                             </h4>
-                            <p className="text-base font-normal font-sans flex-wrap w-[510px] mt-5">
+                            <p className="text-base font-normal font-sans flex-wrap w-[510px]  mt-5">
                                 Enterprise Hubs has built a system to unleash collaboration, creativity 
                                 and inspiration from passionate entrepreneurs and business people, most 
                                 especially a community that promotes learning, collaboration and growth. 
@@ -158,7 +158,7 @@ const Home = ()=>{
                             </p>
                         </div>
                     </div>
-                    <div className="basis-1/4">
+                    <div>
                         <div className="flex justify-end w-full h-full">
                             <img src={images.group6} alt="group6" />
                         </div>
@@ -176,7 +176,7 @@ const Home = ()=>{
                     <p className="flex items-center text-[#252524] text-base font-normal font-sans justify-center flex-wrap w-[510px]">
                             spaces provide flexible solutions for passionate people.
                     </p>
-                    <div className="grid grid-cols-4 mt-16">
+                    <div className="grid lg:grid-cols-4 sm:grid-cols-2 md:grid-cols-3 mt-16">
                         <div className="flex flex-col items-center w-[187px] h-[182px] ">
                             <img src={images.StateoftheartOffice} alt="state of the art" width="50px" height="50px" />
                             <p className="flex-wrap w-[145px] font-medium text-base text-[#616161] mt-5">State of the art</p>
@@ -256,17 +256,17 @@ const Home = ()=>{
                     <div className="w-full">
                         <img src={images.Qotes} alt="quotes" className="pl-24 border-2 border-red-500" />
                     </div>
-                    <div className="flex justify-evenly">
+                    <div className="flex md:flex-col sm:flex-col justify-evenly md:ml-10 sm:ml-10">
                         <div className="flex flex-col mt-10">
                             <p className="font-sans font-bold text-xl w-[216px] flex-wrap">
                                 What our customers are saying
                             </p>
-                            <div className="flex text-2xl">
+                            <div className="flex lg:flex md:hidden sm:hidden text-2xl">
                                 <p><IoIosArrowBack /></p>
                                 <p className="text-[#DE2223]"><IoIosArrowForward /></p>
                             </div>
                         </div>
-                        <div className="flex flex-col font-sans">
+                        <div className="flex flex-col md:justify-start sm:justify-start font-sans">
                             <p className="font-normal text-xl w-[520px]">
                                 Working from Enterprise Hubs has been amazing, the facilities and staff are great, 
                                 likewise the working space is comfortable with good ambience
@@ -276,7 +276,7 @@ const Home = ()=>{
                                 <p className="text-base font-medium text-[#616161]">Stargate Chauffeur</p>
                             </div>
                         </div>
-                        <div className="flex flex-col font-sans bg-[#ffffff] opacity-25">
+                        <div className="flex md:hidden sm:hidden flex-col font-sans bg-[#ffffff] opacity-25">
                             <p className="font-normal text-xl w-[400px] text-[#202020]">
                                 The offices at Enterprise Hubs are airy, well-lit and very serene. 
                                 I think the edge it has over over other co-working spaces is the proximity to Lekki 
@@ -290,6 +290,10 @@ const Home = ()=>{
                                 <p className="text-base font-medium text-[#616161]">Stargate Chauffeur</p>
                             </div>
                         </div>   
+                        <div className="md:flex sm:flex justify-between text-2xl">
+                                <p><IoIosArrowBack /></p>
+                                <p className="text-[#DE2223]"><IoIosArrowForward /></p>
+                        </div>
                     </div>
                   </div>
                   {/* what our customer are saying ends */}
@@ -302,8 +306,8 @@ const Home = ()=>{
                     <p className="text-base text-[#252524] font-normal font-sans flex-wrap my-5">
                         We regularly publish business tips and corporate articles for your consumption
                     </p>
-                    <div className="grid grid-cols-3 gap-2 bg-[#fff]">
-                        <div className="flex flex-col col-span-2 bg-[url('/src/assets/roomInterior.png')] h-[446px] w-[757px] rounded-xl p-10">
+                    <div className="grid grid-cols-3 md:grid-cols-2 sm:grid-cols-1 min-[500px]:grid-cols-1 gap-2 bg-[#fff]">
+                        <div className="flex flex-col lg:col-span-2 md:col-span-1 bg-[url('/src/assets/roomInterior.png')] h-[446px] w-[757px] rounded-xl p-10">
                             {/* <div className="bg-[#000000] w-full h-full opacity-40 rounded-xl"> */}
                                 <p className="font-sans text-base text-[#81C167] font-bold">
                                     ARTICLE | 👨🏼‍🦰Barki Taiwo | 12 Jan 2024
@@ -390,7 +394,7 @@ const Home = ()=>{
                         <p className="text-wrap my-5 ">Unlock a new chapter - Join the Network of successful entrepreneurs like you</p>
                         <Link to="/contact us" className="flex items-center justify-center bg-[#DE2223] text-[#ffffff] w-60 h-12 rounded-md">Join Enterprise Hubs</Link>
                     </div>
-                    <div className="flex mt-10">
+                    <div className="flex md:flex-col sm:flex-col mt-10">
                         <div className="flex flex-col">
                             <h4 className="flex-wrap w-[517px] text-4xl font-bold text-[#252524]">
                                 Have a question about renting office space.
@@ -403,7 +407,7 @@ const Home = ()=>{
                                 Talk to us
                             </Link>
                         </div>
-                        <div className="w-full max-w-md mx-auto">
+                        <div className="w-full max-w-md mx-auto md:mt-5 sm:mt-5">
                         {items.map((item, index) => (
                             <div key={index} className="border border-gray-300 mb-2 rounded">
                             <div
