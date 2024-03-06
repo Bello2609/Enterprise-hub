@@ -11,7 +11,7 @@ const AboutUs  = ()=>{
                     <h4 className="flex-wrap w-[517px] text-5xl font-bold text-[#252524] text-wrap">
                         A system that is redefining the way we <h4 className="text-[#56923E]">live, work and learn.</h4>
                     </h4>
-                    <p className="w-[413px] flex-wrap font-normal text-base text-[#252524] my-4">
+                    <p className="w-[413px] flex-wrap font-normal text-base text-[#252524] my-4 leading-[28px]">
                         Enterprise Hubs owned by Pedestal Africa Limited is an integrated network of 
                         online and physical resource centres for emerging enterprises in Nigeria and 
                         beyond. A platform for promotion of businesses across Africa, offering shared 

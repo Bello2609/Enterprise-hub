@@ -13,15 +13,15 @@ const Franchise = ()=>{
                     <img src={images.pro7} alt="professional" className="w-[423px] h-[291px]" />
                 </div>
                 <div className="flex flex-col">
-                    <p className="w-[413px] flex-wrap font-normal text-base text-[#252524] my-4">
+                    <p className="w-[413px] flex-wrap font-normal text-base text-[#252524] my-4 leading-[28px]">
                         Enterprise Hubs is an integrated network of online and physical resource centers 
-                        for emerging enterprises in Africa’s growth clusters.A platform for promotion of 
+                        for emerging enterprises in Africa's growth clusters.A platform for promotion of 
                         emerging businesses across Africa, offering shared services, virtual offices, 
                         contemporary business hubs, online B2B marketplace, business support services and a 
                         complete suite of enterprise development programs and resources.A system that’s 
                         redefining the way people work, innovate and grow.
                     </p>
-                    <p className="w-[413px] flex-wrap font-normal text-base text-[#252524] my-4">
+                    <p className="w-[413px] flex-wrap font-normal text-base text-[#252524] my-4 leading-[28px]">
                         Joining our partner or franchisee program offers you a strong position in a fast-growing
                         industry with a particularly strong future outlook in Africa.
                     </p>

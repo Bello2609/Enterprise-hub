@@ -5,6 +5,7 @@ import * as images from "../../image";
 import { FaArrowRightLong } from "react-icons/fa6";
 import { IoIosArrowBack } from "react-icons/io";
 import { IoIosArrowForward } from "react-icons/io";
+import Accorddion from "../../Components/Accordion/Accordion";
 
 const items = [
     {
@@ -36,9 +37,9 @@ const Home = ()=>{
             <div className="flex flex-col w-full h-fit">
                 {/* where entrepreneur go section */}
                 <div className="flex w-full justify-evenly">
-                    <div className="basis-1/2">
+                    <div className="basis-1/2 shrink">
                         <div className="flex flex-col  bg-[#56923E] p-20 flex-wrap shrink">
-                            <h4 className="md:w-[517px] text-6xl font-bold text-[#fff]">
+                            <h4 className="w-[517px] text-6xl font-bold text-[#fff] leading-[63px]">
                                 Where entrepreneurs go to grow
                             </h4>
                             <p className="w-[413px] flex-wrap font-normal text-base text-[#ffffff] my-4">
@@ -61,46 +62,54 @@ const Home = ()=>{
                 </div>
                  {/* where entrepreneur go section ended */}
                  {/* what are you looking for section */}
-                 <div className="flex flex-col h-fit p-16">
+                 <div className="flex flex-col md:items-center sm:items-centerave  h-fit p-16">
                     <h4 className="font-sans font-bold text-3xl text-[#252524]">
                         What are you looking for today?
                     </h4>
-                    <div className="grid md:grid-cols-2 sm:grid-cols-1 lg:grid-cols-4 gap-3 h-fit ">
-                        <div className="flex flex-col w-[220px] h-[fit] bg-[#DFFFD4] p-5 mt-5">
+                    <div className="grid md:grid-cols-2 sm:grid-cols-1 grid-cols-4 gap-3 h-fit ">
+                        <div className="flex flex-col w-[220px] h-[fit] bg-[#DFFFD4] p-5 mt-5 rounded-lg">
                             <img src={images.table} alt="table" className="rounded-full" width="100px" height="100px" />
-                            <h4 className="font-xl font-semibold font-sans mt-3">Office Space</h4>
-                            <p className="w-[200px] my-3 text-[#252524] flex-wrap">We have state of the art office spaces to cater for your needs</p>
-                            <Link className="flex justify-center items-center w-[176px] h-[57px] text-[#fff] font-medium bg-[#E8332C] p-3 w-28 h-11 rounded-md ">
+                            <div className="h-[113px]">
+                                <h4 className="font-xl font-semibold font-sans mt-3">Office Space</h4>
+                                <p className="w-[200px] my-3 text-[#252524] flex-wrap leading-[24px]">We have state of the art office spaces to cater for your needs</p>
+                            </div>
+                            <Link className="flex justify-center items-center w-[176px] h-[57px] text-[#fff] font-medium bg-[#E8332C] p-3 w-28 h-11 rounded-md mt-3 ">
                                 Book now
                             </Link>
                         </div>
-                        <div className="flex flex-col w-[220px] h-[fit] bg-[#FBF6AF] p-5 mt-5">
+                        <div className="flex flex-col w-[220px] h-[fit] bg-[#FBF6AF] p-5 mt-5 rounded-lg">
                             <img src={images.map} alt="table" className="rounded-full" width="100px" height="100px" />
-                            <h4 className="font-xl font-semibold font-sans mt-3">Virtual Office</h4>
-                            <p className="w-[200px] my-3 text-[#252524] flex-wrap">
-                                Take control of your business, by having a business address in the heart of Lagos Nigeria.
-                            </p>
-                            <Link className="flex justify-center items-center w-[176px] h-[57px] text-[#fff] font-medium bg-[#E8332C] p-3 w-28 h-11 rounded-md ">
+                            <div className="h-[113px]">
+                                <h4 className="font-xl font-semibold font-sans mt-3">Virtual Office</h4>
+                                <p className="w-[200px] my-3 text-[#252524] flex-wrap">
+                                    Take control of your business, by having a business address in the heart of Lagos Nigeria.
+                                </p>
+                            </div>
+                            <Link className="flex justify-center items-center w-[176px] h-[57px] text-[#fff] font-medium bg-[#E8332C] p-3 w-28 h-11 rounded-md mt-3 ">
                                 Book now
                             </Link>
                         </div>
-                        <div className="flex flex-col w-[220px] h-[fit] bg-[#FFDEDD] p-5 mt-5">
+                        <div className="flex flex-col w-[220px] h-[fit] bg-[#FFDEDD] p-5 mt-5 rounded-lg">
                             <img src={images.tv} alt="table" className="rounded-full" width="100px" height="100px" />
-                            <h4 className="font-xl font-semibold font-sans mt-3">Professional Services</h4>
-                            <p className="w-[200px] my-3 text-[#252524] flex-wrap">
-                                We support entrepreneurs, by offering professional services at a reduced cost
-                            </p>
-                            <Link to="/professional" className="flex justify-center items-center w-[176px] h-[57px] text-[#fff] font-medium bg-[#E8332C] p-3 w-28 h-11 rounded-md ">
+                            <div className="h-[113px]">
+                                <h4 className="font-xl font-semibold font-sans mt-3">Professional Services</h4>
+                                <p className="w-[200px] my-3 text-[#252524] flex-wrap">
+                                    We support entrepreneurs, by offering professional services at a reduced cost
+                                </p>
+                            </div>
+                            <Link to="/professional" className="flex justify-center items-center w-[176px] h-[57px] text-[#fff] font-medium bg-[#E8332C] p-3 w-28 h-11 rounded-md mt-3 ">
                                 Book now
                             </Link>
                         </div>
-                        <div className="flex flex-col w-[220px] h-[fit] bg-[#F0F0F0] p-5 mt-5">
+                        <div className="flex flex-col w-[220px] h-[fit] bg-[#F0F0F0] p-5 mt-5 rounded-lg">
                             <img src={images.board} alt="table" className="rounded-full" width="100px" height="100px" />
-                            <h4 className="font-xl font-semibold font-sans mt-3">Training Programs</h4>
-                            <p className="w-[200px] my-3 text-[#252524] flex-wrap">
-                                Get involve, and participate in our training programs.
-                            </p>
-                            <Link className="flex justify-center items-center w-[176px] h-[57px] text-[#fff] font-medium bg-[#E8332C] p-3 w-28 h-11 rounded-md ">
+                            <div className="h-[113px]">
+                                <h4 className="font-xl font-semibold font-sans mt-3">Training Programs</h4>
+                                <p className="w-[200px] my-3 text-[#252524] flex-wrap">
+                                    Get involve, and participate in our training programs.
+                                </p>
+                            </div>
+                            <Link className="flex justify-center items-center w-[176px] h-[57px] text-[#fff] font-medium bg-[#E8332C] p-3 w-28 h-11 rounded-md mt-3 ">
                                 Book now
                             </Link>
                         </div>
@@ -109,17 +118,17 @@ const Home = ()=>{
                   {/* what are you looking for section end*/}
                   {/* a system that is redefining */}
                   <div className="bg-[url('/src/assets/interior.png')] w-full bg-no-repeat bg-center h-[506px] flex  items-end">
-                    <div className="flex flex-col bg-[#C81F20] h-[435px] w-[633px] lg:w-[633px] sm:w-full ml-16 sm:ml-0 ">
+                    <div className="flex flex-col bg-[#C81F20] h-[435px] w-[633px] lg:w-[633px] sm:w-full ml-16 sm:ml-0">
                         <div className="flex w-12 h-12 justify-end w-[633px]">
                             <div className="flex bg-[#E1D634] w-12 h-12">
                                 
                             </div>
                         </div>
                         <div className="flex flex-col flex-wrap p-10 font-sans text-[#fff]">
-                            <h4 className="text-3xl font-bold  text-wrap w-[360px]">
+                            <h4 className="text-3xl font-bold  text-wrap w-[360px] leading-[35px]">
                                 A system that is redefining the way we live, work and learn.
                             </h4>
-                            <p className="text-base w-[533px] sm:w-fit my-3">
+                            <p className="text-base w-[533px] sm:w-fit my-3 leading-[25px]">
                                 Enterprise Hubs owned by Pedestal Africa Limited is an integrated 
                                 network of online and physical resource centres for emerging enterprises 
                                 in Nigeria and beyond. A platform for promotion of businesses across Africa, 
@@ -149,7 +158,7 @@ const Home = ()=>{
                             <h4 className="text-[#252524] font-sans font-bold text-4xl">
                                 Why Choose Us
                             </h4>
-                            <p className="text-base font-normal font-sans flex-wrap w-[510px]  mt-5">
+                            <p className="text-base font-normal font-sans flex-wrap w-[510px]  mt-5 leading-[25px]">
                                 Enterprise Hubs has built a system to unleash collaboration, creativity 
                                 and inspiration from passionate entrepreneurs and business people, most 
                                 especially a community that promotes learning, collaboration and growth. 
@@ -176,7 +185,7 @@ const Home = ()=>{
                     <p className="flex items-center text-[#252524] text-base font-normal font-sans justify-center flex-wrap w-[510px]">
                             spaces provide flexible solutions for passionate people.
                     </p>
-                    <div className="grid lg:grid-cols-4 sm:grid-cols-2 md:grid-cols-3 mt-16">
+                    <div className="grid grid-cols-4 mt-16">
                         <div className="flex flex-col items-center w-[187px] h-[182px] ">
                             <img src={images.StateoftheartOffice} alt="state of the art" width="50px" height="50px" />
                             <p className="flex-wrap w-[145px] font-medium text-base text-[#616161] mt-5">State of the art</p>
@@ -307,7 +316,7 @@ const Home = ()=>{
                         We regularly publish business tips and corporate articles for your consumption
                     </p>
                     <div className="grid grid-cols-3 md:grid-cols-2 sm:grid-cols-1 min-[500px]:grid-cols-1 gap-2 bg-[#fff]">
-                        <div className="flex flex-col lg:col-span-2 md:col-span-1 bg-[url('/src/assets/roomInterior.png')] h-[446px] w-[757px] rounded-xl p-10">
+                        <div className="flex flex-col col-span-2 bg-[url('/src/assets/roomInterior.png')] h-[446px] w-[757px] rounded-xl p-10">
                             {/* <div className="bg-[#000000] w-full h-full opacity-40 rounded-xl"> */}
                                 <p className="font-sans text-base text-[#81C167] font-bold">
                                     ARTICLE | 👨🏼‍🦰Barki Taiwo | 12 Jan 2024
@@ -389,12 +398,12 @@ const Home = ()=>{
                   {/* news and insight */}
                   {/* faq section */}
                   <div className="flex flex-col py-10 items-center border border-[#E3E3E3]">
-                    <div className="flex flex-col items-center">
+                    <div className="flex flex-col items-center border border-[#E3E3E3] rounded-xl p-10">
                         <img src={images.album} alt="albumm" />
                         <p className="text-wrap my-5 ">Unlock a new chapter - Join the Network of successful entrepreneurs like you</p>
                         <Link to="/contact us" className="flex items-center justify-center bg-[#DE2223] text-[#ffffff] w-60 h-12 rounded-md">Join Enterprise Hubs</Link>
                     </div>
-                    <div className="flex md:flex-col sm:flex-col mt-10">
+                    <div className="flex justify-evenly md:flex-col sm:flex-col mt-10 w-full">
                         <div className="flex flex-col">
                             <h4 className="flex-wrap w-[517px] text-4xl font-bold text-[#252524]">
                                 Have a question about renting office space.
@@ -407,34 +416,8 @@ const Home = ()=>{
                                 Talk to us
                             </Link>
                         </div>
-                        <div className="w-full max-w-md mx-auto md:mt-5 sm:mt-5">
-                        {items.map((item, index) => (
-                            <div key={index} className="border border-gray-300 mb-2 rounded">
-                            <div
-                                className="flex justify-between items-center p-4 cursor-pointer"
-                                onClick={() => handleClick(index)}
-                            >
-                                <span className="font-semibold">{item.title}</span>
-                                <svg
-                                className={`w-6 h-6 ${activeIndex === index ? 'transform rotate-180' : ''}`}
-                                xmlns="http://www.w3.org/2000/svg"
-                                viewBox="0 0 24 24"
-                                fill="none"
-                                stroke="currentColor"
-                                strokeWidth="2"
-                                strokeLinecap="round"
-                                strokeLinejoin="round"
-                                >
-                                <polyline points="6 9 12 15 18 9" />
-                                </svg>
-                            </div>
-                            {activeIndex === index && (
-                                <div className="p-4 border-t border-gray-300">
-                                    <p>{item.content}</p>
-                                </div>
-                            )}
-                            </div>
-                        ))}
+                        <div>
+                            <Accorddion />
                         </div>
                     </div>
                     

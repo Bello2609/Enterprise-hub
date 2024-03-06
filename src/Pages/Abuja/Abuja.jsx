@@ -26,7 +26,7 @@ const Abuja = ()=>{
                             <h4 className="flex-wrap w-[517px] text-5xl font-bold text-[#252524]">
                                 Enterprise Hubs QSC, Abuja
                             </h4>
-                            <p className="w-[413px] flex-wrap font-normal text-base text-[#252524] my-4 w-[491px]">
+                            <p className="w-[413px] flex-wrap font-normal text-base text-[#252524] my-4 w-[491px] leading-[25px]">
                             Enterprise Hubs has a new service - Enterprise Hubs QSC – short for Quick Service Center. Enterprise Hubs QSC is a “micro hub” where you can access all the services you need when on the move for business:
                             <li>Desktop design and print</li>
                             <li>Document handling</li>
@@ -41,7 +41,7 @@ const Abuja = ()=>{
                             <img src={images.started1} alt="female picture" className="w-[458px] h-[375px]" />
                         </div>
                         <div className="flex flex-col ml-16">
-                            <p className="w-[413px] flex-wrap font-normal text-base text-[#252524] my-4">
+                            <p className="w-[413px] flex-wrap font-normal text-base text-[#252524] my-4 leading-[25px]">
                                 In addition, the Abuja QSC offers 3 beautiful executive offices 
                                 available for quarterly use. You can access this service at the 
                                 business center of the beautiful Wells Carlton Hotel Asokoro Abuja.
@@ -63,7 +63,7 @@ const Abuja = ()=>{
                                     return(
                                         <div className="flex flex-col bg-[#fff] rounded-xl border border-[#DADADA] w-[270px] h-fit p-4">
                                             <img src={data.officeImage} alt="A man carrying a bag" className="rounded-t-xl w-[240px] h-[110px]" />
-                                            <div>
+                                            <div className="h-[130px]">
                                                 <p className="font-sans text-lg text-[#81C167] font-bold mt-3">
                                                     {data.officeName}
                                                 </p>

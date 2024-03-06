@@ -51,7 +51,7 @@ const Lagos = ()=>{
                             <h4 className="flex-wrap w-[517px] text-5xl font-bold text-[#252524]">
                                 Enterprise Hubs Victoria Island, Lagos
                             </h4>
-                            <p className="w-[413px] flex-wrap font-normal text-base text-[#252524] my-4">
+                            <p className="w-[413px] flex-wrap font-normal text-base text-[#252524] my-4 leading-[25px]">
                                 A serene privately managed co-working facility and entrepreneurship 
                                 support center, offering virtual office services, co-working spaces, 
                                 private offices, meeting facilities, a garden and hosting entrepreneurship 
@@ -64,7 +64,7 @@ const Lagos = ()=>{
                         <div>
                             <img src={images.started1} alt="female picture" className="w-[458px] h-[375px]" />
                         </div>
-                        <div className="flex flex-col ml-16">
+                        <div className="flex flex-col ml-16 leading-[25px]">
                             <p className="w-[413px] flex-wrap font-normal text-base text-[#252524] my-4">
                                 Located in Victoria Island, downtown Lagos Nigeria, we boast of 
                                 super-fast fiber optic internet, ample parking and dining spaces 
@@ -95,13 +95,13 @@ const Lagos = ()=>{
                             {
                                 officeData.map(data=>{
                                     return(
-                                        <div className="flex flex-col bg-[#fff] rounded-xl border border-[#DADADA] w-[270px] h-fit p-4">
+                                        <div className="flex flex-col bg-[#fff] rounded-xl border border-[#DADADA] w-[270px] h-[350px] p-4">
                                             <img src={data.officeImage} alt="A man carrying a bag" className="rounded-t-xl w-[240px] h-[110px]" />
-                                            <div>
-                                                <p className="font-sans text-lg text-[#81C167] font-bold mt-3">
+                                            <div className="h-[200px] border border-red-500">
+                                                <p className="font-sans text-lg text-[#81C167] font-bold mt-3 w-[200px]  border-red-500">
                                                     {data.officeName}
                                                 </p>
-                                                <p className="text-[#616161] text-base font-sans font-normal w-[230px] my-5">
+                                                <p className="text-[#616161] text-base font-sans font-normal w-[220px] h-[60px]  my-5">
                                                     {data.officeInfo}
                                                 </p>
                                                 <Link className="flex items-center mr-3 text-base font-semibold text-[#38997A]">
