@@ -1,11 +1,13 @@
 import React, {useState} from "react";
 // import React from "react";
 import { Link } from "react-router-dom";
+import { motion } from "framer-motion";
 import * as images from "../../image";
 import { FaArrowRightLong } from "react-icons/fa6";
 import { IoIosArrowBack } from "react-icons/io";
 import { IoIosArrowForward } from "react-icons/io";
 import Accorddion from "../../Components/Accordion/Accordion";
+
 
 const items = [
     {
@@ -37,24 +39,31 @@ const Home = ()=>{
             <div className="flex flex-col w-full h-fit">
                 {/* where entrepreneur go section */}
                 <div className="flex w-full justify-evenly">
-                    <div className="basis-1/2 shrink">
-                        <div className="flex flex-col  bg-[#56923E] p-20 flex-wrap shrink">
+                    <div className="basis-1/2">
+                        <div className="flex flex-col  bg-[#56923E] p-20 flex-wrap px-20">
                             <h4 className="w-[517px] text-6xl font-bold text-[#fff] leading-[63px]">
                                 Where entrepreneurs go to grow
                             </h4>
-                            <p className="w-[413px] flex-wrap font-normal text-base text-[#ffffff] my-4">
+                            <p className="w-[413px] flex-wrap font-normal text-base text-[#ffffff] my-8">
                                 We've redefined the landscape for emerging enterprises in Nigeria and 
                                 beyond, offering a unique blend of online and physical resource centers 
                                 designed to propel your business forward.
                             </p>
-                            <Link className="flex justify-center items-center w-[176px] h-[57px] font-medium bg-[#ffffff] p-3 w-40 h-12 rounded-md ">
-                                EXPLORE
-                            </Link>
+                            <motion.div 
+                                className="flex justify-center items-center w-[176px] h-[57px] font-medium bg-[#ffffff] p-3 w-40 h-12 rounded-md"
+                                whileHover={{scale: 1.1}}
+                                whileTap={{scale: 0.9}}
+                                transition={{  ease: "easeInOut" }}>
+                                    <Link>
+                                        EXPLORE
+                                    </Link>
+                            </motion.div>
+                           
                         </div>
                         <div className="bg-[#72B955] h-[20px]"></div>
                     </div>
-                    <div className="basis-1/2 shrink">
-                        <div className="bg-[url('/src/assets/bg1.png')] bg-right bg-cover bg-no-repeat h-[525px]">
+                    <div className="basis-1/2">
+                        <div className="bg-[url('/src/assets/bg1.png')] bg-right bg-cover bg-no-repeat h-[565px]">
                             {/* <img src={images.bg1} alt="linkedin" className="h-full w-full" /> */}
                         </div>
                         <div className="bg-[#DE2223] h-[20px]"></div>
@@ -67,52 +76,52 @@ const Home = ()=>{
                         What are you looking for today?
                     </h4>
                     <div className="grid md:grid-cols-2 sm:grid-cols-1 grid-cols-4 gap-3 h-fit ">
-                        <div className="flex flex-col w-[220px] h-[fit] bg-[#DFFFD4] p-5 mt-5 rounded-lg">
+                        <motion.div whileHover={{ y: 50}} transition={{ duration: 0.5, ease: "easeOut" }} className="flex flex-col w-[220px] h-[fit] bg-[#DFFFD4] p-5 mt-5 rounded-lg">
                             <img src={images.table} alt="table" className="rounded-full" width="100px" height="100px" />
                             <div className="h-[113px]">
                                 <h4 className="font-xl font-semibold font-sans mt-3">Office Space</h4>
-                                <p className="w-[200px] my-3 text-[#252524] flex-wrap leading-[24px]">We have state of the art office spaces to cater for your needs</p>
+                                <p className="w-[200px] text-[#252524] flex-wrap leading-[24px] my-3">We have state of the art office spaces to cater for your needs</p>
                             </div>
-                            <Link className="flex justify-center items-center w-[176px] h-[57px] text-[#fff] font-medium bg-[#E8332C] p-3 w-28 h-11 rounded-md mt-3 ">
+                            <Link to="/book-space" className="flex justify-center items-center w-[108px] h-[45px] text-[#fff] font-medium bg-[#E8332C] p-3 w-28 h-11 rounded-md mt-5">
                                 Book now
                             </Link>
-                        </div>
-                        <div className="flex flex-col w-[220px] h-[fit] bg-[#FBF6AF] p-5 mt-5 rounded-lg">
+                        </motion.div>
+                        <motion.div whileHover={{ y: 50}} transition={{ duration: 0.5, ease: "easeOut" }} className="flex flex-col w-[220px] h-[fit] bg-[#FBF6AF] p-5 mt-5 rounded-lg">
                             <img src={images.map} alt="table" className="rounded-full" width="100px" height="100px" />
-                            <div className="h-[113px]">
-                                <h4 className="font-xl font-semibold font-sans mt-3">Virtual Office</h4>
-                                <p className="w-[200px] my-3 text-[#252524] flex-wrap">
-                                    Take control of your business, by having a business address in the heart of Lagos Nigeria.
+                            <div className="h-fit">
+                                <h4 className="font-xl font-semibold font-sans mt-2">Virtual Office</h4>
+                                <p className="w-[200px] h-[72px]  text-[#252524] flex-wrap my-5">
+                                    Take control of your business,by having a business address in the heart of Lagos Nigeria. 
                                 </p>
                             </div>
-                            <Link className="flex justify-center items-center w-[176px] h-[57px] text-[#fff] font-medium bg-[#E8332C] p-3 w-28 h-11 rounded-md mt-3 ">
+                            <Link to="/book-space"  className="flex justify-center items-center w-[108px] h-[45px] text-[#fff] font-medium bg-[#E8332C] p-3 w-28 h-11 rounded-md mt-6">
                                 Book now
                             </Link>
-                        </div>
-                        <div className="flex flex-col w-[220px] h-[fit] bg-[#FFDEDD] p-5 mt-5 rounded-lg">
+                        </motion.div>
+                        <motion.div whileHover={{ y: 50}} transition={{ duration: 0.5, ease: "easeOut" }} className="flex flex-col w-[220px] h-[fit] bg-[#FFDEDD] p-5 mt-5 rounded-lg">
                             <img src={images.tv} alt="table" className="rounded-full" width="100px" height="100px" />
-                            <div className="h-[113px]">
+                            <div className="h-[140px]">
                                 <h4 className="font-xl font-semibold font-sans mt-3">Professional Services</h4>
-                                <p className="w-[200px] my-3 text-[#252524] flex-wrap">
+                                <p className="w-[200px] text-[#252524] flex-wrap my-5">
                                     We support entrepreneurs, by offering professional services at a reduced cost
                                 </p>
                             </div>
-                            <Link to="/professional" className="flex justify-center items-center w-[176px] h-[57px] text-[#fff] font-medium bg-[#E8332C] p-3 w-28 h-11 rounded-md mt-3 ">
-                                Book now
+                            <Link to="/professional" className="flex justify-center items-center w-[108px] h-[45px] text-[#fff] font-medium bg-[#E8332C] p-3 w-28 h-11 rounded-md mt-5">
+                                Learn more
                             </Link>
-                        </div>
-                        <div className="flex flex-col w-[220px] h-[fit] bg-[#F0F0F0] p-5 mt-5 rounded-lg">
+                        </motion.div>
+                        <motion.div whileHover={{ y: 50}} transition={{ duration: 0.5, ease: "easeOut" }} className="flex flex-col w-[220px] h-[fit] bg-[#F0F0F0] p-5 mt-5 rounded-lg">
                             <img src={images.board} alt="table" className="rounded-full" width="100px" height="100px" />
                             <div className="h-[113px]">
                                 <h4 className="font-xl font-semibold font-sans mt-3">Training Programs</h4>
-                                <p className="w-[200px] my-3 text-[#252524] flex-wrap">
+                                <p className="w-[200px] text-[#252524] flex-wrap my-3">
                                     Get involve, and participate in our training programs.
                                 </p>
                             </div>
-                            <Link className="flex justify-center items-center w-[176px] h-[57px] text-[#fff] font-medium bg-[#E8332C] p-3 w-28 h-11 rounded-md mt-3 ">
-                                Book now
+                            <Link className="flex justify-center items-center w-[108px] h-[45px] text-[#fff] font-medium bg-[#E8332C] p-3 w-28 h-11 rounded-md mt-3">
+                                Learn more
                             </Link>
-                        </div>
+                        </motion.div>
                     </div>
                  </div>
                   {/* what are you looking for section end*/}
@@ -175,7 +184,7 @@ const Home = ()=>{
                   </div>
                   {/* why choose us end */}
                   {/* building area start */}
-                  <div className="flex flex-col items-center bg-[#F3F9F1] py-10">
+                  <div className="flex flex-col items-center bg-[#F3F9F1] py-16">
                     <h4 className="text-[#252524] font-sans font-bold text-4xl mb-5">
                         Building & Area
                     </h4>
@@ -186,82 +195,124 @@ const Home = ()=>{
                             spaces provide flexible solutions for passionate people.
                     </p>
                     <div className="grid grid-cols-4 mt-16">
-                        <div className="flex flex-col items-center w-[187px] h-[182px] ">
+                        <motion.div
+                            whileHover={{scale: 1.1}}
+                            whileTap={{scale: 0.9}}
+                            className="flex flex-col items-center w-[187px] h-[182px]">
                             <img src={images.StateoftheartOffice} alt="state of the art" width="50px" height="50px" />
                             <p className="flex-wrap w-[145px] font-medium text-base text-[#616161] mt-5">State of the art</p>
                             <p className="flex justify-center w-[145px] font-medium text-base text-[#616161]">Offices</p>
-                        </div>
-                        <div className="flex flex-col items-center w-[187px] h-[182px] ">
+                        </motion.div>
+                        <motion.div 
+                            whileHover={{scale: 1.1}}
+                            whileTap={{scale: 0.9}}
+                            className="flex flex-col items-center w-[187px] h-[182px] ">
                             <img src={images.StateoftheartOffice1} alt="state of the art" width="50px" height="50px" />
                             <p className="flex justify-center w-[145px] font-medium text-base text-[#616161] mt-5">Eco-friendly </p>
                             <p className="flex justify-center w-[145px] font-medium text-base text-[#616161]">Environment</p>
-                        </div>
-                        <div className="flex flex-col items-center w-[187px] h-[182px] ">
+                        </motion.div>
+                        <motion.div
+                            whileHover={{scale: 1.1}}
+                            whileTap={{scale: 0.9}}
+                            className="flex flex-col items-center w-[187px] h-[182px] ">
                             <img src={images.ModernAesthetics} alt="state of the art" width="50px" height="50px" />
                             <p className="flex-wrap w-[145px] font-medium text-base text-[#616161] mt-5">Modern Aesthetics</p>
-                        </div>
-                        <div className="flex flex-col items-center w-[187px] h-[182px] ">
+                        </motion.div>
+                        <motion.div
+                            whileHover={{scale: 1.1}}
+                            whileTap={{scale: 0.9}}
+                            className="flex flex-col items-center w-[187px] h-[182px] ">
                             <img src={images.parkingSpace} alt="state of the art" width="50px" height="50px" />
                             <p className="flex justify-center w-[145px] font-medium text-base text-[#616161] mt-5">Parking Space</p>
-                        </div>
+                        </motion.div>
                         {/* 1 */}
-                        <div className="flex flex-col items-center w-[187px] h-[182px] ">
+                        <motion.div 
+                            whileHover={{scale: 1.1}}
+                            whileTap={{scale: 0.9}}
+                            className="flex flex-col items-center w-[187px] h-[182px] ">
                             <img src={images.restaurant} alt="state of the art" width="50px" height="50px" />
                             <p className="flex justify-center w-[145px] font-medium text-base text-[#616161] mt-5">Restaurant</p>
-                        </div>
-                        <div className="flex flex-col items-center w-[187px] h-[182px] ">
+                        </motion.div>
+                        <motion.div 
+                            whileHover={{scale: 1.1}}
+                            whileTap={{scale: 0.9}}
+                            className="flex flex-col items-center w-[187px] h-[182px] ">
                             <img src={images.greatReception} alt="state of the art" width="50px" height="50px" />
                             <p className="flex-wrap w-[145px] font-medium text-base text-[#616161] mt-5">Great Reception</p>
-                        </div>
-                        <div className="flex flex-col items-center w-[187px] h-[182px] ">
+                        </motion.div>
+                        <motion.div 
+                            whileHover={{scale: 1.1}}
+                            whileTap={{scale: 0.9}}
+                            className="flex flex-col items-center w-[187px] h-[182px] ">
                             <img src={images.dedicatedDesk} alt="state of the art" width="50px" height="50px" />
                             <p className="flex-wrap w-[145px] font-medium text-base text-[#616161] mt-5">Dedicated Desks</p>
-                        </div>
-                        <div className="flex flex-col items-center w-[187px] h-[182px] ">
+                        </motion.div>
+                        <motion.div 
+                            whileHover={{scale: 1.1}}
+                            whileTap={{scale: 0.9}}
+                            className="flex flex-col items-center w-[187px] h-[182px] ">
                             <img src={images.conferenceroom} alt="state of the art" width="50px" height="50px" />
                             <p className="flex-wrap w-[145px] font-medium text-base text-[#616161] mt-5">Conference Rooms</p>
-                        </div>
+                        </motion.div>
                         {/* 2 */}
-                        <div className="flex flex-col items-center w-[187px] h-[182px] ">
+                        <motion.div 
+                            whileHover={{scale: 1.1}}
+                            whileTap={{scale: 0.9}}
+                            className="flex flex-col items-center w-[187px] h-[182px] ">
                             <img src={images.StateoftheartOffice} alt="state of the art" width="50px" height="50px" />
                             <p className="flex justify-center w-[145px] font-medium text-base text-[#616161] mt-5">Well Secured</p>
-                        </div>
-                        <div className="flex flex-col items-center w-[187px] h-[182px] ">
+                        </motion.div>
+                        <motion.div 
+                            whileHover={{scale: 1.1}}
+                            whileTap={{scale: 0.9}}
+                            className="flex flex-col items-center w-[187px] h-[182px] ">
                             <img src={images.StateoftheartOffice1} alt="state of the art" width="50px" height="50px" />
                             <p className="flex justify-center w-[145px] font-medium text-base text-[#616161] mt-5">Access to </p>
                             <p className="flex justify-center w-[145px] font-medium text-base text-[#616161]">Networking</p>
-                        </div>
-                        <div className="flex flex-col items-center w-[187px] h-[182px] ">
+                        </motion.div>
+                        <motion.div
+                            whileHover={{scale: 1.1}}
+                            whileTap={{scale: 0.9}}
+                            className="flex flex-col items-center w-[187px] h-[182px] ">
                             <img src={images.flexibleMemberaship} alt="state of the art" width="50px" height="50px" />
                             <p className="flex justify-center w-[145px] font-medium text-base text-[#616161] mt-5">Flexible </p>
                             <p className="flex justify-center w-[145px] font-medium text-base text-[#616161]">Membership</p>
-                        </div>
-                        <div className="flex flex-col items-center w-[187px] h-[182px] ">
+                        </motion.div>
+                        <motion.div 
+                            whileHover={{scale: 1.1}}
+                            whileTap={{scale: 0.9}}
+                            className="flex flex-col items-center w-[187px] h-[182px] ">
                             <img src={images.privateCall} alt="state of the art" width="50px" height="50px" />
                             <p className="flex justify-center w-[145px] font-medium text-base text-[#616161] mt-5">Private Calls</p>
-                        </div>
+                        </motion.div>
                         {/* 3 */}
                         <div class="grid grid-cols-subgrid col-span-3">
                             <div class="col-start-2">
-                                <div className="flex flex-col items-center w-[187px] h-[182px] ">
+                                <motion.div 
+                                    whileHover={{scale: 1.1}}
+                                    whileTap={{scale: 0.9}}
+                                    className="flex flex-col items-center w-[187px] h-[182px] ">
                                     <img src={images.PrintingScanningPhotocopying} alt="state of the art" width="50px" height="50px" />
                                     <p className="flex justify-center w-[145px] font-medium text-base text-[#616161] mt-5">Printing, Scanning,</p>
                                     <p className="flex justify-center w-[145px] font-medium text-base text-[#616161]">Photocopying</p>
-                                </div>
+                                </motion.div>
                             </div>
                             <div class="col-start-3">
-                                <div className="flex flex-col items-center w-[187px] h-[182px] ">
+                                <motion.div
+                                    whileHover={{scale: 1.1}}
+                                    whileTap={{scale: 0.9}}
+                                    className="flex flex-col items-center w-[187px] h-[182px] ">
                                     <img src={images.Whiteboards} alt="state of the art" width="50px" height="50px" />
                                     <p className="flex justify-center w-[145px] font-medium text-base text-[#616161] mt-5">Flexible </p>
                                     <p className="flex justify-center w-[145px] font-medium text-base text-[#616161]">Membership</p>
-                                </div>
+                                </motion.div>
                             </div>
                         </div>
                     </div>
                   </div>
                   {/* building area end */}
                   {/* what our customer are saying */}
-                  <div className="flex flex-col py-10">
+                  <div className="flex flex-col py-10 px-20">
                     <div className="w-full">
                         <img src={images.Qotes} alt="quotes" className="pl-24 border-2 border-red-500" />
                     </div>
@@ -308,7 +359,7 @@ const Home = ()=>{
                   {/* what our customer are saying ends */}
                   {/*  */}
                   {/* news and insight */}
-                  <div className="flex flex-col items-center bg-[#F3F9F1] py-10">
+                  <div className="flex flex-col items-center bg-[#F3F9F1] py-16">
                     <h4 className="text-[#252524] font-sans font-bold text-4xl mb-5">
                         News and Insights
                     </h4>
@@ -403,7 +454,7 @@ const Home = ()=>{
                         <p className="text-wrap my-5 ">Unlock a new chapter - Join the Network of successful entrepreneurs like you</p>
                         <Link to="/contact us" className="flex items-center justify-center bg-[#DE2223] text-[#ffffff] w-60 h-12 rounded-md">Join Enterprise Hubs</Link>
                     </div>
-                    <div className="flex justify-evenly md:flex-col sm:flex-col mt-10 w-full">
+                    <div className="flex justify-evenly md:flex-col sm:flex-col mt-16 w-full">
                         <div className="flex flex-col">
                             <h4 className="flex-wrap w-[517px] text-4xl font-bold text-[#252524]">
                                 Have a question about renting office space.
@@ -413,7 +464,11 @@ const Home = ()=>{
                                 are always happy to help.
                             </p>
                             <Link className="flex justify-center items-center w-[176px] h-[57px] font-medium bg-[#DE2223] text-[#fff] p-3 w-40 h-12 rounded-md ">
-                                Talk to us
+                                <motion.p 
+                                    whileHover={{scale: 1.1}}
+                                    whileTap={{scale: 0.9}}>
+                                        Talk to us
+                                </motion.p>
                             </Link>
                         </div>
                         <div>

@@ -1,6 +1,7 @@
 import React from "react";
 import * as images from "../../image";
 import { Link } from "react-router-dom";
+import { motion } from "framer-motion";
 import { HiOutlineArrowNarrowRight } from "react-icons/hi";
 
 const officeData = [
@@ -70,9 +71,9 @@ const Kano = ()=>{
                             {
                                 officeData.map(data=>{
                                     return(
-                                        <div className="flex flex-col bg-[#fff] rounded-xl border border-[#DADADA] w-[270px] h-fit p-4">
+                                        <motion.div whileHover={{ y: -10}} transition={{ duration: 0.5, ease: "easeOut" }} className="flex flex-col bg-[#fff] rounded-xl border border-[#DADADA] w-[270px] h-[300px] p-4">
                                             <img src={data.officeImage} alt="A man carrying a bag" className="rounded-t-xl w-[240px] h-[110px]" />
-                                            <div className="h-[130px]">
+                                            <div className="h-[150px]">
                                                 <p className="font-sans text-lg text-[#81C167] font-bold mt-3">
                                                     {data.officeName}
                                                 </p>
@@ -80,10 +81,10 @@ const Kano = ()=>{
                                                     {data.officeInfo}
                                                 </p>
                                                 <Link className="flex items-center mr-3 text-base font-semibold text-[#38997A]">
-                                                    Book Now <span><HiOutlineArrowNarrowRight /></span>
+                                                    <motion.p whileHover={{ x: -10}} transition={{ duration: 0.5, ease: "easeOut" }}>Book Now </motion.p><motion.span whileHover={{ x: 10}} transition={{ duration: 0.5, ease: "easeOut" }}><HiOutlineArrowNarrowRight /></motion.span>
                                                 </Link>
                                             </div>
-                                        </div>
+                                        </motion.div>
                                     )
                                 })
                             }

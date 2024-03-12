@@ -13,7 +13,7 @@ import FormInput from "../../Components/FormInput/FormInput";
 const UserProfileEdit= ()=>{
     return(
         <>
-             <div className="flex flex-col bg-[#DFDFDF] items-center justify-center w-full h-fit">
+             <div className="flex flex-col bg-[#DFDFDF] items-center justify-center w-full h-fit py-10">
                 <div className="flex flex-col bg-[#fff] rounded-b-2xl">
                     <div className="flex items-center justify-between  w-[807px] h-[150px] bg-gradient-to-r from-[#FFFCB8] to-[#F5D0CA]">
                         <div className="w-28 h-28"></div>
@@ -26,17 +26,17 @@ const UserProfileEdit= ()=>{
                     <div className="flex flex-col p-10">
                         <FormInput type="email" label="Email " />
                         <FormInput type="password" label="Password " />
-                        <div className="flex justify-between">
+                        <div className="flex justify-evenly w-full">
                             <FormInput type="email" label="Gender " />
                             <FormInput type="password" label="Role " />
                         </div>
-                        <div className="flex justify-between">
+                        <div className="flex justify-between w-full">
                             <FormInput type="email" label="First Name " />
                             <FormInput type="password" label="Last Name " />
                         </div>
-                        <div className="flex justify-between">
-                            <FormInput type="email" label="Phone Number " />
-                            <FormInput type="password" label="Company Name " />
+                        <div className="flex justify-between w-full">
+                            <FormInput type="text" label="Phone Number " />
+                            <FormInput type="text" label="Company Name " />
                         </div>
                         <Link className="flex justify-center items-center my-5 w-full h-[57px] text-[#252524] font-medium bg-[#F4F4F4] p-3 w-40 h-12 rounded-md ">
                             <span className="mr-2"><LuUpload /></span>CAC Registration.pdf<span className="ml-2"><FaRegTimesCircle /></span>

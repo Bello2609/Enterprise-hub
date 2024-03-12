@@ -13,8 +13,8 @@ const UserProfile = ()=>{
     const { isOpen: isConfirmOpen, onOpen: onConfirmOpen, onClose: onConfirmClose } = useDisclosure();
     return(
         <>
-            <div className="flex flex-col bg-[#DFDFDF] items-center justify-center w-full h-fit">
-                <div className="flex flex-col bg-[#fff] rounded-b-2xl">
+            <div className="flex flex-col bg-[#DFDFDF] items-center justify-center w-full h-fit py-10">
+                <div className="flex flex-col bg-[#fff] rounded-b-2xl ">
                     <div className="flex items-center justify-between  w-[807px] h-[150px] bg-gradient-to-r from-[#FFFCB8] to-[#F5D0CA]">
                         <div className="w-28 h-28"></div>
                         <p className="font-sans text-base font-medium pl-16">Good afternoon, Ogechi</p>

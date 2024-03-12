@@ -6,7 +6,7 @@ import { FaFacebookSquare } from "react-icons/fa";
 const Footer = ()=>{
     return(
         <>
-            <div className="flex flex-col w-screen h-[400px] md:h-fit sm:h-fit bg-[#FFEBEA] justify-evenly overflow-x-hidden">
+            <div className="flex flex-col w-screen h-fit md:h-fit sm:h-fit bg-[#FFEBEA] justify-evenly overflow-x-hidden py-5">
                 <div className="flex lg:flex-row md:flex-col sm:flex-col min-[500px]:flex-col justify-evenly md:items-start sm:items-start md:ml-10 sm:ml-10 mt-10">
                     <div>
                         <img src={images.Enterprise} alt="enterprise" />
@@ -73,7 +73,7 @@ const Footer = ()=>{
                     </div>
                 </div>
                 <div className="flex flex-col font-sans font-medium text-base mx-16">
-                    <div className="bg-[#F8C3C2] h-px"></div>
+                    <div className="bg-[#F8C3C2] h-px mt-3"></div>
                     <p className="text-[#616161] mt-5 text-base font-normal">Copyright ® 2024 Enterprise Hubs. All right reserved.</p>
                 </div>
             </div>
