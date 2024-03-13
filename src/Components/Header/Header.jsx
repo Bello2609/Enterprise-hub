@@ -64,7 +64,7 @@ const Header = ()=>{
                 </div>
                 {
                     nav && (
-                        <div className="fixed md:hidden w-[50%] h-full top-0 right-0  ease-in-out duration-500 bg-[#fff] text-base text-[#000000] font-sans font-medium">
+                        <div className="fixed md:fixed w-[50%] h-full top-0 right-0  ease-in-out duration-500 bg-[#fff] text-base text-[#000000] font-sans font-medium">
                             <div onClick={handleNav} className='block md:hidden'>
                                 {nav ? <AiOutlineClose size={20} /> : <AiOutlineMenu size={20} />}
                             </div>
@@ -72,14 +72,24 @@ const Header = ()=>{
                                 <NavLink to="/" className="ml-4">Home</NavLink>
                                 <NavLink to="/about-us" className="my-4">About</NavLink>
                                 <NavLink to="/service" className="my-4">Service</NavLink>
-                                <NavLink to="/location" className="my-4">Location</NavLink>
+                                <Menu>
+                                    <MenuButton as={Text} cursor="pointer" rightIcon={<ChevronDownIcon />}>
+                                        Location
+                                    </MenuButton>
+                                    <MenuList>
+                                        <MenuItem><NavLink to="/lagos">Lagos</NavLink></MenuItem>
+                                        <MenuItem><NavLink to="/abuja">Abuja</NavLink></MenuItem>
+                                        <MenuItem><NavLink to="/kano">Kano</NavLink></MenuItem>
+                                    </MenuList>
+                                </Menu>
                                 <NavLink to="/gallery" className="my-4">Gallery</NavLink>
                                 <NavLink to="/blog" className="my-4">Blog</NavLink>
                                 <NavLink to="/franchise" className="my-4">Frachise</NavLink>
                                 <motion.div 
+                                    className="flex justify-center items-center mx-4 bg-[#DE2223] text-[#ffffff] w-40 h-12 rounded-md"
                                     whileHover={{scale: 1.1}}
                                     whileTap={{scale: 0.9}}>
-                                    <NavLink to="/contact-us" className="mx-4 bg-[#DE2223] text-[#ffffff] w-40 h-12 rounded-md">Contact Us</NavLink>
+                                    <NavLink to="/contact-us">Contact Us</NavLink>
                                 </motion.div>
                             </div>
                         </div>

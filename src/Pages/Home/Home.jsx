@@ -40,11 +40,11 @@ const Home = ()=>{
                 {/* where entrepreneur go section */}
                 <div className="flex w-full justify-evenly">
                     <div className="basis-1/2">
-                        <div className="flex flex-col  bg-[#56923E] p-20 flex-wrap px-20">
-                            <h4 className="w-[517px] text-6xl font-bold text-[#fff] leading-[63px]">
+                        <div className="flex flex-col  bg-[#56923E] flex-wrap px-20 sm:px-16 py-20">
+                            <h4 className="w-[517px] sm:w-fit text-6xl font-bold text-[#fff] leading-[63px]">
                                 Where entrepreneurs go to grow
                             </h4>
-                            <p className="w-[413px] flex-wrap font-normal text-base text-[#ffffff] my-8">
+                            <p className="w-[413px] sm:w-fit flex-wrap font-normal text-base text-[#ffffff] my-8">
                                 We've redefined the landscape for emerging enterprises in Nigeria and 
                                 beyond, offering a unique blend of online and physical resource centers 
                                 designed to propel your business forward.
@@ -71,22 +71,28 @@ const Home = ()=>{
                 </div>
                  {/* where entrepreneur go section ended */}
                  {/* what are you looking for section */}
-                 <div className="flex flex-col md:items-center sm:items-centerave  h-fit p-16">
+                 <div className="flex flex-col md:items-center sm:items-center  h-fit p-16">
                     <h4 className="font-sans font-bold text-3xl text-[#252524]">
                         What are you looking for today?
                     </h4>
                     <div className="grid md:grid-cols-2 sm:grid-cols-1 grid-cols-4 gap-3 h-fit ">
-                        <motion.div whileHover={{ y: 50}} transition={{ duration: 0.5, ease: "easeOut" }} className="flex flex-col w-[220px] h-[fit] bg-[#DFFFD4] p-5 mt-5 rounded-lg">
+                        <motion.div 
+                            whileHover={{ y: 50}} 
+                            transition={{ duration: 0.5, ease: "easeOut" }} 
+                            className="flex flex-col w-[220px] sm:w-[270px] h-fit sm:h-[360px] bg-[#DFFFD4] p-5 sm:p-10 mt-5 sm:mt-5 rounded-lg">
                             <img src={images.table} alt="table" className="rounded-full" width="100px" height="100px" />
                             <div className="h-[113px]">
-                                <h4 className="font-xl font-semibold font-sans mt-3">Office Space</h4>
+                                <h4 className="font-xl font-semibold  font-sans mt-3">Office Space</h4>
                                 <p className="w-[200px] text-[#252524] flex-wrap leading-[24px] my-3">We have state of the art office spaces to cater for your needs</p>
                             </div>
                             <Link to="/book-space" className="flex justify-center items-center w-[108px] h-[45px] text-[#fff] font-medium bg-[#E8332C] p-3 w-28 h-11 rounded-md mt-5">
                                 Book now
                             </Link>
                         </motion.div>
-                        <motion.div whileHover={{ y: 50}} transition={{ duration: 0.5, ease: "easeOut" }} className="flex flex-col w-[220px] h-[fit] bg-[#FBF6AF] p-5 mt-5 rounded-lg">
+                        <motion.div 
+                            whileHover={{ y: 50}}
+                            transition={{ duration: 0.5, ease: "easeOut" }} 
+                            className="flex flex-col w-[220px] sm:w-[270px] h-fit sm:h-[370px] bg-[#FBF6AF] p-5 sm:p-10 mt-5 sm:mt-5 rounded-lg">
                             <img src={images.map} alt="table" className="rounded-full" width="100px" height="100px" />
                             <div className="h-fit">
                                 <h4 className="font-xl font-semibold font-sans mt-2">Virtual Office</h4>
@@ -98,7 +104,10 @@ const Home = ()=>{
                                 Book now
                             </Link>
                         </motion.div>
-                        <motion.div whileHover={{ y: 50}} transition={{ duration: 0.5, ease: "easeOut" }} className="flex flex-col w-[220px] h-[fit] bg-[#FFDEDD] p-5 mt-5 rounded-lg">
+                        <motion.div 
+                            whileHover={{ y: 50}} 
+                            transition={{ duration: 0.5, ease: "easeOut" }} 
+                            className="flex flex-col w-[220px] sm:w-[270px] h-fit sm:h-[370px] sm:h-[360px] bg-[#FFDEDD] p-5 sm:p-10 mt-5 sm:mt-5 rounded-lg">
                             <img src={images.tv} alt="table" className="rounded-full" width="100px" height="100px" />
                             <div className="h-[140px]">
                                 <h4 className="font-xl font-semibold font-sans mt-3">Professional Services</h4>
@@ -110,7 +119,10 @@ const Home = ()=>{
                                 Learn more
                             </Link>
                         </motion.div>
-                        <motion.div whileHover={{ y: 50}} transition={{ duration: 0.5, ease: "easeOut" }} className="flex flex-col w-[220px] h-[fit] bg-[#F0F0F0] p-5 mt-5 rounded-lg">
+                        <motion.div 
+                            whileHover={{ y: 50}} 
+                            transition={{ duration: 0.5, ease: "easeOut" }} 
+                            className="flex flex-col w-[220px] sm:w-[270px] h-fit sm:h-[360px] bg-[#F0F0F0] p-5 sm:p-10 mt-5 sm:mt-5 rounded-lg">
                             <img src={images.board} alt="table" className="rounded-full" width="100px" height="100px" />
                             <div className="h-[113px]">
                                 <h4 className="font-xl font-semibold font-sans mt-3">Training Programs</h4>
@@ -167,7 +179,7 @@ const Home = ()=>{
                             <h4 className="text-[#252524] font-sans font-bold text-4xl">
                                 Why Choose Us
                             </h4>
-                            <p className="text-base font-normal font-sans flex-wrap w-[510px]  mt-5 leading-[25px]">
+                            <p className="text-base font-normal font-sans flex-wrap w-[510px] sm:w-fit  mt-5 leading-[25px]">
                                 Enterprise Hubs has built a system to unleash collaboration, creativity 
                                 and inspiration from passionate entrepreneurs and business people, most 
                                 especially a community that promotes learning, collaboration and growth. 
@@ -188,13 +200,13 @@ const Home = ()=>{
                     <h4 className="text-[#252524] font-sans font-bold text-4xl mb-5">
                         Building & Area
                     </h4>
-                    <p className="text-base text-[#252524] font-normal font-sans flex-wrap w-[510px]">
+                    <p className="text-base text-[#252524] font-normal font-sans flex-wrap w-[510px] sm:w-fit">
                         Our private offices, dedicated desks, virtual offices and co-working
                     </p>
                     <p className="flex items-center text-[#252524] text-base font-normal font-sans justify-center flex-wrap w-[510px]">
                             spaces provide flexible solutions for passionate people.
                     </p>
-                    <div className="grid grid-cols-4 mt-16">
+                    <div className="grid grid-cols-4 sm:grid-cols-2 md:grid-cols-2 mt-16">
                         <motion.div
                             whileHover={{scale: 1.1}}
                             whileTap={{scale: 0.9}}
@@ -312,7 +324,7 @@ const Home = ()=>{
                   </div>
                   {/* building area end */}
                   {/* what our customer are saying */}
-                  <div className="flex flex-col py-10 px-20">
+                  <div className="flex flex-col  py-10 px-20 sm:px-0">
                     <div className="w-full">
                         <img src={images.Qotes} alt="quotes" className="pl-24 border-2 border-red-500" />
                     </div>
@@ -327,7 +339,7 @@ const Home = ()=>{
                             </div>
                         </div>
                         <div className="flex flex-col md:justify-start sm:justify-start font-sans">
-                            <p className="font-normal text-xl w-[520px]">
+                            <p className="font-normal text-xl w-[520px] sm:w-fit">
                                 Working from Enterprise Hubs has been amazing, the facilities and staff are great, 
                                 likewise the working space is comfortable with good ambience
                             </p>
@@ -367,7 +379,7 @@ const Home = ()=>{
                         We regularly publish business tips and corporate articles for your consumption
                     </p>
                     <div className="grid grid-cols-3 md:grid-cols-2 sm:grid-cols-1 min-[500px]:grid-cols-1 gap-2 bg-[#fff]">
-                        <div className="flex flex-col col-span-2 bg-[url('/src/assets/roomInterior.png')] h-[446px] w-[757px] rounded-xl p-10">
+                        <div className="flex flex-col col-span-2 sm:col-span-1 bg-[url('/src/assets/roomInterior.png')] h-[446px] w-[757px] sm:w-fit rounded-xl p-10">
                             {/* <div className="bg-[#000000] w-full h-full opacity-40 rounded-xl"> */}
                                 <p className="font-sans text-base text-[#81C167] font-bold">
                                     ARTICLE | 👨🏼‍🦰Barki Taiwo | 12 Jan 2024
