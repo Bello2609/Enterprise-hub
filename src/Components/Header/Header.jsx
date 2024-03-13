@@ -65,7 +65,7 @@ const Header = ()=>{
                 {
                     nav && (
                         <div className="fixed md:fixed w-[50%] h-full top-0 right-0  ease-in-out duration-500 bg-[#fff] text-base text-[#000000] font-sans font-medium">
-                            <div onClick={handleNav} className='block md:hidden'>
+                            <div onClick={handleNav} className='block md:hidden p-5'>
                                 {nav ? <AiOutlineClose size={20} /> : <AiOutlineMenu size={20} />}
                             </div>
                             <div className="flex flex-col items-center justify-between">

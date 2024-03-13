@@ -79,7 +79,7 @@ const Home = ()=>{
                         <motion.div 
                             whileHover={{ y: 50}} 
                             transition={{ duration: 0.5, ease: "easeOut" }} 
-                            className="flex flex-col w-[220px] sm:w-[270px] h-fit sm:h-[360px] bg-[#DFFFD4] p-5 sm:p-10 mt-5 sm:mt-5 rounded-lg">
+                            className="flex flex-col w-[220px] sm:w-[270px] h-[350px] sm:h-[360px] bg-[#DFFFD4] p-5 sm:p-10 mt-5 sm:mt-5 rounded-lg">
                             <img src={images.table} alt="table" className="rounded-full" width="100px" height="100px" />
                             <div className="h-[113px]">
                                 <h4 className="font-xl font-semibold  font-sans mt-3">Office Space</h4>
@@ -122,7 +122,7 @@ const Home = ()=>{
                         <motion.div 
                             whileHover={{ y: 50}} 
                             transition={{ duration: 0.5, ease: "easeOut" }} 
-                            className="flex flex-col w-[220px] sm:w-[270px] h-fit sm:h-[360px] bg-[#F0F0F0] p-5 sm:p-10 mt-5 sm:mt-5 rounded-lg">
+                            className="flex flex-col w-[220px] sm:w-[270px] h-[350px] sm:h-[360px] bg-[#F0F0F0] p-5 sm:p-10 mt-5 sm:mt-5 rounded-lg">
                             <img src={images.board} alt="table" className="rounded-full" width="100px" height="100px" />
                             <div className="h-[113px]">
                                 <h4 className="font-xl font-semibold font-sans mt-3">Training Programs</h4>
@@ -139,7 +139,7 @@ const Home = ()=>{
                   {/* what are you looking for section end*/}
                   {/* a system that is redefining */}
                   <div className="bg-[url('/src/assets/interior.png')] w-full bg-no-repeat bg-center h-[506px] flex  items-end">
-                    <div className="flex flex-col bg-[#C81F20] h-[435px] w-[633px] lg:w-[633px] sm:w-full ml-16 sm:ml-0">
+                    <div className="flex flex-col bg-[#C81F20] h-[435px] w-[633px] lg:w-[633px] sm:w-full md:w-full ml-16 sm:ml-0">
                         <div className="flex w-12 h-12 justify-end w-[633px]">
                             <div className="flex bg-[#E1D634] w-12 h-12">
                                 
@@ -168,9 +168,9 @@ const Home = ()=>{
                   </div>
                   {/* a system that is redefining end*/}
                   {/* why choose us */}
-                  <div className="flex lg:flex-row md:flex-col sm:flex-col min-[400px]:flex-col justify-between  w-full h-[400px] sm:h-fit">
+                  <div className="flex lg:flex-row  sm:flex-col justify-between  w-full md:w-fit h-[400px] sm:h-fit ">
                     <div className="bg-[#EFE553] ">
-                        <div className="flex items-end justify-center md:justify-center sm:justify-center w-[485px] md:w-[360px] h-[400px] md:w-[359px]">
+                        <div className="flex items-end justify-center md:justify-center sm:justify-center w-[485px] h-[400px] md:w-[359px]">
                             <img src={images.maskgroup} alt="masked group"  width="186px" height="202px"/>
                         </div>
                     </div>
@@ -179,7 +179,7 @@ const Home = ()=>{
                             <h4 className="text-[#252524] font-sans font-bold text-4xl">
                                 Why Choose Us
                             </h4>
-                            <p className="text-base font-normal font-sans flex-wrap w-[510px] sm:w-fit  mt-5 leading-[25px]">
+                            <p className="text-base font-normal font-sans flex-wrap w-[510px] sm:w-fit md:w-fit  mt-5 leading-[25px]">
                                 Enterprise Hubs has built a system to unleash collaboration, creativity 
                                 and inspiration from passionate entrepreneurs and business people, most 
                                 especially a community that promotes learning, collaboration and growth. 
