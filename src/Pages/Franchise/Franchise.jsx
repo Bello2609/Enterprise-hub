@@ -6,7 +6,7 @@ import { motion } from "framer-motion";
 const Franchise = ()=>{
     return(
         <>
-            <div className="flex justify-between px-20 my-16">
+            <div className="flex md:flex-col sm:flex-col justify-between px-20 my-16">
                 <div className="flex flex-col ">
                     <h4 className="flex-wrap w-[517px] text-6xl font-bold text-[#252524] mb-10">
                         Our Franchise Program

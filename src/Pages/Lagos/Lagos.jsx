@@ -47,7 +47,7 @@ const Lagos = ()=>{
             <div className="flex flex-col">
                 <div className="flex w-full h-[388px] bg-[#72B955]"></div>
                 <div className="flex flex-col items-center my-10">
-                    <div className="flex items-center justify-between my-10">
+                    <div className="flex md:flex-col sm:flex-col items-center justify-between my-10">
                         <div className="flex flex-col">
                             <h4 className="flex-wrap w-[517px] text-5xl font-bold text-[#252524]">
                                 Enterprise Hubs Victoria Island, Lagos
@@ -61,7 +61,7 @@ const Lagos = ()=>{
                         </div>
                         <img src={images.started1} alt="female picture" className="w-[458px] h-[375px]" />
                     </div>
-                    <div className="flex  items-center justify-between">
+                    <div className="flex md:flex-col sm:flex-col items-center justify-between">
                         <div>
                             <img src={images.started1} alt="female picture" className="w-[458px] h-[375px]" />
                         </div>
@@ -92,7 +92,7 @@ const Lagos = ()=>{
                             Book our offices
                         </h4>
                     </div>
-                        <div className="grid grid-cols-4 gap-3 my-10">
+                        <div className="grid grid-cols-4 md:grid-cols-2 sm:grid-cols-1 gap-3 my-10">
                             {
                                 officeData.map(data=>{
                                     return(

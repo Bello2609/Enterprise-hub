@@ -28,22 +28,22 @@ const Header = ()=>{
                     <img src={Images.Enterprise} alt="enterprise" width="125px" height="44px" />
                 </div>
                 <div className="flex md:hidden sm:hidden items-center text-base text-[#000000] font-sans font-medium">
-                        <NavLink to="/" className="ml-4">Home</NavLink>
-                        <NavLink to="/about-us" className="ml-4">About</NavLink>
-                        <NavLink to="/service" className="mx-4">Service</NavLink>
+                        <NavLink to="/" className="ml-4">HOME</NavLink>
+                        <NavLink to="/about-us" className="ml-4">ABOUT</NavLink>
+                        <NavLink to="/service" className="mx-4">SERVICES</NavLink>
                         <Menu>
                             <MenuButton as={Text} cursor="pointer" rightIcon={<ChevronDownIcon />}>
-                                Location
+                                LOCATION
                             </MenuButton>
                             <MenuList>
-                                <MenuItem><NavLink to="/lagos">Lagos</NavLink></MenuItem>
-                                <MenuItem><NavLink to="/abuja">Abuja</NavLink></MenuItem>
-                                <MenuItem><NavLink to="/kano">Kano</NavLink></MenuItem>
+                                <MenuItem><NavLink to="/lagos">LAGOS</NavLink></MenuItem>
+                                <MenuItem><NavLink to="/abuja">ABUJA</NavLink></MenuItem>
+                                <MenuItem><NavLink to="/kano">KANO</NavLink></MenuItem>
                             </MenuList>
                         </Menu>
-                        <NavLink to="/gallery" className="ml-4">Gallery</NavLink>
-                        <NavLink to="/blog" className="ml-4">Blog</NavLink>
-                        <NavLink to="/franchise" className="ml-4">Frachise</NavLink>
+                        <NavLink to="/gallery" className="ml-4">GALLERY</NavLink>
+                        <NavLink to="/blog" className="ml-4">BLOG</NavLink>
+                        <NavLink to="/franchise" className="ml-4">FRANSHISE</NavLink>
                         {/* <NavLink to="/contact-us" className="flex justify-center items-center mx-4 bg-[#DE2223] text-[#ffffff] w-40 h-12 rounded-md">
                             <motion.div
                                 whileHover={{scale: 1.1}}
