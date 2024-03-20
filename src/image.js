@@ -1,4 +1,5 @@
 import Enterprise from "./assets/logo/ENTERPRISE.png";
+import Enterprisemob from "./assets/logo/entreprisemob.svg";
 import bg1 from "./assets/bg1.png";
 import bg2 from "./assets/bg2.png";
 import bg3 from "./assets/bg3.png";
@@ -52,6 +53,7 @@ import checkred from "./assets/checkred.png";
 
 export {
     Enterprise,
+    Enterprisemob,
     bg1,
     bg2,
     bg3,

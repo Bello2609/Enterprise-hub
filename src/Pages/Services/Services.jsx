@@ -23,25 +23,25 @@ const Services = ()=>{
                         
                     {/* </div> */}
                 </div>
-                <div className="flex justify-evenly md:justify-center sm:justify-center md:items-center sm:items-center my-10 w-full px-20">
-                    <div className="grid md:grid-cols-2 sm:grid-cols-1 grid-cols-4 gap-24 h-fit w-full md:px-10 sm:px-10">
+                <div className="flex justify-evenly md:flex-col sm:flex-col  md:justify-center sm:justify-center md:items-center sm:items-center my-10 w-full px-20">
+                    <div className="grid md:grid-cols-2 sm:grid-cols-1 grid-cols-4 gap-3 h-fit w-full">
                         <div
-                            className="flex flex-col w-[220px] sm:w-[270px] h-[350px] bg-[#DFFFD4] p-5 mt-5 rounded-lg">
+                            className="flex flex-col w-[280px] sm:w-[300px] h-[350px] bg-[#DFFFD4] p-5 mt-5 rounded-lg">
                             <img src={images.table} alt="table" className="rounded-full" width="100px" height="100px" />
                             <div className="h-fit">
                                 <h4 className="font-xl font-semibold font-sans mt-3">Office Space</h4>
-                                <p className="w-[200px] text-[#252524] flex-wrap leading-[24px] my-3">We have state of the art office spaces to cater for your needs</p>
+                                <p className="w-[220px] text-[#252524] flex-wrap leading-[24px] my-3">We have state of the art office spaces to cater for your needs</p>
                             </div>
-                            <Link to="/book-space" className="flex justify-center items-center w-[108px] h-[45px] text-[#fff] font-medium bg-[#E8332C] p-3 w-28 h-11 rounded-md mt-5">
+                            <Link to="/book-space" className="flex justify-center items-center w-[108px] h-[45px] text-[#fff] font-medium bg-[#E8332C] p-3 w-28 h-11 rounded-md mt-16">
                                 Book now
                             </Link>
                         </div>
                         <div
-                            className="flex flex-col w-[220px] sm:w-[270px] h-[350px] bg-[#FBF6AF] p-5 mt-5 rounded-lg">
+                            className="flex flex-col w-[280px] sm:w-[300px] h-[350px] bg-[#FBF6AF] p-5 mt-5 rounded-lg">
                             <img src={images.map} alt="table" className="rounded-full" width="100px" height="100px" />
                             <div className="h-fit">
                                 <h4 className="font-xl font-semibold font-sans mt-3">Virtual Office</h4>
-                                <p className="w-[200px] h-[72px]  text-[#252524] flex-wrap my-5">
+                                <p className="w-[220px] h-[72px]  text-[#252524] flex-wrap my-5">
                                     Take control of your business,by having a business address in the heart of Lagos Nigeria. 
                                 </p>
                             </div>
@@ -50,11 +50,11 @@ const Services = ()=>{
                             </Link>
                         </div>
                         <div
-                            className="flex flex-col w-[220px] sm:w-[270px] h-[350px] bg-[#FFDEDD] p-5 mt-5 rounded-lg">
+                            className="flex flex-col w-[280px] sm:w-[300px] h-[350px] bg-[#FFDEDD] p-5 mt-5 rounded-lg">
                             <img src={images.tv} alt="table" className="rounded-full" width="100px" height="100px" />
                             <div className="h-fit">
                                 <h4 className="font-xl font-semibold font-sans mt-3">Professional Services</h4>
-                                <p className="w-[200px] text-[#252524] flex-wrap my-5">
+                                <p className="w-[220px] text-[#252524] flex-wrap my-5">
                                     We support entrepreneurs, by offering professional services at a reduced cost
                                 </p>
                             </div>
@@ -63,15 +63,15 @@ const Services = ()=>{
                             </Link>
                         </div>
                         <div
-                            className="flex flex-col w-[220px] sm:w-[270px] h-[350px] bg-[#F0F0F0] p-5 mt-5 rounded-lg">
+                            className="flex flex-col w-[280px] sm:w-[300px] h-[350px] bg-[#F0F0F0] p-5 mt-5 rounded-lg">
                             <img src={images.board} alt="table" className="rounded-full" width="100px" height="100px" />
                             <div className="h-fit">
                                 <h4 className="font-xl font-semibold font-sans mt-3">Training Programs</h4>
-                                <p className="w-[200px] text-[#252524] flex-wrap my-3">
+                                <p className="w-[220px] text-[#252524] flex-wrap my-3">
                                     Get involve, and participate in our training programs.
                                 </p>
                             </div>
-                            <Link className="flex justify-center items-center w-[108px] h-[45px] text-[#fff] font-medium bg-[#E8332C] p-3 w-28 h-11 rounded-md mt-3">
+                            <Link className="flex justify-center items-center w-[108px] h-[45px] text-[#fff] font-medium bg-[#E8332C] p-3 w-28 h-11 rounded-md mt-16 mb-2">
                                 Learn more
                             </Link>
                         </div>
