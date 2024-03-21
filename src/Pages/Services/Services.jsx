@@ -7,7 +7,7 @@ const Services = ()=>{
     return(
         <>
             <div className="flex flex-col w-full">
-                <div className="flex justify-between items-start md:flex-col sm:flex-col px-20 my-10">
+                <div className="flex justify-between items-start md:flex-col sm:flex-col px-20 sm:px-10 my-10">
                     {/* <div className="flex items-start"> */}
                         
                             <h4 className="flex-wrap w-[517px] md:w-fit sm:w-fit text-6xl font-bold text-[#252524]">
@@ -23,7 +23,7 @@ const Services = ()=>{
                         
                     {/* </div> */}
                 </div>
-                <div className="flex justify-evenly md:flex-col sm:flex-col  md:justify-center sm:justify-center md:items-center sm:items-center my-10 w-full px-20">
+                <div className="flex justify-evenly md:flex-col sm:flex-col  md:justify-center sm:justify-center md:items-center sm:items-center my-10 w-full px-20 sm:px-10">
                     <div className="grid md:grid-cols-2 sm:grid-cols-1 grid-cols-4 gap-3 h-fit w-full">
                         <div
                             className="flex flex-col w-[280px] sm:w-[300px] h-[350px] bg-[#DFFFD4] p-5 mt-5 rounded-lg">

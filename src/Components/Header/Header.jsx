@@ -4,6 +4,8 @@ import { NavLink, Link } from "react-router-dom";
 import { AiOutlineClose, AiOutlineMenu, AiFillInstagram } from 'react-icons/ai';
 import { ChevronDownIcon } from "@chakra-ui/icons";
 import { FaLinkedin, FaFacebookSquare } from "react-icons/fa";
+import { GoArrowUpRight } from "react-icons/go";
+// import { IoIosArrowDown } from "react-icons/io";
 import { motion } from "framer-motion";
 import {
     Menu,
@@ -12,6 +14,7 @@ import {
     MenuItem,
     Text
   } from '@chakra-ui/react';
+  import { IoIosArrowDown } from "react-icons/io";
 
 const Header = ()=>{
     const [ nav, setNav ] = useState(false);
@@ -69,25 +72,25 @@ const Header = ()=>{
                                     {nav ? <AiOutlineClose size={20} /> : <AiOutlineMenu size={20} />}
                                 </div>
                             </div>
-                            <div className="flex flex-col mx-10 border border-red-500">
+                            <div className="flex flex-col mx-10">
                                 <div className="flex flex-col justify-between">
-                                    <NavLink to="/" className="my-4 text-xl font-medium">Home</NavLink>
-                                    <NavLink to="/about-us" className="my-4 text-xl font-medium">About</NavLink>
-                                    <NavLink to="/service" className="my-4 text-xl font-medium">Service</NavLink>
+                                    <NavLink to="/" className="flex items-center justify-between my-4 text-xl font-medium">Home<span><GoArrowUpRight /></span></NavLink>
+                                    <NavLink to="/about-us" className="flex items-center justify-between my-4 text-xl font-medium">About<span><GoArrowUpRight /></span></NavLink>
+                                    <NavLink to="/service" className="flex items-center justify-between my-4 text-xl font-medium">Service<span><GoArrowUpRight /></span></NavLink>
                                     <Menu className="my-4">
-                                        <MenuButton as={Text} className="my-4 text-xl font-medium" cursor="pointer" rightIcon={<ChevronDownIcon />}>
-                                            Location
+                                        <MenuButton display="flex" as={Text} className="flex items-center justify-between my-4 text-xl font-medium w-[100%]" cursor="pointer" rightIcon={<ChevronDownIcon />}>
+                                            <p className="flex items-center justify-between">Location <span><IoIosArrowDown /></span></p>
                                         </MenuButton>
-                                        <MenuList className="w-full">
-                                            <MenuItem><NavLink to="/lagos" className="my-4 text-xl font-medium">Lagos</NavLink></MenuItem>
-                                            <MenuItem><NavLink to="/abuja" className="my-4 text-xl font-medium">Abuja</NavLink></MenuItem>
-                                            <MenuItem><NavLink to="/kano" className="my-4 text-xl font-medium">Kano</NavLink></MenuItem>
+                                        <MenuList minW="200px"> 
+                                            <MenuItem minW="350px"><NavLink to="/lagos" className="my-4 text-xl font-medium w-[200px]">Lagos</NavLink></MenuItem>
+                                            <MenuItem minW="350px"><NavLink to="/abuja" className="my-4 text-xl font-medium w-[200px]">Abuja</NavLink></MenuItem>
+                                            <MenuItem minW="350px"><NavLink to="/kano" className="my-4 text-xl font-medium w-[200px]">Kano</NavLink></MenuItem>
                                         </MenuList>
                                     </Menu>
-                                    <NavLink to="/gallery" className="my-4 text-xl font-medium">Gallery</NavLink>
-                                    <NavLink to="/blog" className="my-4 text-xl font-medium">Blog</NavLink>
-                                    <NavLink to="/franchise" className="my-4 text-xl font-medium">Frachise</NavLink>
-                                    <motion.div 
+                                    <NavLink to="/gallery" className="flex items-center justify-between my-4 text-xl font-medium">Gallery<span><GoArrowUpRight /></span></NavLink>
+                                    <NavLink to="/blog" className="flex items-center justify-between my-4 text-xl font-medium">Blog<span><GoArrowUpRight /></span></NavLink>
+                                    <NavLink to="/franchise" className="flex items-center justify-between my-4 text-xl font-medium">Frachise<span><GoArrowUpRight /></span></NavLink>
+                                    <motion.div
                                         className="flex justify-center items-center mt-10 bg-[#DE2223] text-[#ffffff] w-[322px] h-12 rounded-md"
                                         whileHover={{scale: 1.1}}
                                         whileTap={{scale: 0.9}}>
