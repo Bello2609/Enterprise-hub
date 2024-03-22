@@ -1,4 +1,4 @@
-import Enterprise from "./assets/logo/ENTERPRISE.png";
+import Enterprise from "./assets/logo/ENTERPRISE.svg";
 import Enterprisemob from "./assets/logo/entreprisemob.svg";
 import bg1 from "./assets/bg1.png";
 import bg2 from "./assets/bg2.png";

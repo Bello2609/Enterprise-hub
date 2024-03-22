@@ -24,16 +24,16 @@ const Header = ()=>{
   };
     return (
         <>
-            <div className="flex flex-row justify-between h-20 px-20 w-full items-center">
+            <div className="flex flex-row justify-between h-20 px-20 sm:px-10 w-full items-center">
                 <div>
-                    <img src={Images.Enterprise} alt="enterprise" width="125px" height="44px" />
+                    <img src={Images.Enterprise} alt="enterprise" className="w-[125px] h-[44px]" />
                 </div>
                 <div className="flex md:hidden sm:hidden items-center text-base text-[#000000] font-sans font-medium">
                         <NavLink to="/" className="ml-4">HOME</NavLink>
                         <NavLink to="/about-us" className="ml-4">ABOUT</NavLink>
                         <NavLink to="/service" className="mx-4">SERVICES</NavLink>
                         <Menu>
-                            <MenuButton as={Text} cursor="pointer" rightIcon={<ChevronDownIcon />}>
+                            <MenuButton as={Text} cursor="pointer">
                                 LOCATION
                             </MenuButton>
                             <MenuList>
@@ -44,7 +44,7 @@ const Header = ()=>{
                         </Menu>
                         <NavLink to="/gallery" className="ml-4">GALLERY</NavLink>
                         <NavLink to="/blog" className="ml-4">BLOG</NavLink>
-                        <NavLink to="/franchise" className="ml-4">FRANSHISE</NavLink>
+                        <NavLink to="/franchise" className="ml-4">FRANCHISE</NavLink>
                         {/* <NavLink to="/contact-us" className="flex justify-center items-center mx-4 bg-[#DE2223] text-[#ffffff] w-40 h-12 rounded-md">
                             <motion.div
                                 whileHover={{scale: 1.1}}

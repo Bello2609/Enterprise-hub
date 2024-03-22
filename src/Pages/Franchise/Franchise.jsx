@@ -6,15 +6,15 @@ import { motion } from "framer-motion";
 const Franchise = ()=>{
     return(
         <>
-            <div className="flex md:flex-col sm:flex-col justify-between px-20 my-16">
+            <div className="flex md:flex-col sm:flex-col justify-between px-20 sm:px-10 my-16">
                 <div className="flex flex-col ">
-                    <h4 className="flex-wrap w-[517px] text-6xl font-bold text-[#252524] mb-10">
+                    <h4 className="flex-wrap w-[517px] sm:w-fit text-6xl font-bold text-[#252524] mb-10">
                         Our Franchise Program
                     </h4>
                     <img src={images.pro7} alt="professional" className="w-[423px] h-[291px]" />
                 </div>
                 <div className="flex flex-col items-start ">
-                    <p className="w-[413px] flex-wrap font-normal text-base text-[#252524] my-4 leading-[28px]">
+                    <p className="w-[413px] sm:w-fit flex-wrap font-normal text-base text-[#252524] my-4 leading-[28px]">
                         Enterprise Hubs is an integrated network of online and physical resource centers 
                         for emerging enterprises in Africa's growth clusters.A platform for promotion of 
                         emerging businesses across Africa, offering shared services, virtual offices, 

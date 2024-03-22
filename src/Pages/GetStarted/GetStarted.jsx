@@ -9,9 +9,9 @@ const GetStarted = ()=>{
     return(
         <>
             <div className="flex flex-col items-center my-20">
-                <div className="flex justify-between">
+                <div className="flex sm:flex-col justify-between">
                     <div className="flex flex-col">
-                        <h4 className="flex-wrap w-[517px] text-5xl font-bold text-[#252524]">
+                        <h4 className="flex-wrap w-[517px] sm:w-fit text-5xl font-bold text-[#252524]">
                             We've got the perfect space for you
                         </h4>
                         <p className="w-[413px] flex-wrap font-normal text-base text-[#252524] my-4">
@@ -26,7 +26,7 @@ const GetStarted = ()=>{
                     </div>
                     <img src={images.started1} alt="female picture" className="w-[458px] h-[375px]" />
                 </div>
-                <div className="flex justify-between my-10">
+                <div className="flex sm:flex-col justify-between my-10">
                     <img src={images.started2} alt="female picture" className="w-[458px] h-[375px]" />
                     <div className="flex flex-col ml-20">
                         <h4 className="flex-wrap w-[517px] text-5xl font-bold text-[#252524]">
@@ -41,7 +41,7 @@ const GetStarted = ()=>{
                          </Link>
                     </div>
                 </div>
-                <div className="flex justify-between">
+                <div className="flex sm:flex-col justify-between">
                     <div className="flex flex-col jusitify-start">
                         <h4 className="flex-wrap w-[517px] text-5xl font-bold text-[#252524]">
                             Where entrepreneurs go to grow

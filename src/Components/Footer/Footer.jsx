@@ -9,7 +9,7 @@ const Footer = ()=>{
             <div className="flex flex-col w-screen h-fit md:h-fit sm:h-fit bg-[#FFEBEA] justify-evenly overflow-x-hidden py-5">
                 <div className="flex lg:flex-row md:flex-col sm:flex-col min-[500px]:flex-col justify-evenly md:items-start sm:items-start md:ml-10 sm:ml-10 mt-10">
                     <div>
-                        <img src={images.Enterprise} alt="enterprise" />
+                        <img src={images.Enterprise} alt="enterprise" className="w-[125px] h-[44px]" />
                         <p className="w-72 flex-wrap text-[#616161] font-sans text-base my-3">
                             Enterprise Hubs owned by Pedestal Africa Limited is an integrated network 
                             of online and physical resource centres for emerging enterprises in 
@@ -21,7 +21,7 @@ const Footer = ()=>{
                             <p><FaFacebookSquare /></p>
                         </div>
                     </div>
-                    <div className="flex flex-col">
+                    <div className="flex flex-col sm:mt-5">
                         <h4 className="text-base font-sans text-[#DE2223] font-bold">Visit Our Office</h4>
                         <div className="flex flex-col mt-3">
                             <h4 className="text-base font-sans text-[#252524] font-medium">LAGOS</h4>
@@ -43,7 +43,7 @@ const Footer = ()=>{
                             </p>
                         </div>
                     </div>
-                    <div className="flex flex-col">
+                    <div className="flex flex-col sm:mt-5">
                         <h4 className="text-base font-sans text-[#DE2223] font-bold">CONTACT US</h4>
                         <div className="flex flex-col mt-3 font-normal">
                             <p className="flex-wrap w-[218px] text-base text-[#252524]">
@@ -60,7 +60,7 @@ const Footer = ()=>{
                             </p>
                         </div>
                     </div>
-                    <div className="flex flex-col">
+                    <div className="flex flex-col sm:mt-5">
                         <h4 className="text-base font-sans text-[#DE2223] font-bold">HELP AND SUPPORT</h4>
                         <div className="flex flex-col mt-3 font-normal">
                             <p className="flex-wrap w-[218px] text-base text-[#252524]">
