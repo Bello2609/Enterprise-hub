@@ -25,6 +25,7 @@ const Abuja = lazy(()=> import("./Pages/Abuja/Abuja.jsx"));
 const ContactUs = lazy(()=> import("./Pages/ContactUs/ContactUs.jsx"));
 const AddBlog = lazy(()=> import("./Pages/AddBlog/AddBlog.jsx"));
 const AddTestimonials = lazy(()=> import("./Pages/AddTestimonials/AddTestimonials.jsx"));
+const Gallery = lazy(()=>import("./Pages/Gallery/Gallery.jsx"));
 
 
 const Router = () => {
@@ -237,6 +238,17 @@ const Router = () => {
                   <Suspense>
                      <Layout>
                         <GetStarted />
+                     </Layout>
+                  </Suspense>
+               }
+            />
+             <Route
+               path="/gallery"
+               exact
+               element={
+                  <Suspense>
+                     <Layout>
+                        <Gallery />
                      </Layout>
                   </Suspense>
                }

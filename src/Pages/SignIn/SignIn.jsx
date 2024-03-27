@@ -7,11 +7,11 @@ import * as images from "../../image";
 
 const SignIn = () => {
    return (
-      <div className="w-[569px] flex flex-col">
+      <div className="w-[569px] sm:w-screen sm:px-5 flex flex-col my-10">
          <div className="flex flex-col text-center items-center">
             {/* <img /> */}
             <img src={images.Enterprise} width="145px" height="90px" alt="enterprise" />
-            <h3 className="font-bold text-3xl text-[#56923E]">Welcome back!</h3>
+            <h3 className="font-bold text-3xl text-[#56923E] my-5">Welcome back!</h3>
          </div>
          <div className="flex flex-col gap-4">
             <FormInput

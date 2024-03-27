@@ -15,9 +15,9 @@ const Footer = ()=>{
                             of online and physical resource centres for emerging enterprises in 
                             Nigeria and beyondcd
                         </p>
-                        <div className="flex text-[#DE2223] text-3xl">
+                        <div className="flex text-[#DE2223] text-3xl">`
                             <p><FaLinkedin /></p>
-                            <p><AiFillInstagram /></p>
+                            <p className="sm:mx-2"><AiFillInstagram /></p>
                             <p><FaFacebookSquare /></p>
                         </div>
                     </div>
@@ -30,13 +30,13 @@ const Footer = ()=>{
                                 Island, Lagos.
                             </p>
                         </div>
-                        <div className="flex flex-col mt-10">
+                        <div className="flex flex-col my-8">
                             <h4 className="text-base font-sans text-[#252524] font-medium">KANO</h4>
                             <p className="flex-wrap w-[218px] text-base text-[#252524]">
                                  14, Ibrahim Dabo Road, Tarauni G.R.A, Kano State.
                             </p>
                         </div>
-                        <div className="flex flex-col mt-3">
+                        <div className="flex flex-col">
                             <h4 className="text-base font-sans text-[#252524] font-medium">ABUJA</h4>
                             <p className="flex-wrap w-[218px] text-base text-[#252524]">
                                 Ground Floor, Wells Carlton Hotel. 8 Gado Nasko Street, Asokoro, Abuja

@@ -8,10 +8,10 @@ const AboutUs  = ()=>{
         <>
             <div className="flex flex-col w-full">
                 <div className="flex md:flex-col sm:flex-col justify-between md:items-center sm:items-center px-20 items-start my-10">
-                    <h4 className="flex-wrap w-[517px] sm:w-fit text-5xl font-bold text-[#252524] text-wrap">
+                    <h4 className="flex-wrap w-[517px] sm:w-[320px] text-5xl font-bold text-[#252524] text-wrap">
                         A system that is redefining the way we <h4 className="text-[#56923E]">live, work and learn.</h4>
                     </h4>
-                    <p className="w-[413px] md:mt-3 sm:mt-3 flex-wrap font-normal text-base text-[#252524] leading-[28px]">
+                    <p className="w-[413px] sm:w-[320px] md:mt-3 sm:mt-3 flex-wrap font-normal text-base text-[#252524] leading-[28px]">
                         Enterprise Hubs owned by Pedestal Africa Limited is an integrated network of 
                         online and physical resource centres for emerging enterprises in Nigeria and 
                         beyond. A platform for promotion of businesses across Africa, offering shared 
@@ -30,7 +30,7 @@ const AboutUs  = ()=>{
                         <img src={images.frame38} alt="frame" className="w-[359px] h-[337px] mt-10" />
                     </div>
                     <div className="flex flex-col w-fit justify-between items-center">
-                        <img src={images.Group39534} className="w-[519px] h-[312px] mt-[-100px] md:mt-0 sm:mt-0" alt="group" />
+                        <img src={images.Group39534} className="w-[519px] sm:w-fit h-[312px] sm:h-fit mt-[-100px] md:mt-0 sm:mt-0 sm:px-8" alt="group" />
                         <img src={images.Maskgroup1} alt="mask group" />
                     </div>
 
@@ -39,7 +39,7 @@ const AboutUs  = ()=>{
                     <div className="w-full">
                         <img src={images.Qotes} alt="quotes" className="pl-24 border-2 border-red-500" />
                     </div>
-                    <div className="flex md:flex-col sm:flex-col justify-evenly md:ml-10 sm:ml-10">
+                    <div className="flex md:flex-col sm:flex-col justify-evenly md:ml-10 sm:mx-10">
                         <div className="flex flex-col mt-10">
                             <p className="font-sans font-bold text-xl w-[216px] flex-wrap">
                                 What our customers are saying
@@ -50,7 +50,7 @@ const AboutUs  = ()=>{
                             </div>
                         </div>
                         <div className="flex flex-col md:justify-start sm:justify-start font-sans">
-                            <p className="font-normal text-xl w-[520px] sm:w-fit">
+                            <p className="font-normal text-xl w-[520px] sm:w-fit sm:mt-5">
                                 Working from Enterprise Hubs has been amazing, the facilities and staff are great, 
                                 likewise the working space is comfortable with good ambience
                             </p>

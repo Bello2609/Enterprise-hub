@@ -41,7 +41,7 @@ const Accorddion = ()=>{
                                     <AccordionIcon />
                                 </AccordionButton>
                                 </h2>
-                                <AccordionPanel>
+                                <AccordionPanel className="sm:w-[350px]">
                                     {data.answer}
                                 </AccordionPanel>
                             </AccordionItem>

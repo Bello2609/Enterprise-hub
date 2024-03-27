@@ -27,6 +27,7 @@ import Qotes from "./assets/Qotes.png";
 import roomInterior from "./assets/roomInterior.png";
 import manbag from "./assets/manbag.png";
 import album from "./assets/album.png";
+import album2 from "./assets/album2.png";
 import frame38 from "./assets/Frame38.png";
 import Maskgroup1 from "./assets/Maskgroup1.png";
 import Group39534 from "./assets/Group39534.png";
@@ -41,10 +42,14 @@ import pro7 from "./assets/professional/pro7.png"
 import started1 from "./assets/started1.png";
 import started2 from "./assets/started2.png";
 import started3 from "./assets/started3.png";
+import sign from "./assets/sign.png";
 import book from "./assets/book.png";
 import office1 from "./assets/office/office1.png";
 import office2 from "./assets/office/office2.png";
 import office3 from "./assets/office/office3.png";
+import lg1 from "./assets/office/lg1.png";
+import lg2 from "./assets/office/lg2.png";
+import lg3 from "./assets/office/lg3.png";
 import map1 from "./assets/map1.png";
 import modalimg from "./assets/modalimg.png";
 import check from "./assets/check.png";
@@ -81,6 +86,7 @@ export {
     roomInterior,
     manbag,
     album,
+    album2,
     frame38,
     Maskgroup1,
     Group39534,
@@ -102,5 +108,8 @@ export {
     map1,
     modalimg,
     check,
-    checkred
+    checkred,
+    lg1,
+    lg2,
+    lg3
 }

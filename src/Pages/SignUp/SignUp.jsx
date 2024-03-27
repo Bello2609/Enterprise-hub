@@ -6,7 +6,7 @@ import * as images from "../../image"
 
 const SignUp = () => {
    return (
-      <div className="w-[569px] flex flex-col">
+      <div className="w-[569px] sm:w-screen sm:px-5 flex flex-col my-10">
          <div className="flex flex-col items-center">
             {/* <img /> */}
             <img src={images.Enterprise} alt="enterprise" />
@@ -66,7 +66,7 @@ const SignUp = () => {
             <p className="my-3">
                {"Already have an account? "}
                <span>
-                  <Link className="text-[#56923E] underline">Sign in</Link>
+                  <Link to="/sign-in" className="text-[#56923E] underline">Sign in</Link>
                </span>
             </p>
          </div>

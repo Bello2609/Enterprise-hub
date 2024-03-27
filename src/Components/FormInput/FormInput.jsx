@@ -11,14 +11,14 @@ const FormInput = ({
    value,
 }) => {
    return (
-      <div className="flex flex-col gap-4 mt-3 w-full">
-         <div className="flex">
+      <div className="flex flex-col gap-4 mt-3 w-full sm:w-[390px] sm:px-5">
+         <div className="flex flex-auto">
             <label className="font-medium text-[#252524]">{label}</label>
          </div>
 
-         <div className="border-solid border border-[#DFDFDF] rounded-lg px-2 h-11">
+         <div className="flex-auto border-solid border border-[#DFDFDF] rounded-lg px-2 h-11">
             <input
-               className="w-full h-full border-0 outline-0"
+               className="w-full sm:w-fit h-full border-0 outline-0"
                placeholder={placeholder}
                type={type}
                {...(register && {

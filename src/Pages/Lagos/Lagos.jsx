@@ -45,7 +45,7 @@ const Lagos = ()=>{
     return(
         <>
             <div className="flex flex-col">
-                <div className="flex w-full h-[388px] bg-[#72B955]"></div>
+                <div className="flex w-full h-[388px] bg-[url('/src/assets/office/lg1.png')]"></div>
                 <div className="flex flex-col items-center my-10">
                     <div className="flex md:flex-col sm:flex-col items-center justify-between my-10">
                         <div className="flex flex-col">
@@ -59,11 +59,11 @@ const Lagos = ()=>{
                                 programs and resources.
                             </p>
                         </div>
-                        <img src={images.started1} alt="female picture" className="w-[458px] h-[375px]" />
+                        <img src={images.lg2} alt="female picture" className="w-[458px] h-[375px]" />
                     </div>
                     <div className="flex md:flex-col sm:flex-col items-center justify-between">
                         <div>
-                            <img src={images.started1} alt="female picture" className="w-[458px] h-[375px]" />
+                            <img src={images.lg3} alt="female picture" className="w-[458px] h-[375px]" />
                         </div>
                         <div className="flex flex-col ml-16 leading-[25px]">
                             <p className="w-[413px] flex-wrap font-normal text-base text-[#252524] my-4">

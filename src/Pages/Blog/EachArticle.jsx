@@ -8,20 +8,20 @@ import { FaXTwitter } from "react-icons/fa6";
 const EachArticle = ()=>{
     return(
         <>
-            <div className="flex justify-evenly bg-[#F3F9F1] py-16">
+            <div className="flex sm:flex-col justify-evenly bg-[#F3F9F1] py-16">
                 <div className="flex flex-col items-center">
-                    <div className="flex justify-evenly px-20 w-full">
-                        <div className="flex flex-col items-start w-full">
-                            <p className="w-[413px] flex-wrap font-normal text-base text-[#81C167] my-5">
+                    <div className="flex justify-evenly px-20 sm:px-10 w-full">
+                        <div className="flex flex-col items-start sm:items-center w-full sm:w-fit">
+                            <p className="w-[413px] sm:w-fit flex-wrap font-normal text-base text-[#81C167] my-5">
                                 NEWS | 👨🏼‍🦰Barki Taiwo | 12 Jan 2024
                             </p>
-                            <h4 className="flex-wrap w-[700px] text-left text-6xl font-bold text-[#252524]">
+                            <h4 className="flex-wrap w-[700px] sm:w-[320px] text-left text-6xl font-bold text-[#252524]">
                                 Enterprise Hubs Hosts Baykins Pharmacy
                             </h4>
                         </div>
                     </div>
                     <img src={images.roomInterior} className="rounded-xl w-[757px] h-[350px] my-5" alt="room interior" />
-                    <div className="flex flex-col w-[757px] text-[#252524] my-10">
+                    <div className="flex flex-col w-[757px] sm:w-[320px] text-[#252524] my-10">
                         <p className="text-[#252524] font-normal text-base mb-5">
                             Lorem ipsum dolor sit amet consectetur adipiscing elit, sollicitudin in 
                             massa sem pellentesque et praesent ultricies, eleifend libero sed non 
@@ -70,7 +70,7 @@ const EachArticle = ()=>{
                         <p><FaXTwitter /></p>
                     </div>
                 </div>
-                <div className="grid grid-col-1 gap-3">
+                <div className="grid grid-col-1 gap-3 sm:mt-5">
                     <div className="flex flex-col bg-[#fff] rounded-xl border border-[#DADADA] h-fit">
                         <img src={images.manbag} alt="A man carrying a bag" className="rounded-t-xl" />
                         <div className="p-8">

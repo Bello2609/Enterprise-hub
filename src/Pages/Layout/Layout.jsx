@@ -6,7 +6,7 @@ import Header from "../../Components/Header/Header.jsx";
 const Layout = ({ children }) => {
    return (
       <>
-         <div className="w-full h-full m-0 p-0 overflow-x-hidden">
+         <div className="w-full h-full m-0 p-0 overflow-x-hidden ">
             <Header />
             {children}
             <Footer />

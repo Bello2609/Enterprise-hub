@@ -11,11 +11,11 @@ const ContactUs = ()=>{
                 <div className="w-full h-[388px] bg-[url('/src/assets/contact.png')] bg-no-repeat bg-center ">
 
                 </div>
-                <div className="flex justify-evenly my-10">
+                <div className="flex sm:flex-col sm:px-10 justify-evenly my-10">
                     <div className="flex flex-col">
                         <h4 className="my-5 font-bold text-[] text-4xl">Find us on Maps</h4>
                         <img src={images.map1} alt="google map" />
-                        <div className="flex justify-between mt-10">
+                        <div className="flex justify-between mt-10 sm:w-fit">
                             <div className="flex flex-col">
                             <h4 className="text-base font-sans text-[#DE2223] font-bold">Visit Our Office</h4>
                             <div className="flex flex-col mt-3">
@@ -38,19 +38,19 @@ const ContactUs = ()=>{
                                 </p>
                             </div>
                             </div>
-                            <div className="flex flex-col">
+                            <div className="flex flex-col sm:w-fit">
                                 <h4 className="text-base font-sans text-[#DE2223] font-bold">CONTACT US</h4>
                                 <div className="flex flex-col mt-3 font-normal">
-                                    <p className="flex-wrap w-[218px] text-base text-[#252524]">
+                                    <p className="flex-wrap w-[218px] sm:w-fit text-base text-[#252524]">
                                     📧 info@enterprisehubs.com 
                                     </p>
-                                    <p className="flex-wrap w-[218px] text-base text-[#252524]">
+                                    <p className="flex-wrap w-[218px] sm:w-fit text-base text-[#252524]">
                                     📞 +2349060009685 
                                     </p>
-                                    <p className="flex-wrap w-[218px] text-base text-[#252524]">
+                                    <p className="flex-wrap w-[218px] sm:w-fit text-base text-[#252524]">
                                     📞 +2348122244752
                                     </p>
-                                    <p className="flex-wrap w-[218px] text-base text-[#252524]">
+                                    <p className="flex-wrap w-[218px] sm:w-fit text-base text-[#252524]">
                                     📞 +2348095862293
                                     </p>
                                 </div>

@@ -11,7 +11,7 @@ const Franchise = ()=>{
                     <h4 className="flex-wrap w-[517px] sm:w-fit text-6xl font-bold text-[#252524] mb-10">
                         Our Franchise Program
                     </h4>
-                    <img src={images.pro7} alt="professional" className="w-[423px] h-[291px]" />
+                    <img src={images.pro7} alt="professional" className="w-[423px] sm:w-[320px] h-[291px] sm:h-[220px]" />
                 </div>
                 <div className="flex flex-col items-start ">
                     <p className="w-[413px] sm:w-fit flex-wrap font-normal text-base text-[#252524] my-4 leading-[28px]">
@@ -22,7 +22,7 @@ const Franchise = ()=>{
                         complete suite of enterprise development programs and resources.A system that’s 
                         redefining the way people work, innovate and grow.
                     </p>
-                    <p className="w-[413px] flex-wrap font-normal text-base text-[#252524] my-4 leading-[28px]">
+                    <p className="w-[413px] sm:w-fit flex-wrap font-normal text-base text-[#252524] my-4 leading-[28px]">
                         Joining our partner or franchisee program offers you a strong position in a fast-growing
                         industry with a particularly strong future outlook in Africa.
                     </p>

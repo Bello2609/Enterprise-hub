@@ -1,16 +1,13 @@
 .signup-layout-container {
-   left: -3px;
-   background-image: url("https://s3-alpha-sig.figma.com/img/8ba2/97f7/15f1dbe6d2e50463cd70c058e84a7cd6?Expires=1708905600&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=juysydnRyWNUyhaEwqlCbUrQgpAKidd3oK2CFJ4SqJhRzZptV3bKzNknUPlJwi7f6DC3nakfavwqNk3CmkGZS4LS6yXJQdwjEDYA3OUyBC0Krb~6KRlqA-Bn-ICszgQNoGjAApcjCqFkaAt~alOitHuUBkPmLwSoHsZEEYgsxKC~-noowUV0h3TrU3JtRQAQZdfHAnzuvfc2CCW2ohmSiLktHh0L7ey4RyK2Vh9k~HLtMti2cMrHfDBLahWJ23zUstLWGCfypvt4Feju-xS~AhaVRxF1PziAlJeaa5u3TIeym0mcmQYxLEYIc3w0EavPWe8GsUN5X2U1fyvlRaqHEQ__");
-   background-size: 2546px 1422px;
-   background-position-x: -1410px;
-   background-position-y: -461px;
+   background-image: url("/src/assets/sign.png");
+   background-size: cover;
+   background-position: center;
    background-repeat: no-repeat;
-   transform: rotateY(180deg);
 }
 
-.form-container {
+/* .form-container {
    width: calc(100% - 543px);
-}
+} */
 
 input::placeholder {
    color: #616161;
