@@ -48,7 +48,7 @@ const Home = ()=>{
                 </div>
                  {/* where entrepreneur go section ended */}
                  {/* what are you looking for section */}
-                 <div className="flex flex-col md:items-center sm:items-center p-16  h-fit ">
+                 <div className="flex flex-col md:items-center sm:items-center p-16 sm:px-10  h-fit ">
                     <h4 className="font-sans font-bold text-3xl text-[#252524] mb-5">
                         What are you looking for today?
                     </h4>
