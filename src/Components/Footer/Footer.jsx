@@ -72,7 +72,7 @@ const Footer = ()=>{
                         </div>
                     </div>
                 </div>
-                <div className="flex flex-col font-sans font-medium text-base mx-16">
+                <div className="flex flex-col font-sans font-medium text-base mx-16 sm:mx-10">
                     <div className="bg-[#F8C3C2] h-px mt-3"></div>
                     <p className="text-[#616161] mt-5 text-base font-normal">Copyright ® 2024 Enterprise Hubs. All right reserved.</p>
                 </div>
