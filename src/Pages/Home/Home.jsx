@@ -18,7 +18,7 @@ const Home = ()=>{
                 <div className="flex w-full justify-evenly">
                     <div className="basis-1/2">
                         <div className="flex flex-col bg-[#56923E] px-20 sm:px-20 py-20">
-                            <h4 className="w-[517px] sm:w-[300px] text-6xl sm:text-4xl font-bold text-[#fff] leading-[63px]">
+                            <h4 className="w-[517px] sm:w-[243px] text-6xl sm:text-4xl font-bold text-[#fff] leading-[63px]">
                                 Where entrepreneurs go to grow
                             </h4>
                             <p className="w-[413px] sm:w-[320px] flex-wrap font-normal text-base text-[#ffffff] my-8">
