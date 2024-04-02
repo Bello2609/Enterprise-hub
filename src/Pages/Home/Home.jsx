@@ -17,7 +17,7 @@ const Home = ()=>{
                 {/* where entrepreneur go section */}
                 <div className="flex w-full justify-evenly">
                     <div className="basis-1/2">
-                        <div className="flex flex-col bg-[#56923E] px-20 sm:px-20 py-20">
+                        <div className="flex flex-col bg-[#56923E] px-20 sm:px-10 py-20">
                             <h4 className="w-[517px] sm:w-[243px] text-6xl sm:text-4xl font-bold text-[#fff] leading-[63px]">
                                 Where entrepreneurs go to grow
                             </h4>
@@ -144,7 +144,7 @@ const Home = ()=>{
                         {/* </div> */}
                     </div>
                     <div>
-                        <div className="flex flex-col h-full justify-center ml-16 sm:ml-10 lg:mt-0 md:mt-10 sm:mt-10">
+                        <div className="flex flex-col h-full justify-center ml-16 sm:mx-10 smpx lg:mt-0 md:mt-10 sm:mt-10">
                             <h4 className="text-[#252524] font-sans font-bold text-4xl">
                                 Why Choose Us
                             </h4>
