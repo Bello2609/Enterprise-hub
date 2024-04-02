@@ -1,10 +1,11 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import * as Images from "../../image";
 import { NavLink, Link } from "react-router-dom";
 import { AiOutlineClose, AiOutlineMenu, AiFillInstagram } from 'react-icons/ai';
 import { ChevronDownIcon } from "@chakra-ui/icons";
 import { FaLinkedin, FaFacebookSquare } from "react-icons/fa";
 import { GoArrowUpRight } from "react-icons/go";
+import { useLocation } from "react-router-dom";
 // import { IoIosArrowDown } from "react-icons/io";
 import { motion } from "framer-motion";
 import {
@@ -22,6 +23,10 @@ const Header = ()=>{
   const handleNav = () => {
     setNav(!nav);
   };
+  const { pathname } = useLocation();
+  useEffect(()=>{
+    setNav(false)
+  }, [pathname])
     return (
         <>
             <div className="flex flex-row justify-between h-20 px-20 sm:px-10 w-full items-center">
