@@ -351,7 +351,7 @@ const Home = ()=>{
                         We regularly publish business tips and corporate articles for your consumption
                     </p>
                     <div className="grid grid-cols-3 md:grid-cols-2 sm:grid-cols-1 gap-4 bg-[#fff] px-2">
-                        <div className="flex flex-col bg-[#fff] col-span-2 md:col-span-1 sm:col-span-1 bg-[url('/src/assets/roomInterior.png')] h-[446px] w-[757px] sm:w-fit  rounded-xl p-10">
+                        <div className="flex flex-col bg-[#fff] col-span-2 md:col-span-1 sm:col-span-1 bg-[url('/src/assets/roomInterior.png')] h-[446px] w-[757px] sm:w-fit  rounded-xl p-10 sm:p-5">
                             {/* <div className="bg-[#000000] w-full h-full opacity-40 rounded-xl"> */}
                                 <p className="font-sans text-base text-[#81C167] font-bold">
                                     ARTICLE | 👨🏼‍🦰Barki Taiwo | 12 Jan 2024

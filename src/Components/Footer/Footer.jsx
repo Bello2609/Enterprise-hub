@@ -15,7 +15,7 @@ const Footer = ()=>{
                             of online and physical resource centres for emerging enterprises in 
                             Nigeria and beyondcd
                         </p>
-                        <div className="flex text-[#DE2223] text-3xl">`
+                        <div className="flex text-[#DE2223] text-3xl">
                             <p><FaLinkedin /></p>
                             <p className="sm:mx-2"><AiFillInstagram /></p>
                             <p><FaFacebookSquare /></p>

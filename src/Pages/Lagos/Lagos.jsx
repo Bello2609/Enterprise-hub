@@ -46,13 +46,13 @@ const Lagos = ()=>{
         <>
             <div className="flex flex-col">
                 <div className="flex w-full h-[388px] bg-[url('/src/assets/office/lg1.png')]"></div>
-                <div className="flex flex-col items-center my-10">
-                    <div className="flex md:flex-col sm:flex-col items-center justify-between my-10">
+                <div className="flex flex-col items-center my-10 sm:px-10">
+                    <div className="flex md:flex-col sm:flex-col items-center justify-between my-10 sm:px-10">
                         <div className="flex flex-col">
-                            <h4 className="flex-wrap w-[517px] text-5xl font-bold text-[#252524]">
+                            <h4 className="flex-wrap w-[517px] sm:w-fit text-5xl font-bold text-[#252524]">
                                 Enterprise Hubs Victoria Island, Lagos
                             </h4>
-                            <p className="w-[413px] flex-wrap font-normal text-base text-[#252524] my-4 leading-[25px]">
+                            <p className="w-[413px] sm:w-[320px] sm:px-10 flex-wrap font-normal text-base text-[#252524] my-4 leading-[25px]">
                                 A serene privately managed co-working facility and entrepreneurship 
                                 support center, offering virtual office services, co-working spaces, 
                                 private offices, meeting facilities, a garden and hosting entrepreneurship 
@@ -61,24 +61,24 @@ const Lagos = ()=>{
                         </div>
                         <img src={images.lg2} alt="female picture" className="w-[458px] h-[375px]" />
                     </div>
-                    <div className="flex md:flex-col sm:flex-col items-center justify-between">
+                    <div className="flex md:flex-col sm:flex-col items-center justify-between sm:px-10">
                         <div>
                             <img src={images.lg3} alt="female picture" className="w-[458px] h-[375px]" />
                         </div>
                         <div className="flex flex-col ml-16 leading-[25px]">
-                            <p className="w-[413px] flex-wrap font-normal text-base text-[#252524] my-4">
+                            <p className="w-[413px]  sm:px-10 flex-wrap font-normal text-base text-[#252524] my-4">
                                 Located in Victoria Island, downtown Lagos Nigeria, we boast of 
                                 super-fast fiber optic internet, ample parking and dining spaces 
                                 and roomy workspaces. Enterprise Hubs also offers back-office professional 
                                 services to support entrepreneurs and innovators.
                             </p>
-                            <p className="w-[413px] flex-wrap font-normal text-base text-[#252524] my-4">
+                            <p className="w-[413px]  sm:px-10 flex-wrap font-normal text-base text-[#252524] my-4">
                                 Our virtual office service gives you a prestigious business address 
                                 without the hassle of renting and equipping one yourself. This service 
                                 is synchronized with our Abuja and Kano centers, giving you the option of one or 
                                 all business addresses in the top 3 cities in Nigeria.
                             </p>
-                            <p className="w-[413px] flex-wrap font-normal text-base text-[#252524] my-4">
+                            <p className="w-[413px]  sm:px-10 flex-wrap font-normal text-base text-[#252524] my-4">
                                 Our digital portal allows you to search, select, book, and pay for spaces
                                 and services from the comfort of your device.
                             </p>
@@ -88,7 +88,7 @@ const Lagos = ()=>{
                 </div>
                 <div className="flex flex-col items-center bg-[#F3F9F1] py-10">
                     <div>
-                        <h4 className="flex-wrap w-[517px] text-5xl font-bold text-[#252524]">
+                        <h4 className="flex-wrap w-[517px] sm:w-fit text-5xl font-bold text-[#252524]">
                             Book our offices
                         </h4>
                     </div>
