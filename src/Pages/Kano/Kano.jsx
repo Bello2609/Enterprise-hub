@@ -26,13 +26,13 @@ const Kano = ()=>{
         <>
             <div className="flex flex-col">
                 <div className="flex w-full h-[388px] bg-[#72B955]"></div>
-                <div className="flex flex-col items-center my-10">
-                    <div className="flex md:flex-col sm:flex-col items-center justify-between my-10">
-                        <div className="flex flex-col leading-[25px]">
-                            <h4 className="flex-wrap w-[517px] text-5xl font-bold text-[#252524]">
+                <div className="flex flex-col items-center my-10 sm:px-10">
+                    <div className="flex md:flex-col sm:flex-col sm:flex-col sm:items-center sm:w-[80vw]  items-center justify-between my-10">
+                        <div className="flex flex-col leading-[25px] sm:w-fit">
+                            <h4 className="flex-wrap w-[517px] sm:w-fit text-5xl font-bold text-[#252524]">
                                 Enterprise Hubs Kano GRA
                             </h4>
-                            <p className="w-[413px] flex-wrap font-normal text-base text-[#252524] my-4">
+                            <p className="w-[413px] sm:w-fit flex-wrap font-normal text-base text-[#252524] my-4">
                                 Enterprise Hubs Kano GRA offers a range of cozy workspaces in the 
                                 ancient commercial city of Kano. Conveniently located in the serene 
                                 Tarauni GRA, Enterprise Hubs is pioneering flexible workspace and 
@@ -40,14 +40,14 @@ const Kano = ()=>{
                                 flagship location in Victoria Island Lagos.
                             </p>
                         </div>
-                        <img src={images.started1} alt="female picture" className="w-[458px] h-[375px]" />
+                        <img src={images.started1} alt="female picture" className="w-[458px] sm:w-fit h-[375px] sm:h-fit" />
                     </div>
                     <div className="flex md:flex-col sm:flex-col items-start justify-between">
                         <div>
-                            <img src={images.started1} alt="female picture" className="w-[458px] h-[375px]" />
+                            <img src={images.started1} alt="female picture" className="w-[458px] sm:w-fit h-[375px] sm:h-fit" />
                         </div>
-                        <div className="flex flex-col ml-16 leading-[25px]">
-                            <p className="w-[413px] flex-wrap font-normal text-base text-[#252524] my-4">
+                        <div className="flex flex-col ml-16 leading-[25px] sm:ml-0">
+                            <p className="w-[413px]  sm:w-[80vw] flex-wrap font-normal text-base text-[#252524] my-4">
                                 This easily accessible spot boasts private offices, coworking lounge,
                                 meeting rooms and dedicated desks, plus a huge parking garden. 
                                 We also offer virtual office service giving you a prestigious 
@@ -63,7 +63,7 @@ const Kano = ()=>{
                 </div>
                 <div className="flex flex-col items-center bg-[#F3F9F1] py-10">
                     <div>
-                        <h4 className="flex-wrap w-[517px] text-5xl font-bold text-[#252524]">
+                        <h4 className="flex-wrap w-[517px] sm:w-fit sm:px-10 text-5xl font-bold text-[#252524]">
                             Book our offices
                         </h4>
                     </div>
@@ -71,7 +71,7 @@ const Kano = ()=>{
                             {
                                 officeData.map(data=>{
                                     return(
-                                        <motion.div whileHover={{ y: -10}} transition={{ duration: 0.5, ease: "easeOut" }} className="flex flex-col bg-[#fff] rounded-xl border border-[#DADADA] w-[270px] h-[300px] p-4">
+                                        <div whileHover={{ y: -10}} transition={{ duration: 0.5, ease: "easeOut" }} className="flex flex-col bg-[#fff] rounded-xl border border-[#DADADA] w-[270px] h-[300px] p-4">
                                             <img src={data.officeImage} alt="A man carrying a bag" className="rounded-t-xl w-[240px] h-[110px]" />
                                             <div className="h-[150px]">
                                                 <p className="font-sans text-lg text-[#81C167] font-bold mt-3">
@@ -81,10 +81,10 @@ const Kano = ()=>{
                                                     {data.officeInfo}
                                                 </p>
                                                 <Link className="flex items-center mr-3 text-base font-semibold text-[#38997A]">
-                                                    <motion.p whileHover={{ x: -10}} transition={{ duration: 0.5, ease: "easeOut" }}>Book Now </motion.p><motion.span whileHover={{ x: 10}} transition={{ duration: 0.5, ease: "easeOut" }}><HiOutlineArrowNarrowRight /></motion.span>
+                                                    <p whileHover={{ x: -10}} transition={{ duration: 0.5, ease: "easeOut" }}>Book Now </p><span whileHover={{ x: 10}} transition={{ duration: 0.5, ease: "easeOut" }}><HiOutlineArrowNarrowRight /></span>
                                                 </Link>
                                             </div>
-                                        </motion.div>
+                                        </div>
                                     )
                                 })
                             }

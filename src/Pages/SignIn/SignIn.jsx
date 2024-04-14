@@ -46,7 +46,7 @@ const SignIn = () => {
             <p>
                {"Don't have an account? "}
                <span>
-                  <Link className="text-[#56923E] underline">Sign up</Link>
+                  <Link to="/sign-up" className="text-[#56923E] underline">Sign up</Link>
                </span>
             </p>
          </div>

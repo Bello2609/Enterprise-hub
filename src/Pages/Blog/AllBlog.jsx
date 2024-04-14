@@ -18,7 +18,7 @@ const AllBlog = ()=>{
                   
                 </div>
                 <div className="grid grid-cols-3 md:grid-cols-2 sm:grid-cols-1 gap-4 px-2">
-                        <div className="flex flex-col bg-[#fff] col-span-2 md:col-span-1 sm:col-span-1 bg-[url('/src/assets/roomInterior.png')] h-[446px] w-[757px] sm:w-fit  rounded-xl p-10 sm:p-5">
+                        <div className="flex sm:hidden flex-col bg-[#fff] col-span-2 md:col-span-1 sm:col-span-1 bg-[url('/src/assets/roomInterior.png')] h-[446px] w-[757px] sm:w-fit  rounded-xl p-10 ">
                             {/* <div className="bg-[#000000] w-full h-full opacity-40 rounded-xl"> */}
                                 <p className="font-sans text-base text-[#81C167] font-bold">
                                     ARTICLE
@@ -29,6 +29,21 @@ const AllBlog = ()=>{
                                 <p className="text-[#DEDEDE] font-sans font-normal w-[301px]">
                                     We had the pleasure of serving Baykins Pharmacy with our best as they held 
                                     their staff retreat on Friday September …
+                                </p>
+                            {/* </div> */}
+                        </div>
+                        {/* on mobile */}
+                        <div className="hidden sm:flex flex-col h-[446px] bg-[#fff] bg-[url('/src/assets/roomInterior.png')] rounded-xl p-5">
+                            {/* <div className="bg-[#000000] w-full h-full opacity-40 rounded-xl"> */}
+                                <p className="font-sans text-base text-[#81C167] font-bold">
+                                    ARTICLE | 👨🏼‍🦰Barki Taiwo | 12 Jan 2024
+                                </p>
+                                <h4 className="font-sans font-bold text-xl text-[#ffffff] w-[312px] my-5">
+                                    Enterprise Hubs Hosts Baykins Pharmacy
+                                </h4>
+                                <p className="text-[#DEDEDE] font-sans font-normal w-[301px]">
+                                    We had the pleasure of serving Baykins Pharmacy with our best as 
+                                    they held their staff retreat on Friday September …
                                 </p>
                             {/* </div> */}
                         </div>

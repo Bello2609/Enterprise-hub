@@ -21,13 +21,13 @@ const Abuja = ()=>{
         <>
             <div className="flex flex-col">
                 <div className="flex w-full h-[388px] bg-[#72B955]"></div>
-                <div className="flex flex-col items-center my-10">
-                    <div className="flex md:flex-col sm:flex-col items-center justify-between my-10">
-                        <div className="flex flex-col">
-                            <h4 className="flex-wrap w-[517px] text-5xl font-bold text-[#252524]">
+                <div className="flex flex-col items-center my-10 sm:px-10">
+                    <div className="flex md:flex-col sm:flex-col sm:items-center sm:w-[80vw] items-center justify-between my-10">
+                        <div className="flex flex-col sm:w-fit">
+                            <h4 className="flex-wrap w-[517px] sm:w-fit text-5xl font-bold text-[#252524]">
                                 Enterprise Hubs QSC, Abuja
                             </h4>
-                            <p className="w-[413px] flex-wrap font-normal text-base text-[#252524] my-4 w-[491px] leading-[25px]">
+                            <p className="w-[413px] sm:w-fit flex-wrap font-normal text-base text-[#252524] my-4 leading-[25px]">
                             Enterprise Hubs has a new service - Enterprise Hubs QSC – short for Quick Service Center. Enterprise Hubs QSC is a “micro hub” where you can access all the services you need when on the move for business:
                             <li>Desktop design and print</li>
                             <li>Document handling</li>
@@ -35,14 +35,14 @@ const Abuja = ()=>{
                             <li>Dispatch or professional services</li>
                             </p>
                         </div>
-                        <img src={images.started1} alt="female picture" className="w-[458px] h-[375px]" />
+                        <img src={images.started1} alt="female picture" className="w-[458px] sm:fit h-[375px] sm:h-fit" />
                     </div>
                     <div className="flex md:flex-col sm:flex-col justify-between items-start">
                         <div>
-                            <img src={images.started1} alt="female picture" className="w-[458px] h-[375px]" />
+                            <img src={images.started1} alt="female picture" className="w-[458px] sm:w-fit h-[375px] sm:h-fit" />
                         </div>
-                        <div className="flex flex-col ml-16">
-                            <p className="w-[413px] flex-wrap font-normal text-base text-[#252524] my-4 leading-[25px]">
+                        <div className="flex flex-col ml-16 sm:ml-0">
+                            <p className="w-[413px]  sm:w-[80vw]  flex-wrap font-normal text-base text-[#252524] my-4 leading-[25px]">
                                 In addition, the Abuja QSC offers 3 beautiful executive offices 
                                 available for quarterly use. You can access this service at the 
                                 business center of the beautiful Wells Carlton Hotel Asokoro Abuja.
@@ -54,15 +54,15 @@ const Abuja = ()=>{
                 </div>
                 <div className="flex flex-col items-center bg-[#F3F9F1] py-10">
                     <div>
-                        <h4 className="flex-wrap w-[517px] text-5xl font-bold text-[#252524]">
+                        <h4 className="flex-wrap w-[517px] sm:w-fit sm:px-10 text-5xl font-bold text-[#252524]">
                             Book our offices
                         </h4>
                     </div>
-                        <div className="grid grid-cols-2 gap-3 my-10">
+                        <div className="grid grid-cols-2 md:grid-cols-1 sm:grid-cols-1 gap-3 my-10">
                             {
                                 officeData.map(data=>{
                                     return(
-                                        <motion.div whileHover={{ y: -20}} transition={{ duration: 0.5, ease: "easeOut" }} className="flex flex-col bg-[#fff] rounded-xl border border-[#DADADA] w-[270px] h-fit p-4">
+                                        <div whileHover={{ y: -20}} transition={{ duration: 0.5, ease: "easeOut" }} className="flex flex-col bg-[#fff] rounded-xl border border-[#DADADA] w-[270px] h-fit p-4">
                                             <img src={data.officeImage} alt="A man carrying a bag" className="rounded-t-xl w-[240px] h-[110px]" />
                                             <div className="h-[150px]">
                                                 <p className="font-sans text-lg text-[#81C167] font-bold mt-3">
@@ -72,10 +72,10 @@ const Abuja = ()=>{
                                                     {data.officeInfo}
                                                 </p>
                                                 <Link className="flex items-center mr-3 text-base font-semibold text-[#38997A]">
-                                                    <motion.p whileHover={{ x: -10}} transition={{ duration: 0.5, ease: "easeOut" }}>Book Now </motion.p><motion.span whileHover={{ x: 10}} transition={{ duration: 0.5, ease: "easeOut" }}><HiOutlineArrowNarrowRight /></motion.span>
+                                                    <p whileHover={{ x: -10}} transition={{ duration: 0.5, ease: "easeOut" }}>Book Now </p><span whileHover={{ x: 10}} transition={{ duration: 0.5, ease: "easeOut" }}><HiOutlineArrowNarrowRight /></span>
                                                 </Link>
                                             </div>
-                                        </motion.div>
+                                        </div>
                                     )
                                 })
                             }

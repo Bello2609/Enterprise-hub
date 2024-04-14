@@ -96,7 +96,7 @@ const Header = ()=>{
                                     <NavLink to="/blog" className="flex items-center justify-between my-4 text-xl font-medium">Blog<span><GoArrowUpRight /></span></NavLink>
                                     <NavLink to="/franchise" className="flex items-center justify-between my-4 text-xl font-medium">Frachise<span><GoArrowUpRight /></span></NavLink>
                                     <motion.div
-                                        className="flex justify-center items-center mt-10 bg-[#DE2223] text-[#ffffff] w-[322px] h-12 rounded-md"
+                                        className="flex justify-center items-center mt-10 bg-[#DE2223] text-[#ffffff] w-[80vw] h-12 rounded-md"
                                         whileHover={{scale: 1.1}}
                                         whileTap={{scale: 0.9}}>
                                         <NavLink to="/contact-us">Contact Us</NavLink>

@@ -16,7 +16,7 @@ const Home = ()=>{
             <div className="flex flex-col w-full h-fit">
                 {/* where entrepreneur go section */}
                 <div className="flex w-full justify-evenly">
-                    <div className="basis-1/2">
+                    <div className="basis-1/2 flex-auto">
                         <div className="flex flex-col bg-[#56923E] px-20 sm:px-10 py-20">
                             <h4 className="w-[517px] sm:w-[243px] text-6xl sm:text-4xl font-bold text-[#fff] leading-[63px]">
                                 Where entrepreneurs go to grow
@@ -39,7 +39,7 @@ const Home = ()=>{
                         </div>
                         <div className="bg-[#72B955] h-[20px]"></div>
                     </div>
-                    <div className="basis-1/2">
+                    <div className="basis-1/2 flex-auto">
                         <div className="bg-[url('/src/assets/bg1.png')] bg-right bg-cover bg-no-repeat h-[565px]">
                             {/* <img src={images.bg1} alt="linkedin" className="h-full w-full" /> */}
                         </div>
@@ -351,7 +351,22 @@ const Home = ()=>{
                         We regularly publish business tips and corporate articles for your consumption
                     </p>
                     <div className="grid grid-cols-3 md:grid-cols-2 sm:grid-cols-1 gap-4 bg-[#fff] px-2">
-                        <div className="flex flex-col bg-[#fff] col-span-2 md:col-span-1 sm:col-span-1 bg-[url('/src/assets/roomInterior.png')] h-[446px] w-[757px] sm:w-fit  rounded-xl p-10 sm:p-5">
+                        <div className="flex sm:hidden flex-col bg-[#fff] col-span-2 md:col-span-1 bg-[url('/src/assets/roomInterior.png')] h-[446px] w-[757px] sm:w-fit  rounded-xl p-10">
+                            {/* <div className="bg-[#000000] w-full h-full opacity-40 rounded-xl"> */}
+                                <p className="font-sans text-base text-[#81C167] font-bold">
+                                    ARTICLE | 👨🏼‍🦰Barki Taiwo | 12 Jan 2024
+                                </p>
+                                <h4 className="font-sans font-bold text-xl text-[#ffffff] w-[312px] my-5">
+                                    Enterprise Hubs Hosts Baykins Pharmacy
+                                </h4>
+                                <p className="text-[#DEDEDE] font-sans font-normal w-[301px]">
+                                    We had the pleasure of serving Baykins Pharmacy with our best as 
+                                    they held their staff retreat on Friday September …
+                                </p>
+                            {/* </div> */}
+                        </div>
+                        {/* on mobile */}
+                        <div className="hidden sm:flex flex-col h-[446px] bg-[#fff] bg-[url('/src/assets/roomInterior.png')] rounded-xl p-5">
                             {/* <div className="bg-[#000000] w-full h-full opacity-40 rounded-xl"> */}
                                 <p className="font-sans text-base text-[#81C167] font-bold">
                                     ARTICLE | 👨🏼‍🦰Barki Taiwo | 12 Jan 2024
