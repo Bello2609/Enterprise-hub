@@ -16,12 +16,12 @@ const Home = ()=>{
             <div className="flex flex-col w-full h-fit">
                 {/* where entrepreneur go section */}
                 <div className="flex w-full justify-evenly">
-                    <div className="basis-1/2 flex-auto">
-                        <div className="flex flex-col bg-[#56923E] px-20 sm:px-10 py-20">
-                            <h4 className="w-[517px] sm:w-[243px] text-6xl sm:text-4xl font-bold text-[#fff] leading-[63px]">
+                    <div className="w-[50%] md:basis-1/2 flex-auto">
+                        <div className="flex flex-col bg-[#56923E] px-20 md:px-10 sm:px-10 py-20">
+                            <h4 className="w-[517px] md:w-fit sm:w-[243px] text-6xl md:text-4xl sm:text-4xl font-bold text-[#fff] leading-[63px]">
                                 Where entrepreneurs go to grow
                             </h4>
-                            <p className="w-[413px] sm:w-[320px] flex-wrap font-normal text-base text-[#ffffff] my-8">
+                            <p className="w-[413px] md:w-fit sm:w-[320px] flex-wrap font-normal text-base text-[#ffffff] my-8">
                                 We've redefined the landscape for emerging enterprises in Nigeria and 
                                 beyond, offering a unique blend of online and physical resource centers 
                                 designed to propel your business forward.
@@ -39,7 +39,7 @@ const Home = ()=>{
                         </div>
                         <div className="bg-[#72B955] h-[20px]"></div>
                     </div>
-                    <div className="basis-1/2 flex-auto">
+                    <div className="w-[50%] md:basis-1/2 flex-auto">
                         <div className="bg-[url('/src/assets/bg1.png')] bg-right bg-cover bg-no-repeat h-[565px]">
                             {/* <img src={images.bg1} alt="linkedin" className="h-full w-full" /> */}
                         </div>
@@ -107,7 +107,7 @@ const Home = ()=>{
                  </div>
                   {/* what are you looking for section end*/}
                   {/* a system that is redefining */}
-                  <div className="bg-[url('/src/assets/interior.png')] w-full bg-no-repeat bg-center h-[506px] flex  items-end">
+                  <div className="bg-[url('/src/assets/interior.png')] w-full bg-no-repeat bg-center h-[506px] flex  items-end sm:mt-10">
                     <div className="flex flex-col bg-[#C81F20] h-[435px] sm:h-fit w-[633px] lg:w-[633px] sm:w-full md:w-full ml-16 sm:ml-0">
                         <div className="flex w-12 h-12 justify-end w-[633px]">
                             <div className="flex bg-[#E1D634] w-12 h-12">
@@ -115,7 +115,7 @@ const Home = ()=>{
                             </div>
                         </div>
                         <div className="flex flex-col flex-wrap p-10 font-sans text-[#fff]">
-                            <h4 className="text-3xl font-bold  text-wrap w-[360px] leading-[35px]">
+                            <h4 className="text-3xl font-bold  text-wrap w-[360px] sm:w-fit leading-[35px]">
                                 A system that is redefining the way we live, work and learn.
                             </h4>
                             <p className="text-base w-[533px] sm:w-fit  my-3 leading-[25px]">
@@ -351,7 +351,7 @@ const Home = ()=>{
                         We regularly publish business tips and corporate articles for your consumption
                     </p>
                     <div className="grid grid-cols-3 md:grid-cols-2 sm:grid-cols-1 gap-4 bg-[#fff] px-2">
-                        <div className="flex sm:hidden flex-col bg-[#fff] col-span-2 md:col-span-1 bg-[url('/src/assets/roomInterior.png')] h-[446px] w-[757px] sm:w-fit  rounded-xl p-10">
+                        <div className="flex sm:hidden flex-col bg-[#fff] col-span-2 md:col-span-1 bg-[url('/src/assets/roomInterior.png')] h-[446px] w-[757px] md:w-fit sm:w-fit  rounded-xl p-10">
                             {/* <div className="bg-[#000000] w-full h-full opacity-40 rounded-xl"> */}
                                 <p className="font-sans text-base text-[#81C167] font-bold">
                                     ARTICLE | 👨🏼‍🦰Barki Taiwo | 12 Jan 2024
