@@ -16,12 +16,12 @@ const Home = ()=>{
             <div className="flex flex-col w-full h-fit">
                 {/* where entrepreneur go section */}
                 <div className="flex w-full justify-evenly">
-                    <div className="w-[50%] md:basis-1/2 flex-auto">
+                    <div className="w-[50%] flex-auto">
                         <div className="flex flex-col bg-[#56923E] px-20 md:px-10 sm:px-10 py-20">
-                            <h4 className="w-[517px] md:w-fit sm:w-[243px] text-6xl md:text-4xl sm:text-4xl font-bold text-[#fff] leading-[63px]">
+                            <h4 className="w-[517px] md:w-fit sm:w-[243px] text-6xl md:text-5xl sm:text-4xl font-bold text-[#fff] leading-[63px]">
                                 Where entrepreneurs go to grow
                             </h4>
-                            <p className="w-[413px] md:w-fit sm:w-[320px] flex-wrap font-normal text-base text-[#ffffff] my-8">
+                            <p className="w-[413px] md:w-fit sm:w-fit flex-wrap font-normal text-base text-[#ffffff] my-8">
                                 We've redefined the landscape for emerging enterprises in Nigeria and 
                                 beyond, offering a unique blend of online and physical resource centers 
                                 designed to propel your business forward.
@@ -39,7 +39,7 @@ const Home = ()=>{
                         </div>
                         <div className="bg-[#72B955] h-[20px]"></div>
                     </div>
-                    <div className="w-[50%] md:basis-1/2 flex-auto">
+                    <div className="w-[50%] flex-auto sm:hidden">
                         <div className="bg-[url('/src/assets/bg1.png')] bg-right bg-cover bg-no-repeat h-[565px]">
                             {/* <img src={images.bg1} alt="linkedin" className="h-full w-full" /> */}
                         </div>
@@ -454,7 +454,7 @@ const Home = ()=>{
                         <p className="text-wrap my-5 ">Unlock a new chapter - Join the Network of successful entrepreneurs like you</p>
                         <Link to="/contact us" className="flex items-center justify-center bg-[#DE2223] text-[#ffffff] w-60 h-12 rounded-md">Join Enterprise Hubs</Link>
                     </div>
-                    <div className="flex justify-evenly md:flex-col sm:flex-col sm:p-5 mt-16 w-full">
+                    <div className="flex justify-evenly md:flex-col md:items-center sm:flex-col sm:p-5 mt-16 w-full">
                         <div className="flex flex-col">
                             <h4 className="flex-wrap w-[517px] sm:w-fit text-4xl font-bold text-[#252524]">
                                 Have a question about renting office space.

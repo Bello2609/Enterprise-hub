@@ -16,25 +16,25 @@ const UserProfileEdit= ()=>{
              <div className="flex flex-col bg-[#DFDFDF] items-center justify-center w-full h-fit py-10">
                 <div className="flex flex-col bg-[#fff] rounded-b-2xl">
                     <div className="flex items-center justify-between  w-[807px] h-[150px] bg-gradient-to-r from-[#FFFCB8] to-[#F5D0CA]">
-                        <div className="w-28 h-28"></div>
-                        <p className="font-sans text-base font-medium pl-16">Good afternoon, Ogechi</p>
-                        <img src={images.group6} className="h-full border-2 border-red-500" alt="" />
+                        <div className="sm:hidden w-28 h-28"></div>
+                        <p className="sm:hidden font-sans text-base font-medium pl-16">Good afternoon, Ogechi</p>
+                        <img src={images.group6} className="sm:hidden h-full border-2 border-red-500" alt="" />
                     </div>
-                    <div className="rounded-full bg-[#ffffff] w-fit mt-[-80px] ml-10">
+                    <div className="sm:flex sm:items-center rounded-full bg-[#ffffff] w-fit mt-[-80px] sm:ml-[320px] ml-10">
                         <img src={images.profilePic} alt="user profile picture" />
                     </div>
-                    <div className="flex flex-col p-10">
+                    <div className="flex flex-col sm:items-center p-10">
                         <FormInput type="email" label="Email " />
                         <FormInput type="password" label="Password " />
-                        <div className="flex justify-evenly w-full">
+                        <div className="flex sm:flex-col sm:items-center justify-evenly w-full">
                             <FormInput type="email" label="Gender " />
                             <FormInput type="password" label="Role " />
                         </div>
-                        <div className="flex justify-between w-full">
+                        <div className="flex sm:flex-col sm:items-center justify-between w-full">
                             <FormInput type="email" label="First Name " />
                             <FormInput type="password" label="Last Name " />
                         </div>
-                        <div className="flex justify-between w-full">
+                        <div className="flex sm:flex-col sm:items-center justify-between w-full">
                             <FormInput type="text" label="Phone Number " />
                             <FormInput type="text" label="Company Name " />
                         </div>
@@ -48,7 +48,7 @@ const UserProfileEdit= ()=>{
                     
                 </div>
                 <div className="flex flex-col w-[807px] h-fit bg-[#fff] rounded-2xl mt-5">
-                    <div className="flex justify-evenly items-center">
+                    <div className="flex sm:flex-col justify-evenly items-center">
                         <div className="flex flex-col font-sans justify-center py-10">
                             <h4 className="font-sans text-base text-[#616161] font-semibold">Current Plan</h4>
                             <p className="text-[#252524] font-semibold text-lg flex items-center"><span className="text-[#81C167] text-2xl"><IoCheckmarkCircle /></span>Enterprise Hubs Virtual Office</p>
