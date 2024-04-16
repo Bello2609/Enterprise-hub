@@ -29,7 +29,7 @@ const Franchise = ()=>{
                     <motion.div 
                         whileHover={{scale: 1.1, transition: { duration: 0.5, ease: "easeOut" }}}
                         whileTap={{scale: 0.9}}>
-                        <Link to="/get-started" className="flex items-center justify-center p-3  bg-[#DE2223] text-[#ffffff] w-40 h-12 rounded-md">
+                        <Link to="mailto: info@enterprisehubs.com?cc:dozie@pedestalafrica.com&subject=Enterprise hub franshise enquiry" className="flex items-center justify-center p-3  bg-[#DE2223] text-[#ffffff] w-40 h-12 rounded-md">
                             Get Started
                         </Link>
                     </motion.div>

@@ -23,6 +23,9 @@ const Header = ()=>{
   const handleNav = () => {
     setNav(!nav);
   };
+  const style = {
+    color: "#DE2223"
+  }
   const { pathname } = useLocation();
   useEffect(()=>{
     setNav(false)
@@ -33,10 +36,10 @@ const Header = ()=>{
                 <div>
                     <img src={Images.Enterprise} alt="enterprise" className="w-[125px] h-[44px]" />
                 </div>
-                <div className="flex md:hidden sm:hidden items-center text-base text-[#000000] font-sans font-medium">
-                        <NavLink to="/" className="ml-4">HOME</NavLink>
-                        <NavLink to="/about-us" className="ml-4">ABOUT</NavLink>
-                        <NavLink to="/service" className="mx-4">SERVICES</NavLink>
+                <div className="flex md:hidden sm:hidden items-center text-base font-sans font-medium">
+                        <NavLink to="/" className={({isActive})=>(isActive ? "text-[#DE2223] mr-4" : "mr-4")} exact>HOME</NavLink>
+                        <NavLink to="/about-us" className={({isActive})=>(isActive ? "text-[#DE2223] mx-4" : "mx-4")}>ABOUT</NavLink>
+                        <NavLink to="/service" className={({isActive})=>(isActive ? "text-[#DE2223] mx-4" : "mx-4")}>SERVICES</NavLink>
                         <Menu>
                             <MenuButton as={Text} cursor="pointer">
                                 LOCATION
@@ -47,9 +50,9 @@ const Header = ()=>{
                                 <MenuItem><NavLink to="/kano">KANO</NavLink></MenuItem>
                             </MenuList>
                         </Menu>
-                        <NavLink to="/gallery" className="ml-4">GALLERY</NavLink>
-                        <NavLink to="/blog" className="ml-4">BLOG</NavLink>
-                        <NavLink to="/franchise" className="ml-4">FRANCHISE</NavLink>
+                        <NavLink  to="/gallery" className={({isActive})=>(isActive ? "text-[#DE2223] mx-4" : "mx-4")}>GALLERY</NavLink>
+                        <NavLink  to="/blog" className={({isActive})=>(isActive ? "text-[#DE2223] mx-4" : "mx-4")}>BLOG</NavLink>
+                        <NavLink  to="/franchise" className={({isActive})=>(isActive ? "text-[#DE2223] " : "mx-4")}>FRANCHISE</NavLink>
                         {/* <NavLink to="/contact-us" className="flex justify-center items-center mx-4 bg-[#DE2223] text-[#ffffff] w-40 h-12 rounded-md">
                             <motion.div
                                 whileHover={{scale: 1.1}}

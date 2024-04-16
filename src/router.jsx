@@ -2,8 +2,9 @@
 import React, { lazy, Suspense } from "react";
 import { Routes, Route } from "react-router-dom";
 //pages
+import Layout from "./Pages/Layout/Layout.jsx";
 const Home = lazy(() => import("./Pages/Home/Home.jsx"));
-const Layout = lazy(() => import("./Pages/Layout/Layout.jsx"));
+// const Layout = lazy(() => import("./Pages/Layout/Layout.jsx"));
 const SignUpLayout = lazy(() => import("./Pages/Layout/SignUpLayout.jsx"));
 const SignIn = lazy(() => import("./Pages/SignIn/SignIn.jsx"));
 const SignUp = lazy(() => import("./Pages/SignUp/SignUp.jsx"));
