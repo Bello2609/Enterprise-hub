@@ -7,7 +7,7 @@ const Franchise = ()=>{
     return(
         <>
             <div className="flex md:flex-col sm:flex-col justify-between px-20 sm:px-10 my-16">
-                <div className="flex flex-col ">
+                <div className="flex flex-col">
                     <h4 className="flex-wrap w-[517px] sm:w-fit text-6xl font-bold text-[#252524] mb-10">
                         Our Franchise Program
                     </h4>

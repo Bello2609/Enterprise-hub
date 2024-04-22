@@ -27,6 +27,7 @@ const ContactUs = lazy(()=> import("./Pages/ContactUs/ContactUs.jsx"));
 const AddBlog = lazy(()=> import("./Pages/AddBlog/AddBlog.jsx"));
 const AddTestimonials = lazy(()=> import("./Pages/AddTestimonials/AddTestimonials.jsx"));
 const Gallery = lazy(()=>import("./Pages/Gallery/Gallery.jsx"));
+const Subscription = lazy(()=> import("./Pages/Subscription/Subscription.jsx"));
 
 
 const Router = () => {
@@ -270,6 +271,16 @@ const Router = () => {
                   <Suspense>
                      <SignUpLayout>
                         <SignUp />
+                     </SignUpLayout>
+                  </Suspense>
+               }
+            />
+            <Route
+               path="/subscription"
+               element={
+                  <Suspense>
+                     <SignUpLayout>
+                        <Subscription />
                      </SignUpLayout>
                   </Suspense>
                }

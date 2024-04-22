@@ -1,5 +1,3 @@
-// import React from "react";
-
 import { Link } from "react-router-dom";
 import FormInput from "../../Components/FormInput/FormInput";
 import CustomButton from "../../Components/customButton";
