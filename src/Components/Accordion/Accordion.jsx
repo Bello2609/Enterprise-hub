@@ -29,19 +29,19 @@ import {
 const Accorddion = ()=>{
     return(
             <>
-                <Accordion allowToggle className="w-[515px] h-fit">
+                <Accordion allowToggle className="w-[515px] sm:w-fit h-fit">
                     {
                         accordionData.map(data=>(
-                            <AccordionItem> 
+                            <AccordionItem className='sm:w-fit'>  
                                 <h2>
-                                <AccordionButton className="h-[86px]">
+                                <AccordionButton className="h-[86px] sm:w-fit">
                                     <Box as="span" flex='1' textAlign='left'>
                                         {data.question}
                                     </Box>
                                     <AccordionIcon />
                                 </AccordionButton>
                                 </h2>
-                                <AccordionPanel className="sm:w-[350px]">
+                                <AccordionPanel className="sm:w-fit">
                                     {data.answer}
                                 </AccordionPanel>
                             </AccordionItem>

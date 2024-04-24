@@ -109,7 +109,7 @@ const Header = ()=>{
                                     <Link to="*" className="underline text-[#81C167] text-lg font-bold my-5">Sign In</Link>
                                     <div className="flex text-[#DE2223] text-3xl">
                                         <p><FaLinkedin /></p>
-                                        <p><AiFillInstagram /></p>
+                                        <p className="mx-10"><AiFillInstagram /></p>
                                         <p><FaFacebookSquare /></p>
                                     </div>
                                 </div>

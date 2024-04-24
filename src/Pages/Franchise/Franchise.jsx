@@ -11,7 +11,7 @@ const Franchise = ()=>{
                     <h4 className="flex-wrap w-[517px] sm:w-fit text-6xl font-bold text-[#252524] mb-10">
                         Our Franchise Program
                     </h4>
-                    <img src={images.pro7} alt="professional" className="w-[423px] sm:w-[320px] h-[291px] sm:h-[220px]" />
+                    <img src={images.pro7} alt="professional" className="w-[423px] sm:w-fit h-[291px] sm:h-fit" />
                 </div>
                 <div className="flex flex-col items-start ">
                     <p className="w-[413px] sm:w-fit flex-wrap font-normal text-base text-[#252524] my-4 leading-[28px]">
@@ -29,7 +29,7 @@ const Franchise = ()=>{
                     <motion.div 
                         whileHover={{scale: 1.1, transition: { duration: 0.5, ease: "easeOut" }}}
                         whileTap={{scale: 0.9}}>
-                        <Link to="mailto: info@enterprisehubs.com?cc:dozie@pedestalafrica.com&subject=Enterprise hub franshise enquiry" className="flex items-center justify-center p-3  bg-[#DE2223] text-[#ffffff] w-40 h-12 rounded-md">
+                        <Link to="mailto: info@enterprisehubs.com?cc:dozie@pedestalafrica.com&subject=Enterprise hub franshise enquiry&body=Hi<your name>,%20 i will like to know more about your training programs. Thanks" className="flex items-center justify-center p-3  bg-[#DE2223] text-[#ffffff] w-40 h-12 rounded-md">
                             Get Started
                         </Link>
                     </motion.div>

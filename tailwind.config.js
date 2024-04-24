@@ -16,7 +16,7 @@ module.exports = {
       "xl": { "min": "1280px", "max": "1535" }
     },
     fontFamily:{
-      "sans": "IBM Plex Sans"
+      sans: "IBM Plex Sans"
     },
     container: {
       center: true,

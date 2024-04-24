@@ -13,11 +13,11 @@ import Accorddion from "../../Components/Accordion/Accordion";
 const Home = ()=>{
     return(
         <>
-            <div className="flex flex-col w-full h-fit">
+            <div className="flex flex-col w-full h-fit font-sans">
                 {/* where entrepreneur go section */}
                 <div className="flex w-full justify-evenly">
                     <div className="w-[50%] flex-auto">
-                        <div className="flex flex-col bg-[#56923E] px-20 md:px-10 sm:px-10 py-20">
+                        <div className="flex flex-col bg-[#56923E] px-20 md:px-10 sm:px-10 py-20 font-sans">
                             <h4 className="w-[517px] md:w-fit sm:w-[243px] text-6xl md:text-5xl sm:text-4xl font-bold text-[#fff] leading-[63px]">
                                 Where entrepreneurs go to grow
                             </h4>
@@ -49,7 +49,7 @@ const Home = ()=>{
                  {/* where entrepreneur go section ended */}
                  {/* what are you looking for section */}
                  <div className="flex flex-col md:items-center sm:items-center p-16 sm:px-10  h-fit ">
-                    <h4 className="font-sans font-bold text-3xl text-[#252524] mb-5">
+                    <h4 className="font-bold text-3xl text-[#252524] mb-5">
                         What are you looking for today?
                     </h4>
                     <div className="grid md:grid-cols-2 sm:grid-cols-1 grid-cols-4 gap-3 h-fit w-full">
@@ -127,9 +127,9 @@ const Home = ()=>{
                                 enterprise development services.
                             </p>
                             <div className="flex items-center">
-                                <p className="text-base font-medium">
+                                <Link to="/about-us" className="text-base font-medium">
                                     More about us 
-                                </p>
+                                </Link>
                                 <span className="ml-3"><FaArrowRightLong /></span>
                             </div>
                         </div>
@@ -138,7 +138,7 @@ const Home = ()=>{
                   {/* a system that is redefining end*/}
                   {/* why choose us */}
                   <div className="flex lg:flex-row  sm:flex-col justify-between  w-full md:w-fit h-[400px] sm:h-fit ">
-                    <div className="bg-[#EFE553] flex items-end justify-center md:justify-center sm:justify-center w-[485px] sm:w-[412px] h-[400px] sm:h-[359px]">
+                    <div className="bg-[#EFE553] flex items-end justify-center md:justify-center sm:justify-center w-[485px] sm:w-[100vw] h-[400px] sm:h-[359px]">
                         {/* <div > */}
                             <img src={images.maskgroup} alt="masked group"  width="186px" height="202px"/>
                         {/* </div> */}
@@ -441,8 +441,11 @@ const Home = ()=>{
                             </div>
                         </div>
                     </div>
-                    <p className="text-base text-[#252524] font-normal font-sans flex-wrap my-10 sm:px-5">
+                    <p className="sm:hidden text-base text-[#252524] font-normal font-sans flex-wrap my-10 sm:px-5">
                         Insights to help you do what you do better, faster and more profitably. Read Full Blog
+                    </p>
+                    <p className="hidden sm:flex text-base text-[#252524] font-normal font-sans flex-wrap my-10 sm:px-5">
+                        Insights to help you do what you do better, faster and more profitably. <span className="text-[#81C167] underline">Read Full Blog</span>
                     </p>
                   </div>
                   {/* news and insight */}
@@ -451,7 +454,7 @@ const Home = ()=>{
                     <div className="flex flex-col items-center border border-[#E3E3E3] rounded-xl p-10 sm:px-10">
                         <img src={images.album} className="border border-green-500 sm:hidden" alt="albumm" />
                         <img src={images.album2} className="hidden sm:block" alt="albumm" />
-                        <p className="text-wrap my-5 ">Unlock a new chapter - Join the Network of successful entrepreneurs like you</p>
+                        <p className="text-wrap my-5 text-center">Unlock a new chapter - Join the Network of successful entrepreneurs like you</p>
                         <Link to="/contact us" className="flex items-center justify-center bg-[#DE2223] text-[#ffffff] w-60 h-12 rounded-md">Join Enterprise Hubs</Link>
                     </div>
                     <div className="flex justify-evenly md:flex-col md:items-center sm:flex-col sm:p-5 mt-16 w-full">

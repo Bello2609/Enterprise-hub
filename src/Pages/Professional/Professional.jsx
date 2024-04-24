@@ -40,15 +40,15 @@ const Professional = ()=>{
     return(
         <>
             <div className="flex flex-col w-full items-center">
-                <div className="flex justify-evenly my-10 w-full">
-                    <h4 className="flex-wrap w-[517px] text-6xl font-bold text-[#252524]">
+                <div className="flex sm:flex-col justify-evenly my-10 w-full sm:px-10">
+                    <h4 className="flex-wrap w-[517px] sm:w-full text-6xl sm:text-5xl font-bold text-[#252524]">
                         Professional Services
                     </h4>
-                    <p className="w-[413px] flex-wrap font-normal text-base text-[#252524] my-4">
+                    <p className="w-[413px] sm:w-full flex-wrap font-normal text-base text-[#252524] my-4">
                         We support entrepreneurs, by offering professional services at a reduced cost
                     </p>
                 </div>
-                <div className="grid grid-cols-3 gap-6 my-16">
+                <div className="grid grid-cols-3 md:grid-cols-2 sm:grid-cols-1 gap-6 my-16">
                     {
                         professionalData.map(data=>{
                             return (
