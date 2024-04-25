@@ -15,32 +15,32 @@ const ContactUs = ()=>{
                     <div className="flex flex-col">
                         <h4 className="my-5 font-bold text-[] text-4xl">Find us on Maps</h4>
                         <img src={images.map1} alt="google map" />
-                        <div className="flex justify-between mt-10 sm:w-fit">
-                            <div className="flex flex-col">
-                            <h4 className="text-base font-sans text-[#DE2223] font-bold">Visit Our Office</h4>
-                            <div className="flex flex-col mt-3">
-                                <h4 className="text-base font-sans text-[#252524] font-medium">LAGOS</h4>
-                                <p className="flex-wrap w-[218px] text-base text-[#252524]">
+                        <div className="flex sm:flex-col justify-between mt-10 ">
+                            <div className="flex flex-col sm:w-full">
+                                <h4 className="text-base font-sans text-[#DE2223] font-bold">Visit Our Office</h4>
+                                <div className="flex flex-col mt-3">
+                                    <h4 className="text-base font-sans text-[#252524] font-medium">LAGOS</h4>
+                                    <p className="flex-wrap w-[218px] text-base text-[#252524]">
                                     Trinity Avenue by Landmark, Off Ligali Ayorinde, Victoria 
                                     Island, Lagos.
-                                </p>
-                            </div>
-                            <div className="flex flex-col mt-10">
-                                <h4 className="text-base font-sans text-[#252524] font-medium">KANO</h4>
-                                <p className="flex-wrap w-[218px] text-base text-[#252524]">
-                                    14, Ibrahim Dabo Road, Tarauni G.R.A, Kano State.
-                                </p>
-                            </div>
-                            <div className="flex flex-col mt-3">
-                                <h4 className="text-base font-sans text-[#252524] font-medium">ABUJA</h4>
-                                <p className="flex-wrap w-[218px] text-base text-[#252524]">
+                                    </p>
+                                </div>
+                                <div className="flex flex-col mt-3">
+                                    <h4 className="text-base font-sans text-[#252524] font-medium">KANO</h4>
+                                    <p className="flex-wrap w-[218px] text-base text-[#252524]">
+                                        14, Ibrahim Dabo Road, Tarauni G.R.A, Kano State.
+                                    </p>
+                                </div>
+                                <div className="flex flex-col mt-3">
+                                    <h4 className="text-base font-sans text-[#252524] font-medium">ABUJA</h4>
+                                    <p className="flex-wrap w-[218px] text-base text-[#252524]">
                                     Ground Floor, Wells Carlton Hotel. 8 Gado Nasko Street, Asokoro, Abuja
-                                </p>
+                                    </p>
+                                </div>
                             </div>
-                            </div>
-                            <div className="flex flex-col sm:w-fit">
+                            <div className="flex flex-col sm:w-fit sm:my-5">
                                 <h4 className="text-base font-sans text-[#DE2223] font-bold">CONTACT US</h4>
-                                <div className="flex flex-col mt-3 font-normal">
+                                <div className="flex flex-col mt-3 font-normal sm:w-fit">
                                     <p className="flex-wrap w-[218px] sm:w-fit text-base text-[#252524]">
                                     📧 info@enterprisehubs.com 
                                     </p>
@@ -57,7 +57,7 @@ const ContactUs = ()=>{
                             </div>
                         </div>
                     </div>
-                    <div className="flex flex-col">
+                    <div className="flex flex-col sm:w-full">
                         <form>
                             <FormInput type="text" label="Email"  />
                             <FormInput type="email" label="First Name"  />

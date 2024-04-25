@@ -11,7 +11,7 @@ const SignUp = () => {
             {/* <img /> */}
             <img src={images.Enterprise} alt="enterprise" />
             <h3 className="font-bold text-3xl text-[#56923E] my-5">Join Us!</h3>
-            <p className="text-[#616161] w-[411px] text-center">
+            <p className="text-[#616161] w-[411px] sm:w-fit text-center">
                Become a prestigious member by registering for our Virtual Office
                today
             </p>

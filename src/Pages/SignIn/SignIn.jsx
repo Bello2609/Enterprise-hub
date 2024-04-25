@@ -11,7 +11,7 @@ const SignIn = () => {
             <img src={images.Enterprise} width="145px" height="90px" alt="enterprise" />
             <h3 className="font-bold text-3xl text-[#56923E] my-5">Welcome back!</h3>
          </div>
-         <div className="flex flex-col gap-4">
+         <div className="flex flex-col items-center sm:w-full gap-4 border border-red-500 ">
             <FormInput
                type="text"
                label="Email"
