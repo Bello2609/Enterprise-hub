@@ -51,23 +51,23 @@ const BookSpace = ()=>{
                     </div>
                     <div className="bg-[#fff] w-[766px] h-fit rounded-xl p-10">
                         <p className="text-lg font-medium font-sans text-[#252524]">What location are you booking from?</p>
-                        {/* <div>
-                            
-                            <RadioGroup onChange={ (e)=> console.log(e.target.value) } horizontal>
-                                <RadioButton value="apple" iconSize="50px" iconInnerSize="30px">
-                                    Apple
-                                </RadioButton>
-                                <RadioButton value="orange">
-                                    Orange
-                                </RadioButton>
-                                <RadioButton value="melon">
-                                    Melon
-                                </RadioButton>
-                                <ReversedRadioButton value="melon">
-                                    Melon
-                                </ReversedRadioButton>
-                                </RadioGroup>
-                        </div> */}
+                        <div className="flex justify-between">
+                            <div className="flex border border-[#DFDFDF] rounded-full p-4 w-fit items-start mr-2">
+                                <div className="flex items-center mr-4">
+                                    <input type="radio" id="virtual" style={{ accentColor: "green", borderColor: "green", width: "15px", height: "15px", marginRight: "20px" }} /> Atlantic Center, Lagos
+                                </div>
+                            </div>
+                            <div className="flex border border-[#DFDFDF] rounded-full p-4 w-fit  items-start mr-2">
+                                <div  className="flex items-center mr-4">
+                                    <input type="radio" id="later" style={{ accentColor: "green", borderColor: "green", width: "15px", height: "15px", marginRight: "20px" }} /> QSC, Abuja
+                                </div>
+                            </div>
+                            <div className="flex border border-[#DFDFDF] rounded-full p-4 w-fit items-start">
+                                <div  className="flex items-center mr-4">
+                                    <input type="radio" id="later" style={{ accentColor: "green", borderColor: "green", width: "15px", height: "15px", marginRight: "20px" }} /> Kano
+                                </div>
+                            </div>
+                        </div>
                         <div className="bg-[#DFDFDF] h-px my-5"></div>
                         <div className="flex justify-between">
                             <FormSelect label="Category" options={categoryOption} width="300px" />
@@ -77,9 +77,13 @@ const BookSpace = ()=>{
                             <FormInput type="email" label="Email" />
                             <FormDate label="Booking Date" />
                         </div>
-                        <div className="flex justify-between my-5">
-                            <FormInput type="text" label="Full Name" />
-                            <FormInput type="text" label="Phone Number" />
+                        <div className="flex justify-evenly my-5">
+                            <div className="w-full mr-1">
+                                <FormInput type="text" label="Full Name" />
+                            </div>
+                            <div className="w-full">
+                                <FormInput type="text" label="Phone Number" />
+                            </div>
                         </div>
                         <CustomButton isSignInBtn>
                             Book Now
