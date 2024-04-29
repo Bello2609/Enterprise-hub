@@ -24,8 +24,8 @@ const Subscription = () => {
             <img src={images.Enterprise} width="145px" height="90px" alt="enterprise" />
             <h3 className="font-bold text-3xl text-[#56923E] my-5">Get Your Virtual Address</h3>
          </div>
-         <div className="flex">
-            <div className="flex border border-[#DFDFDF] p-4 w-fit rounded-sm items-start mr-2">
+         <div className="flex sm:flex-col">
+            <div className="flex border border-[#DFDFDF] p-4 w-fit rounded-sm items-start mr-2 sm:mb-2">
                 <div  className="mr-4">
                     <input type="radio" id="virtual" style={{ accentColor: "green", borderColor: "green", width: "15px", height: "15px" }} />
                 </div>
@@ -46,7 +46,7 @@ const Subscription = () => {
          </div>
          <div className="w-full h-[1px] bg-[#DFDFDF] my-5"></div>
          <p className="font-normal text-[#616161] text-lg">Just one more step. Tell us a few about you</p>
-         <div className="flex gap-4">
+         <div className="flex sm:flex-col gap-4">
             <FormSelect label="Gender" options={genderOption} />
             <FormInput
                type="text"
@@ -54,7 +54,7 @@ const Subscription = () => {
                placeholder="Mr/Mrs/Dr"
             />
          </div>
-         <div className="flex gap-4">
+         <div className="flex sm:flex-col gap-4">
             <FormInput
                type="text"
                label="First Name"
@@ -64,7 +64,7 @@ const Subscription = () => {
                label="Last Name"
             />
          </div>
-         <div className="flex gap-4">
+         <div className="flex sm:flex-col gap-4">
             <FormNumber
                label="Phone Number"
             />

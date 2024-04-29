@@ -13,7 +13,7 @@ const Footer = ()=>{
                         <p className="w-72 flex-wrap text-[#616161] font-sans text-base my-3">
                             Enterprise Hubs owned by Pedestal Africa Limited is an integrated network 
                             of online and physical resource centres for emerging enterprises in 
-                            Nigeria and beyondcd
+                            Nigeria and beyond.
                         </p>
                         <div className="flex text-[#DE2223] text-3xl">
                             <p><FaLinkedin /></p>

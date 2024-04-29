@@ -41,17 +41,19 @@ const unitOption = [
 const BookSpace = ()=>{
     return(
         <>
-            <div className="flex items-center justify-center bg-[url('/src/assets/interior1.png')] w-full h-[848px] bg-no-repeat ">
-                <div className="flex align-center">
-                    <div>
-                        <h4 className="font-sans font-bold text-[#fff] text-6xl w-[351px] text-wrap">
+            <div className="flex items-center justify-center bg-[url('/src/assets/interior1.png')] w-full h-[848px] sm:h-fit bg-no-repeat">
+                <div className="flex sm:flex-col sm:items-center">
+                    <div className="flex flex-col sm:items-center">
+                        <h4 className="font-sans font-bold text-[#fff] text-6xl  sm:text-center sm:text-3xl w-[351px] text-wrap">
                             Reserve Your Space
                         </h4>
-                        <p className="mt-5 font-sans font-bold text-[#fff] text-lg w-[341px] text-wrap">Yes, you have the flexibility of picking out your own space</p>
+                        <p className="mt-5 font-sans font-bold text-[#fff] sm:text-center text-lg sm:text-base w-[341px]   text-wrap">
+                            Yes, you have the flexibility of picking out your own space
+                        </p>
                     </div>
-                    <div className="bg-[#fff] w-[766px] h-fit rounded-xl p-10">
+                    <div className="flex flex-col sm:items-center bg-[#fff] w-[766px] sm:w-fit h-fit rounded-xl p-10 sm:px-10">
                         <p className="text-lg font-medium font-sans text-[#252524]">What location are you booking from?</p>
-                        <div className="flex justify-between">
+                        <div className="flex sm:flex-col justify-between">
                             <div className="flex border border-[#DFDFDF] rounded-full p-4 w-fit items-start mr-2">
                                 <div className="flex items-center mr-4">
                                     <input type="radio" id="virtual" style={{ accentColor: "green", borderColor: "green", width: "15px", height: "15px", marginRight: "20px" }} /> Atlantic Center, Lagos
@@ -69,15 +71,15 @@ const BookSpace = ()=>{
                             </div>
                         </div>
                         <div className="bg-[#DFDFDF] h-px my-5"></div>
-                        <div className="flex justify-between">
+                        <div className="flex  sm:flex-col justify-between">
                             <FormSelect label="Category" options={categoryOption} width="300px" />
                             <FormSelect label="Unit" options={unitOption} width="300px" />
                         </div>
-                        <div className="flex flex-col my-5">
+                        <div className="flex flex-col sm:flex-col sm:w-[80vw] my-5">
                             <FormInput type="email" label="Email" />
-                            <FormDate label="Booking Date" />
+                            <FormDate label="Booking Date"  />
                         </div>
-                        <div className="flex justify-evenly my-5">
+                        <div className="flex sm:flex-col justify-evenly sm:w-[80vw] my-5">
                             <div className="w-full mr-1">
                                 <FormInput type="text" label="Full Name" />
                             </div>
@@ -85,7 +87,7 @@ const BookSpace = ()=>{
                                 <FormInput type="text" label="Phone Number" />
                             </div>
                         </div>
-                        <CustomButton isSignInBtn>
+                        <CustomButton isSignInBtn className="sm:px-10">
                             Book Now
                         </CustomButton>
                     </div>

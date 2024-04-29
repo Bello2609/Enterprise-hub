@@ -15,7 +15,7 @@ const FormDate = ({label}) => {
              <label className="font-medium text-[#252524]">{label}</label>
           </div>
  
-          <div className="flex justify-evenly items-center border-solid border border-[#DFDFDF] rounded-lg px-2 h-[46px]">
+          <div className="flex justify-between items-center border-solid border border-[#DFDFDF] rounded-lg px-2 h-[46px]">
           <DatePicker
             value={values}
             onChange={setValues}
@@ -24,7 +24,7 @@ const FormDate = ({label}) => {
             style={{
                height: "43px",
                marginTop: "0px",
-               width: "600px",
+               // width: {width},
                border: "none",
                outline: "none"
             }}
