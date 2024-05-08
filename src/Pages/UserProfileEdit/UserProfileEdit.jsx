@@ -7,6 +7,8 @@ import { IoCheckmarkCircle } from "react-icons/io5";
 import { FaRegTimesCircle } from "react-icons/fa";
 import * as images from "../../image"
 import FormInput from "../../Components/FormInput/FormInput";
+import FormNumber from "../../Components/FormNumber/FormNumber";
+
 
 
 
@@ -35,7 +37,9 @@ const UserProfileEdit= ()=>{
                             <FormInput type="password" label="Last Name " />
                         </div>
                         <div className="flex sm:flex-col sm:items-center justify-between w-full">
-                            <FormInput type="text" label="Phone Number " />
+                             <FormNumber
+                                label="Phone Number"
+                            />
                             <FormInput type="text" label="Company Name " />
                         </div>
                         <Link className="flex justify-center items-center my-5 w-full h-[57px] text-[#252524] font-medium bg-[#F4F4F4] p-3 w-40 h-12 rounded-md ">

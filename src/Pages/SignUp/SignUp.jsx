@@ -3,6 +3,7 @@ import FormInput from "../../Components/FormInput/FormInput";
 import CustomButton from "../../Components/customButton";
 import { Link } from "react-router-dom";
 import * as images from "../../image"
+import FormNumber from "../../Components/FormNumber/FormNumber";
 
 const SignUp = () => {
    return (
@@ -32,10 +33,13 @@ const SignUp = () => {
                label="Confirm password"
                placeholder="Enter your password"
             />
-            <FormInput
+            {/* <FormInput
                type=""
                label="Phone number"
                placeholder="Enter your phone number"
+            /> */}
+            <FormNumber
+               label="Phone Number"
             />
 
             <div className="flex items-center my-2">

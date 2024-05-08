@@ -10,12 +10,14 @@ const FormNumber = ({placeholder, label})=>{
                 <div className="flex">
                 <label className="font-medium text-[#252524]">{label}</label>
                 </div>
-                <div className="flex border-solid rounded-lg border border-[#DFDFDF]  h-11 w-full ">
+                <div className="flex border-solid rounded-lg border border-[#DFDFDF]  h-11 w-full p-2">
                     <PhoneInput
                         style={{
                             outline: "none",
+                            border: "none",
                             height: "100%"
-                        }}                    
+                        }}
+                                            
                         placeholder={placeholder}
                         value={value}
                         defaultCountry="NG"

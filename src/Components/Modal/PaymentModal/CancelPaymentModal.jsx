@@ -37,13 +37,23 @@ const CancelPaymentModal = ({isOpen, onClose})=>{
                                 </div>
                             </div>
                             <div className="flex flex-col">
-                                <p className="font-semibold text-base text-[#252524] my-10">Why are you cancelling your plan?</p>
-                                <Stack spacing={5} direction='column'>
-                                    <Checkbox colorScheme='green' fontWeight="normal" className="text-red">It's too expensive</Checkbox>
-                                    <Checkbox colorScheme='green'>I'm subscribing to another provider</Checkbox>
-                                    <Checkbox colorScheme='green'>I didn't get what I expected</Checkbox>
+                                <p className="font-semibold text-base text-[#252524] my-5">Why are you cancelling your plan?</p>
+                                <div>
                                     
-                                </Stack>
+                                    <div className='flex'>
+                                        <input type="checkbox" style={{accentColor: "green"}} name="It's too expensive" id="expensive" />
+                                        <p className='ml-1'>It's too expensive</p>
+                                    </div>
+                                    <div className='flex my-3'>
+                                        <input type="checkbox" style={{accentColor: "green"}} name="It's too expensive" id="expensive" />
+                                        <p className='ml-1'>I'm subscribing to another provider</p>
+                                    </div>
+                                    <div className='flex'>
+                                        <input type="checkbox" style={{accentColor: "green"}} name="It's too expensive" id="expensive" />
+                                        <p className='ml-1'>I didn't get what I expected</p>
+                                    </div>
+                                    
+                                </div>
                             </div>
                             <FormInput type="text" label="What could we do to improve?" />
                             <div className="flex flex-col my-5">

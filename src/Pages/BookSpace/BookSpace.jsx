@@ -5,6 +5,7 @@ import FormSelect from "../../Components/FormSelect/FormSelect";
 import FormDate from "../../Components/FormDate/FormDate";
 // import {RadioGroup, Radio} from 'react-radio-group';
 import { RadioGroup, RadioButton, ReversedRadioButton } from 'react-radio-buttons'
+import FormNumber from "../../Components/FormNumber/FormNumber";
 
 
 const categoryOption = [
@@ -84,7 +85,9 @@ const BookSpace = ()=>{
                                 <FormInput type="text" label="Full Name" />
                             </div>
                             <div className="w-full">
-                                <FormInput type="text" label="Phone Number" />
+                            <FormNumber
+                                label="Phone Number"
+                            />
                             </div>
                         </div>
                         <CustomButton isSignInBtn className="sm:px-10">

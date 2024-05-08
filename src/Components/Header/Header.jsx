@@ -62,10 +62,10 @@ const Header = ()=>{
                         </NavLink> */}
                         
                         <motion.div 
-                            className="flex justify-center items-center mx-4 bg-[#DE2223] text-[#ffffff] w-40 h-12 rounded-md"
+                            className=" mx-4 bg-[#DE2223] text-[#ffffff] w-40 h-12 rounded-md"
                             whileHover={{scale: 1.1}}
                             whileTap={{scale: 0.9}}>
-                            <NavLink to="/contact-us">Contact Us</NavLink>
+                            <NavLink to="/contact-us" className="flex justify-center items-center w-full h-full">Contact Us</NavLink>
                         </motion.div>
                 </div>
                 <div onClick={handleNav} className='sm:block md:block hidden'>

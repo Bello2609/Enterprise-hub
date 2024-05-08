@@ -73,7 +73,7 @@ const Home = ()=>{
                                     Take control of your business,by having a business address in the heart of Lagos Nigeria. 
                                 </p>
                             </div>
-                            <Link to="/book-space" className="flex justify-center items-center w-[108px] h-[45px] text-[#fff] font-medium bg-[#E8332C] p-3 w-28 h-11 rounded-md mt-5">
+                            <Link to="/subscription" className="flex justify-center items-center w-[108px] h-[45px] text-[#fff] font-medium bg-[#E8332C] p-3 w-28 h-11 rounded-md mt-5">
                                 Book now
                             </Link>
                         </div>
