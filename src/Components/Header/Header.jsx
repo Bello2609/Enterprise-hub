@@ -34,7 +34,9 @@ const Header = ()=>{
         <>
             <div className="flex flex-row justify-between h-20 px-20 sm:px-10 w-full items-center">
                 <div>
-                    <img src={Images.Enterprise} alt="enterprise" className="w-[125px] h-[44px]" />
+                    <a href="/">
+                        <img src={Images.Enterprise} alt="enterprise" className="w-[125px] h-[44px]" />
+                    </a>
                 </div>
                 <div className="flex md:hidden sm:hidden items-center text-base font-sans font-medium">
                         <NavLink to="/" className={({isActive})=>(isActive ? "text-[#DE2223] mr-4" : "mr-4")} exact>HOME</NavLink>
@@ -75,7 +77,9 @@ const Header = ()=>{
                     nav && (
                         <div className="fixed md:fixed w-screen h-full top-0 right-0  ease-in-out duration-500 bg-[#fff] text-base text-[#000000] font-sans font-medium">
                             <div  className='flex items-center justify-between p-5'>
-                                <img src={Images.Enterprisemob} alt="enterprise logo on mobile" />
+                                <a href="/">
+                                    <img src={Images.Enterprisemob} href="/" alt="enterprise logo on mobile" />
+                                </a>
                                 <div onClick={handleNav}>
                                     {nav ? <AiOutlineClose size={20} /> : <AiOutlineMenu size={20} />}
                                 </div>

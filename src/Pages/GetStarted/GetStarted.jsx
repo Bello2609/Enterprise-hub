@@ -20,7 +20,7 @@ const GetStarted = ()=>{
                             virtual office address, we've got a spot waiting for you in our welcoming 
                             community.
                         </p>
-                        <Link to="/get-started" className="flex p-3 mx-4 bg-[#DE2223] text-[#ffffff] w-48 h-12 rounded-md">
+                        <Link to="/get-started" className="flex p-3 bg-[#DE2223] text-[#ffffff] w-48 h-12 rounded-md">
                             <img src={images.book} alt="book" className="mr-3" />Book your space
                         </Link>
                     </div>
@@ -36,7 +36,7 @@ const GetStarted = ()=>{
                             Take control of your business, by having a business address in the heart 
                             of Lagos Nigeria.
                         </p>
-                        <Link to="/get-started" className="flex items-center justify-center p-3 mx-4 bg-[#DE2223] text-[#ffffff] w-60 h-12 rounded-md">
+                        <Link to="/get-started" className="flex items-center justify-center p-3 bg-[#DE2223] text-[#ffffff] w-60 h-12 rounded-md">
                             <span className="mr-2"><FaLocationDot /></span>Secure your virtual office 
                          </Link>
                     </div>
@@ -51,7 +51,7 @@ const GetStarted = ()=>{
                             beyond, offering a unique blend of online and physical resource centers
                              designed to propel your business forward.
                         </p>
-                        <Link to="/get-started" className="flex items-center justify-center p-3 mx-4 bg-[#DE2223] text-[#ffffff] w-40 h-12 rounded-md">
+                        <Link to="/get-started" className="flex items-center justify-center p-3 bg-[#DE2223] text-[#ffffff] w-40 h-12 rounded-md">
                             Visit Website<span><GoArrowUpRight /></span>
                         </Link>
                     </div>
