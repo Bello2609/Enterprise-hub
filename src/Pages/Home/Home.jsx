@@ -1,5 +1,4 @@
-import React, {useState} from "react";
-// import React from "react";
+import React, {useEffect, useState} from "react";
 import { Link } from "react-router-dom";
 import { motion } from "framer-motion";
 import * as images from "../../image";
@@ -9,8 +8,37 @@ import { IoIosArrowForward } from "react-icons/io";
 import Accorddion from "../../Components/Accordion/Accordion";
 
 
+const backGroundList = [
+        '/src/assets/bg1.png',
+        '/src/assets/bg2.png',
+        '/src/assets/bg3.png'
+]
 
 const Home = ()=>{
+    const [currentBgIndex, setCurrentBgIndex] = useState(1);
+    // const [ bgUrl, setBgUrl ] = useState("url('/src/assets/bg2.png')");
+    useEffect(()=>{
+        const intervalId = setInterval(()=>{
+            setCurrentBgIndex(prevState => 
+                prevState === backGroundList.length - 1 ? 0 : prevState + 1
+            );
+        }, 5000);
+        return ()=> clearInterval(intervalId);
+        // const intervalId = setInterval(() => {
+        //     setCurrentBgIndex((prevIndex) =>
+        //         prevIndex === backGroundList.length - 1 ? 0 : prevIndex + 1
+        //     );
+        // }, 5000);
+        // console.log(currentBgIndex);
+        // return () => clearInterval(intervalId);
+        // setTimeout(()=>{
+        //     backGroundList.map((data, i)=>{
+        //         const index = Math.floor(Math.random() * backGroundList.length);
+        //         console.log(data.img[0]);
+        //         return setBgData(data[index]);
+        //     })
+        // }, 5000)
+    }, []);
     return(
         <>
             <div className="flex flex-col w-full h-fit font-sans">
@@ -30,18 +58,18 @@ const Home = ()=>{
                                 className="flex justify-center items-center w-[176px] h-[57px] font-medium bg-[#ffffff] p-3 w-40 h-12 rounded-md"
                                 whileHover={{scale: 1.1}}
                                 whileTap={{scale: 0.9}}
-                                transition={{  ease: "easeInOut" }}>
+                                transition={{  ease: "easeInOut"}}>
                                     <Link>
                                         Explore
                                     </Link>
                             </motion.div>
-                           
                         </div>
                         <div className="bg-[#72B955] h-[20px]"></div>
                     </div>
                     <div className="w-[50%] flex-auto sm:hidden">
-                        <div className="bg-[url('/src/assets/bg1.png')] bg-right bg-cover bg-no-repeat h-[565px]">
-                            {/* <img src={images.bg1} alt="linkedin" className="h-full w-full" /> */}
+                        <div className="bg-right bg-cover bg-no-repeat h-[565px] transition duration-700 delay-700 ease-in-out" style={{
+                            backgroundImage: `url(${backGroundList[currentBgIndex]})`
+                        }}>
                         </div>
                         <div className="bg-[#DE2223] h-[20px]"></div>
                     </div>
