@@ -18,9 +18,9 @@ const Footer = ()=>{
                             Nigeria and beyond.
                         </p>
                         <div className="flex text-[#DE2223] text-3xl">
-                            <p><FaLinkedin /></p>
-                            <p className="sm:mx-2"><AiFillInstagram /></p>
-                            <p><FaFacebookSquare /></p>
+                            <a href="https://www.linkedin.com/company/enterprise-hubs/"><FaLinkedin /></a>
+                            <a href="https://www.instagram.com/enterprisehubs?igsh=YzljYTk1ODg3Zg==" className="sm:mx-2"><AiFillInstagram /></a>
+                            <a href="https://www.facebook.com/enterprisehubs01?mibextid=ZbWKwL"><FaFacebookSquare /></a>
                         </div>
                     </div>
                     <div className="flex flex-col sm:mt-5">

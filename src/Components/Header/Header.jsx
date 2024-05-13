@@ -112,9 +112,9 @@ const Header = ()=>{
                                 <div className="flex flex-col items-center w-full">
                                     <Link to="*" className="underline text-[#81C167] text-lg font-bold my-5">Sign In</Link>
                                     <div className="flex text-[#DE2223] text-3xl">
-                                        <p><FaLinkedin /></p>
-                                        <p className="mx-10"><AiFillInstagram /></p>
-                                        <p><FaFacebookSquare /></p>
+                                        <a href="https://www.linkedin.com/company/enterprise-hubs/"><FaLinkedin /></a>
+                                        <a href="https://www.instagram.com/enterprisehubs?igsh=YzljYTk1ODg3Zg==" className="mx-10"><AiFillInstagram /></a>
+                                        <a href="https://www.facebook.com/enterprisehubs01?mibextid=ZbWKwL"><FaFacebookSquare /></a>
                                     </div>
                                 </div>
                             </div>
