@@ -20,39 +20,39 @@ const ContactUs = ()=>{
                                 <h4 className="text-base font-sans text-[#DE2223] font-bold">Visit Our Office</h4>
                                 <div className="flex flex-col mt-3">
                                     <h4 className="text-base font-sans text-[#252524] font-medium">LAGOS</h4>
-                                    <p className="flex-wrap w-[218px] text-base text-[#252524]">
-                                    Trinity Avenue by Landmark, Off Ligali Ayorinde, Victoria 
-                                    Island, Lagos.
-                                    </p>
+                                    <a href="https://maps.app.goo.gl/S8rswaq5NSrgv3a1A" className="flex-wrap w-[218px] text-base text-[#252524] hover:text-red-500">
+                                        Trinity Avenue by Landmark, Off Ligali Ayorinde, Victoria 
+                                        Island, Lagos.
+                                    </a>
                                 </div>
                                 <div className="flex flex-col mt-3">
                                     <h4 className="text-base font-sans text-[#252524] font-medium">KANO</h4>
-                                    <p className="flex-wrap w-[218px] text-base text-[#252524]">
+                                    <a href="https://maps.app.goo.gl/ZRP9cAMtxhBy1miY7" className="flex-wrap w-[218px] text-base text-[#252524] hover:text-red-500">
                                         14, Ibrahim Dabo Road, Tarauni G.R.A, Kano State.
-                                    </p>
+                                    </a>
                                 </div>
                                 <div className="flex flex-col mt-3">
                                     <h4 className="text-base font-sans text-[#252524] font-medium">ABUJA</h4>
-                                    <p className="flex-wrap w-[218px] text-base text-[#252524]">
-                                    Ground Floor, Wells Carlton Hotel. 8 Gado Nasko Street, Asokoro, Abuja
-                                    </p>
+                                    <a href="https://maps.app.goo.gl/hModQscm1pH5W8yX9" className="flex-wrap w-[218px] text-base text-[#252524] hover:text-red-500">
+                                        Ground Floor, Wells Carlton Hotel. 8 Gado Nasko Street, Asokoro, Abuja
+                                    </a>
                                 </div>
                             </div>
                             <div className="flex flex-col sm:w-fit sm:my-5">
                                 <h4 className="text-base font-sans text-[#DE2223] font-bold">CONTACT US</h4>
                                 <div className="flex flex-col mt-3 font-normal sm:w-fit">
-                                    <p className="flex-wrap w-[218px] sm:w-fit text-base text-[#252524]">
-                                    📧 info@enterprisehubs.com 
-                                    </p>
-                                    <p className="flex-wrap w-[218px] sm:w-fit text-base text-[#252524]">
-                                    📞 +2349060009685 
-                                    </p>
-                                    <p className="flex-wrap w-[218px] sm:w-fit text-base text-[#252524]">
-                                    📞 +2348122244752
-                                    </p>
-                                    <p className="flex-wrap w-[218px] sm:w-fit text-base text-[#252524]">
-                                    📞 +2348095862293
-                                    </p>
+                                    <a href="mailto:info@enterprisehubs.com" className="flex-wrap w-[218px] text-base text-[#252524] hover:text-red-500">
+                                        📧 info@enterprisehubs.com 
+                                    </a>
+                                    <a href="tel:+2349060009685" className="flex-wrap w-[218px] text-base text-[#252524] hover:text-red-500">
+                                        📞 +2349060009685 
+                                    </a >
+                                    <a href="tel:+2348122244752" className="flex-wrap w-[218px] text-base text-[#252524] hover:text-red-500">
+                                        📞 +2348122244752
+                                    </a >
+                                    <a href="tel:+2348095862293" className="flex-wrap w-[218px] text-base text-[#252524] hover:text-red-500">
+                                        📞 +2348095862293
+                                    </a >
                                 </div>
                             </div>
                         </div>

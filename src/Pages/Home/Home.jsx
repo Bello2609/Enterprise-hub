@@ -494,8 +494,9 @@ const Home = ()=>{
                                 Can't see an answer to your question? Get in touch with our team, who 
                                 are always happy to help.
                             </p>
-                            <Link className="flex justify-center items-center w-[176px] h-[57px] font-medium bg-[#DE2223] text-[#fff] p-3 w-40 h-12 rounded-md ">
+                            <Link to="/about-us" className="flex justify-center items-center w-[176px] h-[57px] font-medium bg-[#DE2223] text-[#fff] p-3 w-40 h-12 rounded-md ">
                                 <motion.p 
+                                    className="flex items-center justify-center w-full h-full"
                                     whileHover={{scale: 1.1}}
                                     whileTap={{scale: 0.9}}>
                                         Talk to us
