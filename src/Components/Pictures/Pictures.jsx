@@ -6,7 +6,11 @@ import {
 } from "@chakra-ui/react";
 const Pictures = ({tabItem})=>{
     const { isOpen, onOpen, onClose } = useDisclosure();
-    const [ index, setIndex ] = useState(null);
+    const [ index, setIndex ] = useState();
+
+    // useEffect(()=>{
+    //     setIndex(0);
+    // }, [tabItem]);
     return (
         <>
                     <div className="flex border my-10">

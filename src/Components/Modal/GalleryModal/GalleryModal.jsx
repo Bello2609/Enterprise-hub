@@ -12,7 +12,7 @@ import {
 import { IoIosArrowBack, IoIosArrowForward } from "react-icons/io";
 
   const GalleryModal = ({ isOpen, onClose, images, index })=>{
-    const [ imgIndex, setImgIndex ] = useState(index);
+    const [ imgIndex, setImgIndex ] = useState();
     const [ imgUrl, setImgUrl ] = useState();
 
     const nextImage = ()=>{
@@ -22,7 +22,6 @@ import { IoIosArrowBack, IoIosArrowForward } from "react-icons/io";
       )
       
     }
-    console.log(imgIndex);
     
 
     const prevImage = ()=>{
@@ -30,6 +29,8 @@ import { IoIosArrowBack, IoIosArrowForward } from "react-icons/io";
         prevIndex === 0 ? prevIndex + images.length - 1 : prevIndex - 1
       )
     }
+
+  // this useEffect is for the slider to work
     useEffect(()=>{
       const img_index = images.map(img=>{
           return img.name;
@@ -37,15 +38,17 @@ import { IoIosArrowBack, IoIosArrowForward } from "react-icons/io";
       setImgUrl(img_index[imgIndex]);
       
       
-  }, [imgIndex])
+  }, [imgIndex]);
+
     useEffect(()=>{
+      console.log(index);
         const img_index = images.map(img=>{
             return img.name;
         });
         setImgUrl(img_index[index]);
         setImgIndex(index);
-        
-    }, [index])
+        console.log(img_index[index]);
+    }, [index, images])
     return (
       <>
         <Modal isOpen={isOpen} onClose={onClose} size="lg">

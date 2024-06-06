@@ -13,6 +13,7 @@ const inactiveClasses = "flex items-center p-5 text-nowrap border border-[#DFDFD
 const Gallery = ()=>{
     const [ isQuery, setIsQuery ] = useState(null);
     const [ images, setImages ] = useState([]);
+    
     const { search } = useLocation();
 
     useEffect(()=>{
@@ -27,7 +28,6 @@ const Gallery = ()=>{
             const filterImages = ImageList.map(filt=>{ return filt } );
             setImages(filterImages);
         }
-        
     }
     useEffect(()=>{
         handleFilter();
