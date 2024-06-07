@@ -13,7 +13,7 @@ const Pictures = ({tabItem})=>{
     // }, [tabItem]);
     return (
         <>
-                    <div className="flex border my-10">
+                    <div className="flex my-10">
                         <div className="grid grid-cols-4 md:grid-cols-3 sm:grid-cols-1 gap-4">
                             
                                 {

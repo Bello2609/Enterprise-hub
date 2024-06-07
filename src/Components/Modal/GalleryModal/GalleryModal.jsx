@@ -18,12 +18,8 @@ import { IoIosArrowBack, IoIosArrowForward } from "react-icons/io";
     const nextImage = ()=>{
       setImgIndex(prevState =>
         prevState === images.length - 1 ? 0 : prevState + 1 
-      
-      )
-      
+      ) 
     }
-    
-
     const prevImage = ()=>{
       setImgIndex(prevIndex=>
         prevIndex === 0 ? prevIndex + images.length - 1 : prevIndex - 1
@@ -53,7 +49,7 @@ import { IoIosArrowBack, IoIosArrowForward } from "react-icons/io";
       <>
         <Modal isOpen={isOpen} onClose={onClose} size="lg">
           <ModalOverlay />
-          <ModalContent maxW="500px">
+          <ModalContent maxW="700px">
             <ModalHeader></ModalHeader>
             <ModalCloseButton />
               <div className="flex items-center">

@@ -1,95 +1,96 @@
+import * as images from "../image";
 const ImageList = [
     {
         category: "Cafetaria",
-        name: "/src/assets/gallery/g1.jpg"
+        name: images.g1
     },
     {
         category: "General Offices",
-        name: "/src/assets/gallery/g2.jpg"
+        name: images.g2
     },
     {
         category: "Executive Offices",
-        name: "/src/assets/gallery/g3.jpg"
+        name: images.g3
     },
     {
         category: "Cafetaria",
-        name: "/src/assets/gallery/g4.jpg"
+        name: images.g4
     },
     {
         category: "Board Room",
-        name: "/src/assets/gallery/g5.jpg"
+        name: images.g5
     },
     {
         category: "Training Room",
-        name: "/src/assets/gallery/g6.jpg"
+        name: images.g6
     },
     {
         category: "Privates Offices",
-        name: "/src/assets/gallery/g7.jpg"
+        name: images.g7
     },
     {
         category: "Privates Offices",
-        name: "/src/assets/gallery/g8.jpg"
+        name: images.g8
     },
     {
         category: "Training Room",
-        name: "/src/assets/gallery/g9.jpg"
+        name: images.g9
     },
     {
         category: "Courtyard",
-        name: "/src/assets/gallery/g10.jpg"
+        name: images.g10
     },
     {
         category: "Privates Offices",
-        name: "/src/assets/gallery/g11.jpg"
+        name: images.g11
     },
     {
         category: "Executive Offices",
-        name: "/src/assets/gallery/g12.jpg"
+        name: images.g12
     },
     {
         category: "Training Room",
-        name: "/src/assets/gallery/g13.jpg"
+        name: images.g13
     },
     {
         category: "General Offices",
-        name: "/src/assets/gallery/g15.jpg"
+        name: images.g15
     },
     {
         category: "Kano Offices",
-        name: "/src/assets/gallery/g16.jpg"
+        name: images.g16
     },
     {
         category: "Kano Offices",
-        name: "/src/assets/gallery/g17.jpg"
+        name: images.g17
     },
     {
         category: "Kano Offices",
-        name: "/src/assets/gallery/g18.jpg"
+        name: images.g18
     },
     {
         category: "Kano Offices",
-        name: "/src/assets/gallery/g19.jpg"
+        name: images.g19
     },
     {
         category: "Kano Offices",
-        name: "/src/assets/gallery/g20.jpg"
+        name: images.g20
     },
     {
         category: "Kano Offices",
-        name: "/src/assets/gallery/g21.jpg"
+        name: images.g21
     },
     {
         category: "Kano Offices",
-        name: "/src/assets/gallery/g22.jpg"
+        name: images.g22
     },
     {
         category: "Kano Offices",
-        name: "/src/assets/gallery/g23.jpg"
+        name: images.g23
     },
     {
         category: "Kano Offices",
-        name: "/src/assets/gallery/g24.jpg"
+        name: images.g24
     },
 
 ]
