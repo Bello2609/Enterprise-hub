@@ -9,9 +9,9 @@ import Accorddion from "../../Components/Accordion/Accordion";
 
 
 const backGroundList = [
-        '/src/assets/bg1.png',
-        '/src/assets/bg2.png',
-        '/src/assets/bg3.png'
+        '/public/bg1.png',
+        '/public/bg2.png',
+        '/public/bg3.png'
 ]
 
 const Home = ()=>{
