@@ -259,7 +259,7 @@ const Router = () => {
                   </Suspense>
                }
             />
-            <Route
+            {/* <Route
                path="/get-started"
                exact
                element={
@@ -269,7 +269,7 @@ const Router = () => {
                      </Layout>
                   </Suspense>
                }
-            />
+            /> */}
              {/* <Route
                path="/gallery"
                exact
