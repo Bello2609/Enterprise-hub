@@ -4,16 +4,17 @@ import { Routes, Route } from "react-router-dom";
 //pages
 import Layout from "./Pages/Layout/Layout.jsx";
 import PrivateRoute from "./Utils/PrivateRoutes.jsx";
+import SignUpLayout from "./Pages/Layout/SignUpLayout.jsx";
 const Home = lazy(() => import("./Pages/Home/Home.jsx"));
 // const Layout = lazy(() => import("./Pages/Layout/Layout.jsx"));
-const SignUpLayout = lazy(() => import("./Pages/Layout/SignUpLayout.jsx"));
+
 const SignIn = lazy(() => import("./Pages/SignIn/SignIn.jsx"));
 const SignUp = lazy(() => import("./Pages/SignUp/SignUp.jsx"));
 const ForgetPassword = lazy(()=>import("./Pages/ForgetPassword/ForgetPassword.jsx"));
 const Services = lazy(()=> import("./Pages/Services/Services.jsx"));
 const AboutUs = lazy(()=> import ("./Pages/About us/AboutUs.jsx"));
 const UserProfile = lazy(()=> import ("./Pages/UserProfile/UserProfile.jsx"));
-const UserProfileEdit = lazy(()=> import ("./Pages/UserProfileEdit/UserProfileEdit.jsx"));
+// const UserProfileEdit = lazy(()=> import ("./Pages/UserProfileEdit/UserProfileEdit.jsx"));
 const BookSpace = lazy(()=> import ("./Pages/BookSpace/BookSpace.jsx"));
 const Professional = lazy(()=> import ("./Pages/Professional/Professional.jsx"));
 const Franchise = lazy(()=> import("./Pages/Franchise/Franchise.jsx"));
@@ -85,7 +86,7 @@ const Router = () => {
                   </Suspense>
                }
             />
-            <Route
+            {/* <Route
                path="/user-profile-edit"
                exact
                element={
@@ -97,7 +98,7 @@ const Router = () => {
                      </Layout>
                   </Suspense>
                }
-            />
+            /> */}
             <Route
                path="/book-space"
                exact
