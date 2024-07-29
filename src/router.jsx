@@ -20,8 +20,8 @@ const Professional = lazy(()=> import ("./Pages/Professional/Professional.jsx"))
 const Franchise = lazy(()=> import("./Pages/Franchise/Franchise.jsx"));
 // const AllBlog = lazy(()=> import("./Pages/Blog/AllBlog.jsx"));
 // const Articles = lazy(()=> import("./Pages/Blog/Articles.jsx"));
-const News = lazy(()=> import("./Pages/Blog/News.jsx"));
-const EachArticle = lazy(()=> import("./Pages/Blog/EachArticle.jsx"));
+// const News = lazy(()=> import("./Pages/Blog/News.jsx"));
+// const EachArticle = lazy(()=> import("./Pages/Blog/EachArticle.jsx"));
 const GetStarted = lazy(()=> import("./Pages/GetStarted/GetStarted.jsx"));
 const Lagos = lazy(()=> import("./Pages/Lagos/Lagos.jsx"));
 const Kano = lazy(()=> import("./Pages/Kano/Kano.jsx"));
@@ -30,7 +30,7 @@ const ContactUs = lazy(()=> import("./Pages/ContactUs/ContactUs.jsx"));
 const AddBlog = lazy(()=> import("./Pages/AddBlog/AddBlog.jsx"));
 const AddTestimonials = lazy(()=> import("./Pages/AddTestimonials/AddTestimonials.jsx"));
 const Gallery = lazy(()=>import("./Pages/Gallery/Gallery.jsx"));
-const Subscription = lazy(()=> import("./Pages/Subscription/Subscription.jsx"));
+// const Subscription = lazy(()=> import("./Pages/Subscription/Subscription.jsx"));
 const ResetPassword = lazy(()=> import("./Pages/ResetPassword/ResetPassword.jsx"));
 const Verify = lazy(()=>import("./Pages/Verify/Verify.jsx"))
 
@@ -200,7 +200,7 @@ const Router = () => {
                   </Suspense>
                }
             />
-            <Route
+            {/* <Route
                path="/articles/:id"
                exact
                element={
@@ -212,8 +212,8 @@ const Router = () => {
                      </Layout>
                   </Suspense>
                }
-            />
-            <Route
+            /> */}
+            {/* <Route
                path="/news"
                exact
                element={
@@ -225,7 +225,7 @@ const Router = () => {
                      </Layout>
                   </Suspense>
                }
-            />
+            /> */}
             <Route
                path="/lagos"
                exact
@@ -327,7 +327,7 @@ const Router = () => {
                   </Suspense>
                }
             />
-            <Route
+            {/* <Route
                path="/subscription"
                element={
                   <Suspense>
@@ -339,7 +339,7 @@ const Router = () => {
                      </SignUpLayout>
                   </Suspense>
                }
-            />
+            /> */}
          </Routes>
       </>
    );
