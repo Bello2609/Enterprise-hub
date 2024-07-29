@@ -17,7 +17,7 @@ const CustomButton = ({
    `;
 
    return (
-      <button className={buttonClassName} onClick={handleClick}>
+      <button type="submit" className={buttonClassName} onClick={handleClick}>
          {children}
       </button>
    );

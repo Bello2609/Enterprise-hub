@@ -3,11 +3,13 @@ import React, { lazy, Suspense } from "react";
 import { Routes, Route } from "react-router-dom";
 //pages
 import Layout from "./Pages/Layout/Layout.jsx";
+import PrivateRoute from "./Utils/PrivateRoutes.jsx";
 const Home = lazy(() => import("./Pages/Home/Home.jsx"));
 // const Layout = lazy(() => import("./Pages/Layout/Layout.jsx"));
 const SignUpLayout = lazy(() => import("./Pages/Layout/SignUpLayout.jsx"));
 const SignIn = lazy(() => import("./Pages/SignIn/SignIn.jsx"));
 const SignUp = lazy(() => import("./Pages/SignUp/SignUp.jsx"));
+const ForgetPassword = lazy(()=>import("./Pages/ForgetPassword/ForgetPassword.jsx"));
 const Services = lazy(()=> import("./Pages/Services/Services.jsx"));
 const AboutUs = lazy(()=> import ("./Pages/About us/AboutUs.jsx"));
 const UserProfile = lazy(()=> import ("./Pages/UserProfile/UserProfile.jsx"));
@@ -28,6 +30,9 @@ const AddBlog = lazy(()=> import("./Pages/AddBlog/AddBlog.jsx"));
 const AddTestimonials = lazy(()=> import("./Pages/AddTestimonials/AddTestimonials.jsx"));
 const Gallery = lazy(()=>import("./Pages/Gallery/Gallery.jsx"));
 const Subscription = lazy(()=> import("./Pages/Subscription/Subscription.jsx"));
+const ResetPassword = lazy(()=> import("./Pages/ResetPassword/ResetPassword.jsx"));
+const Verify = lazy(()=>import("./Pages/Verify/Verify.jsx"))
+
 
 
 const Router = () => {
@@ -68,12 +73,14 @@ const Router = () => {
                }
             />
             <Route
-               path="/user-profile/:name"
+               path="/user-profile"
                exact
                element={
                   <Suspense>
                      <Layout>
-                        <UserProfile />
+                        <PrivateRoute>
+                           <UserProfile />
+                        </PrivateRoute>
                      </Layout>
                   </Suspense>
                }
@@ -84,7 +91,9 @@ const Router = () => {
                element={
                   <Suspense>
                      <Layout>
-                        <UserProfileEdit />
+                        <PrivateRoute>
+                           <UserProfileEdit />
+                        </PrivateRoute>
                      </Layout>
                   </Suspense>
                }
@@ -95,7 +104,9 @@ const Router = () => {
                element={
                   <Suspense>
                      <Layout>
-                        <BookSpace />
+                        <PrivateRoute>
+                           <BookSpace />
+                        </PrivateRoute>
                      </Layout>
                   </Suspense>
                }
@@ -106,7 +117,9 @@ const Router = () => {
                element={
                   <Suspense>
                      <Layout>
-                        <Professional />
+                        <PrivateRoute>
+                           <Professional />
+                        </PrivateRoute>
                      </Layout>
                   </Suspense>
                }
@@ -128,7 +141,9 @@ const Router = () => {
                element={
                   <Suspense>
                      <Layout>
-                        <AllBlog />
+                        <PrivateRoute>
+                           <AllBlog />
+                        </PrivateRoute>
                      </Layout>
                   </Suspense>
                }
@@ -140,7 +155,9 @@ const Router = () => {
                element={
                   <Suspense>
                      <Layout>
-                        <AddBlog />
+                        <PrivateRoute>
+                           <AddBlog />
+                        </PrivateRoute>
                      </Layout>
                   </Suspense>
                }
@@ -151,7 +168,9 @@ const Router = () => {
                element={
                   <Suspense>
                      <Layout>
-                        <AddTestimonials />
+                        <PrivateRoute>
+                           <AddTestimonials />
+                        </PrivateRoute>
                      </Layout>
                   </Suspense>
                }
@@ -162,7 +181,9 @@ const Router = () => {
                element={
                   <Suspense>
                      <Layout>
-                        <Articles />
+                        <PrivateRoute>
+                           <Articles />
+                        </PrivateRoute>
                      </Layout>
                   </Suspense>
                }
@@ -184,7 +205,9 @@ const Router = () => {
                element={
                   <Suspense>
                      <Layout>
-                        <EachArticle />
+                        <PrivateRoute>
+                           <EachArticle />
+                        </PrivateRoute>
                      </Layout>
                   </Suspense>
                }
@@ -195,7 +218,9 @@ const Router = () => {
                element={
                   <Suspense>
                      <Layout>
-                        <News />
+                        <PrivateRoute>
+                           <News />
+                        </PrivateRoute>
                      </Layout>
                   </Suspense>
                }
@@ -276,10 +301,39 @@ const Router = () => {
                }
             />
             <Route
+               path="/forget-password"
+               element={
+                  <Suspense>
+                     {/* <SignUpLayout> */}
+                        <ForgetPassword />
+                     {/* </SignUpLayout> */}
+                  </Suspense>
+               }
+            />
+            <Route
+               path="/accounts/auth/password-reset"
+               element={
+                  <Suspense>
+                     <ResetPassword />
+                  </Suspense>
+               }
+            />
+            <Route
+               path="/accounts/auth/verify_account"
+               element={
+                  <Suspense>
+                     <Verify />
+                  </Suspense>
+               }
+            />
+            <Route
                path="/subscription"
                element={
                   <Suspense>
                      <SignUpLayout>
+                        <PrivateRoute>
+                           <News />
+                        </PrivateRoute>
                         <Subscription />
                      </SignUpLayout>
                   </Suspense>

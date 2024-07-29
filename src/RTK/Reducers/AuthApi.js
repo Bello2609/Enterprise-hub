@@ -3,7 +3,7 @@ import { END_POINT, API_METHOD } from "../../Config/Auth";
 
 export const AuthApi  = createApi({
     reducerPath: "AuthReducer",
-    baseQuery: fetchBaseQuery({ baseUrl: "http:localhost:8000" }),
+    baseQuery: fetchBaseQuery({ baseUrl: "https://enterprisehubs.onrender.com/" }),
     tagTypes: ["Auth"],
     endpoints: (build)=>({
         login: build.mutation({
@@ -16,15 +16,18 @@ export const AuthApi  = createApi({
             }
         }),
         register: build.mutation({
-            query: ({name, email, password, user})=>{
+            query: ({email, username, first_name, last_name, password, password2, client_type})=>{
                 return {
                     url: END_POINT.REGISTER,
                     method: API_METHOD.POST,
-                    body: {
-                        name,
+                    body:{
                         email,
+                        username,
+                        first_name,
+                        last_name,
                         password,
-                        user
+                        password2,
+                        client_type
                     }
                 }
             }
@@ -37,10 +40,39 @@ export const AuthApi  = createApi({
                     body: { email }
                 }
             }
+        }),
+        resetPassword: build.mutation({
+            query: ({ token, new_password })=>{
+                return{
+                    url: END_POINT.NEW_PASSWORD,
+                    method: API_METHOD.POST,
+                    body: {
+                        token,
+                        new_password
+                    }
+                }
+            }
+        }),
+        verifyAccount: build.mutation({
+            query: ({ token })=>{
+                return{
+                    url: END_POINT.VERIFY,
+                    method: API_METHOD.POST,
+                    body: {
+                        token
+                    }
+                }
+            }
         })
 
     })
 })
 
-export const { useLoginMutation, useRegisterMutation, useForgetPasswordMutation } = AuthApi;
+export const { 
+    useLoginMutation, 
+    useRegisterMutation, 
+    useForgetPasswordMutation,
+    useResetPasswordMutation,
+    useVerifyAccountMutation   
+ } = AuthApi;
 

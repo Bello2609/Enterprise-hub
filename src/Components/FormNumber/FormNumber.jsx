@@ -1,9 +1,9 @@
-import { useState } from 'react';
+// import React from "react";
 import PhoneInput from 'react-phone-number-input';
 import 'react-phone-number-input/style.css';
 
-const FormNumber = ({placeholder, label})=>{
-    const [value, setValue] = useState()
+const FormNumber = ({placeholder, label, value, onChange})=>{
+    // const [value, setValue] = useState()
     return(
         <>
             <div className="flex flex-col gap-5 w-full mt-3">
@@ -21,7 +21,9 @@ const FormNumber = ({placeholder, label})=>{
                         placeholder={placeholder}
                         value={value}
                         defaultCountry="NG"
-                        onChange={setValue}/>
+                        onChange={onChange}
+                        name={name} 
+                        />
                 </div>
             </div>
          </>

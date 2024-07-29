@@ -1,4 +1,5 @@
-import React from "react";
+/* eslint-disable react/no-unknown-property */
+// import React from "react";
 import * as images from "../../image"
 import FormInput from "../../Components/FormInput/FormInput";
 import CustomButton from "../../Components/customButton";

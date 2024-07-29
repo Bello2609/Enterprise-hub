@@ -3,8 +3,9 @@
 const FormInput = ({
    label,
    type,
-   register,
+   // register,
    name,
+   // eslint-disable-next-line no-unused-vars
    error,
    placeholder,
    onChange,
@@ -17,15 +18,10 @@ const FormInput = ({
          </div>
          <div className="flex-auto border-solid border border-[#DFDFDF] rounded-lg px-2 h-11">
             <input
-               className="w-full sm:w-fit h-full border-0 outline-0"
+               className="w-[100%] sm:w-fit h-full border-0 outline-0"
                placeholder={placeholder}
                type={type}
-               {...(register && {
-                  ...register(name, {
-                     required: `This field is required`,
-                     // Add other validation rules as needed
-                  }),
-               })}
+               name={name}
                onChange={onChange}
                value={value}
             />
