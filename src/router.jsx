@@ -18,7 +18,7 @@ const UserProfile = lazy(()=> import ("./Pages/UserProfile/UserProfile.jsx"));
 const BookSpace = lazy(()=> import ("./Pages/BookSpace/BookSpace.jsx"));
 const Professional = lazy(()=> import ("./Pages/Professional/Professional.jsx"));
 const Franchise = lazy(()=> import("./Pages/Franchise/Franchise.jsx"));
-const AllBlog = lazy(()=> import("./Pages/Blog/AllBlog.jsx"));
+// const AllBlog = lazy(()=> import("./Pages/Blog/AllBlog.jsx"));
 const Articles = lazy(()=> import("./Pages/Blog/Articles.jsx"));
 const News = lazy(()=> import("./Pages/Blog/News.jsx"));
 const EachArticle = lazy(()=> import("./Pages/Blog/EachArticle.jsx"));
@@ -136,7 +136,7 @@ const Router = () => {
                   </Suspense>
                }
             />
-            <Route
+            {/* <Route
                path="/blog"
                exact
                element={
@@ -148,7 +148,7 @@ const Router = () => {
                      </Layout>
                   </Suspense>
                }
-            />
+            /> */}
             {/* this is a private route */}
             <Route
                path="/admin/add-blog"
