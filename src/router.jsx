@@ -19,7 +19,7 @@ const BookSpace = lazy(()=> import ("./Pages/BookSpace/BookSpace.jsx"));
 const Professional = lazy(()=> import ("./Pages/Professional/Professional.jsx"));
 const Franchise = lazy(()=> import("./Pages/Franchise/Franchise.jsx"));
 // const AllBlog = lazy(()=> import("./Pages/Blog/AllBlog.jsx"));
-const Articles = lazy(()=> import("./Pages/Blog/Articles.jsx"));
+// const Articles = lazy(()=> import("./Pages/Blog/Articles.jsx"));
 const News = lazy(()=> import("./Pages/Blog/News.jsx"));
 const EachArticle = lazy(()=> import("./Pages/Blog/EachArticle.jsx"));
 const GetStarted = lazy(()=> import("./Pages/GetStarted/GetStarted.jsx"));
@@ -176,7 +176,7 @@ const Router = () => {
                   </Suspense>
                }
             />
-            <Route
+            {/* <Route
                path="/articles"
                exact
                element={
@@ -188,7 +188,7 @@ const Router = () => {
                      </Layout>
                   </Suspense>
                }
-            />
+            /> */}
             <Route
                path="/contact-us"
                exact
