@@ -22,7 +22,7 @@ const Franchise = lazy(()=> import("./Pages/Franchise/Franchise.jsx"));
 // const Articles = lazy(()=> import("./Pages/Blog/Articles.jsx"));
 // const News = lazy(()=> import("./Pages/Blog/News.jsx"));
 // const EachArticle = lazy(()=> import("./Pages/Blog/EachArticle.jsx"));
-const GetStarted = lazy(()=> import("./Pages/GetStarted/GetStarted.jsx"));
+// const GetStarted = lazy(()=> import("./Pages/GetStarted/GetStarted.jsx"));
 const Lagos = lazy(()=> import("./Pages/Lagos/Lagos.jsx"));
 const Kano = lazy(()=> import("./Pages/Kano/Kano.jsx"));
 const Abuja = lazy(()=> import("./Pages/Abuja/Abuja.jsx"));
@@ -270,7 +270,7 @@ const Router = () => {
                   </Suspense>
                }
             />
-             <Route
+             {/* <Route
                path="/gallery"
                exact
                element={
@@ -280,7 +280,7 @@ const Router = () => {
                      </Layout>
                   </Suspense>
                }
-            />
+            /> */}
             <Route
                path="/sign-in"
                element={
