@@ -14,15 +14,15 @@ const ForgetPassword = lazy(()=>import("./Pages/ForgetPassword/ForgetPassword.js
 const Services = lazy(()=> import("./Pages/Services/Services.jsx"));
 const AboutUs = lazy(()=> import ("./Pages/About us/AboutUs.jsx"));
 const UserProfile = lazy(()=> import ("./Pages/UserProfile/UserProfile.jsx"));
-// const UserProfileEdit = lazy(()=> import ("./Pages/UserProfileEdit/UserProfileEdit.jsx"));
+const UserProfileEdit = lazy(()=> import ("./Pages/UserProfileEdit/UserProfileEdit.jsx"));
 const BookSpace = lazy(()=> import ("./Pages/BookSpace/BookSpace.jsx"));
 const Professional = lazy(()=> import ("./Pages/Professional/Professional.jsx"));
 const Franchise = lazy(()=> import("./Pages/Franchise/Franchise.jsx"));
-// const AllBlog = lazy(()=> import("./Pages/Blog/AllBlog.jsx"));
-// const Articles = lazy(()=> import("./Pages/Blog/Articles.jsx"));
-// const News = lazy(()=> import("./Pages/Blog/News.jsx"));
-// const EachArticle = lazy(()=> import("./Pages/Blog/EachArticle.jsx"));
-// const GetStarted = lazy(()=> import("./Pages/GetStarted/GetStarted.jsx"));
+const AllBlog = lazy(()=> import("./Pages/Blog/AllBlog.jsx"));
+const Articles = lazy(()=> import("./Pages/Blog/Articles.jsx"));
+const News = lazy(()=> import("./Pages/Blog/News.jsx"));
+const EachArticle = lazy(()=> import("./Pages/Blog/EachArticle.jsx"));
+const GetStarted = lazy(()=> import("./Pages/GetStarted/GetStarted.jsx"));
 const Lagos = lazy(()=> import("./Pages/Lagos/Lagos.jsx"));
 const Kano = lazy(()=> import("./Pages/Kano/Kano.jsx"));
 const Abuja = lazy(()=> import("./Pages/Abuja/Abuja.jsx"));
@@ -30,7 +30,7 @@ const ContactUs = lazy(()=> import("./Pages/ContactUs/ContactUs.jsx"));
 const AddBlog = lazy(()=> import("./Pages/AddBlog/AddBlog.jsx"));
 const AddTestimonials = lazy(()=> import("./Pages/AddTestimonials/AddTestimonials.jsx"));
 const Gallery = lazy(()=>import("./Pages/Gallery/Gallery.jsx"));
-// const Subscription = lazy(()=> import("./Pages/Subscription/Subscription.jsx"));
+const Subscription = lazy(()=> import("./Pages/Subscription/Subscription.jsx"));
 const ResetPassword = lazy(()=> import("./Pages/ResetPassword/ResetPassword.jsx"));
 const Verify = lazy(()=>import("./Pages/Verify/Verify.jsx"))
 
@@ -86,7 +86,7 @@ const Router = () => {
                   </Suspense>
                }
             />
-            {/* <Route
+            <Route
                path="/user-profile-edit"
                exact
                element={
@@ -98,7 +98,7 @@ const Router = () => {
                      </Layout>
                   </Suspense>
                }
-            /> */}
+            />
             <Route
                path="/book-space"
                exact
@@ -136,7 +136,7 @@ const Router = () => {
                   </Suspense>
                }
             />
-            {/* <Route
+            <Route
                path="/blog"
                exact
                element={
@@ -148,7 +148,7 @@ const Router = () => {
                      </Layout>
                   </Suspense>
                }
-            /> */}
+            />
             {/* this is a private route */}
             <Route
                path="/admin/add-blog"
@@ -176,7 +176,7 @@ const Router = () => {
                   </Suspense>
                }
             />
-            {/* <Route
+            <Route
                path="/articles"
                exact
                element={
@@ -188,7 +188,7 @@ const Router = () => {
                      </Layout>
                   </Suspense>
                }
-            /> */}
+            />
             <Route
                path="/contact-us"
                exact
@@ -200,7 +200,7 @@ const Router = () => {
                   </Suspense>
                }
             />
-            {/* <Route
+            <Route
                path="/articles/:id"
                exact
                element={
@@ -212,8 +212,8 @@ const Router = () => {
                      </Layout>
                   </Suspense>
                }
-            /> */}
-            {/* <Route
+            />
+            <Route
                path="/news"
                exact
                element={
@@ -225,7 +225,7 @@ const Router = () => {
                      </Layout>
                   </Suspense>
                }
-            /> */}
+            />
             <Route
                path="/lagos"
                exact
@@ -259,7 +259,7 @@ const Router = () => {
                   </Suspense>
                }
             />
-            {/* <Route
+            <Route
                path="/get-started"
                exact
                element={
@@ -269,8 +269,8 @@ const Router = () => {
                      </Layout>
                   </Suspense>
                }
-            /> */}
-             {/* <Route
+            />
+             <Route
                path="/gallery"
                exact
                element={
@@ -280,7 +280,7 @@ const Router = () => {
                      </Layout>
                   </Suspense>
                }
-            /> */}
+            />
             <Route
                path="/sign-in"
                element={
@@ -327,19 +327,16 @@ const Router = () => {
                   </Suspense>
                }
             />
-            {/* <Route
+            <Route
                path="/subscription"
                element={
                   <Suspense>
-                     <SignUpLayout>
                         <PrivateRoute>
-                           <News />
+                           <Subscription />
                         </PrivateRoute>
-                        <Subscription />
-                     </SignUpLayout>
                   </Suspense>
                }
-            /> */}
+            />
          </Routes>
       </>
    );
