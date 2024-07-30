@@ -1,3 +1,4 @@
+/* eslint-disable no-unused-vars */
 import React, { useState } from "react";
 import * as images from "../../image";
 import { Link } from "react-router-dom";
@@ -8,7 +9,9 @@ import { IoCheckmarkCircle } from "react-icons/io5";
 import CancelPaymentModal from "../../Components/Modal/PaymentModal/CancelPaymentModal";
 import ConfirmPaymentModal from "../../Components/Modal/PaymentModal/ConfirmPaymentModal";
 import { useDisclosure } from "@chakra-ui/react";
+import { useSelector } from "react-redux";
 const UserProfile = ()=>{
+    const { first_name, last_name } = useSelector(state=> state.auth);
     const { isOpen: isPaymentOpen, onOpen: onPaymentOpen, onClose: onPaymentClose } = useDisclosure();
     const { isOpen: isConfirmOpen, onOpen: onConfirmOpen, onClose: onConfirmClose } = useDisclosure();
     return(
@@ -17,7 +20,7 @@ const UserProfile = ()=>{
                 <div className="flex flex-col bg-[#fff] rounded-b-2xl ">
                     <div className="flex items-center justify-between  w-[807px] h-[150px] bg-gradient-to-r from-[#FFFCB8] to-[#F5D0CA]">
                         <div className="sm:hidden w-28 h-28"></div>
-                        <p className="sm:hidden font-sans text-base font-medium pl-16">Good afternoon, Ogechi</p>
+                        <p className="sm:hidden font-sans text-base font-medium pl-16">Good afternoon, {first_name}</p>
                         <img src={images.group6} className="sm:hidden h-full border-2 border-red-500" alt="" />
                     </div>
                     <div className="sm:flex sm:items-center rounded-full bg-[#ffffff] w-fit mt-[-80px] sm:ml-[320px] ml-10">
@@ -25,7 +28,7 @@ const UserProfile = ()=>{
                     </div>
                     <div className="flex flex-col sm:items-center p-10 w-full font-sans">
                         <div className="flex sm:flex-col justify-between items-center w-full">
-                            <h4 className="font-sans text-2xl font-semibold">Ogechi Adams</h4>
+                            <h4 className="font-sans text-2xl font-semibold">{first_name} &nbsp; { last_name }</h4>
                             <Link className="flex justify-center items-center w-[176px] h-[57px] sm:my-5 text-[#fff] font-medium bg-[#81C167] p-3 w-40 h-12 rounded-md ">
                                 EXPLORE
                             </Link>

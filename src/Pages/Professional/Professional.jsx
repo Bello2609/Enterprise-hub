@@ -1,4 +1,5 @@
-import React from "react";
+/* eslint-disable react/jsx-key */
+
 import * as images from "../../image"
 import { useDisclosure } from "@chakra-ui/react";
 import QuoteModal from "../../Components/Modal/QuoteModal/QuoteModal";
