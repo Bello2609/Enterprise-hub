@@ -6,8 +6,6 @@ import Layout from "./Pages/Layout/Layout.jsx";
 import PrivateRoute from "./Utils/PrivateRoutes.jsx";
 import SignUpLayout from "./Pages/Layout/SignUpLayout.jsx";
 const Home = lazy(() => import("./Pages/Home/Home.jsx"));
-// const Layout = lazy(() => import("./Pages/Layout/Layout.jsx"));
-
 const SignIn = lazy(() => import("./Pages/SignIn/SignIn.jsx"));
 const SignUp = lazy(() => import("./Pages/SignUp/SignUp.jsx"));
 const ForgetPassword = lazy(()=>import("./Pages/ForgetPassword/ForgetPassword.jsx"));
@@ -118,9 +116,9 @@ const Router = () => {
                element={
                   <Suspense>
                      <Layout>
-                        <PrivateRoute>
+                        {/* <PrivateRoute> */}
                            <Professional />
-                        </PrivateRoute>
+                        {/* </PrivateRoute> */}
                      </Layout>
                   </Suspense>
                }
@@ -142,9 +140,9 @@ const Router = () => {
                element={
                   <Suspense>
                      <Layout>
-                        <PrivateRoute>
+                        
                            <AllBlog />
-                        </PrivateRoute>
+                        
                      </Layout>
                   </Suspense>
                }
@@ -156,9 +154,7 @@ const Router = () => {
                element={
                   <Suspense>
                      <Layout>
-                        <PrivateRoute>
                            <AddBlog />
-                        </PrivateRoute>
                      </Layout>
                   </Suspense>
                }
@@ -169,9 +165,7 @@ const Router = () => {
                element={
                   <Suspense>
                      <Layout>
-                        <PrivateRoute>
                            <AddTestimonials />
-                        </PrivateRoute>
                      </Layout>
                   </Suspense>
                }

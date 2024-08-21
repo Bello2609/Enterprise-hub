@@ -1,5 +1,6 @@
 import { createApi, fetchBaseQuery } from "@reduxjs/toolkit/query/react";
-import { END_POINT, API_METHOD } from "../../Config/Auth";
+import { END_POINT } from "../../Config/Auth";
+import { API_METHOD } from "../../Config/ApiMethod";
 
 export const AuthApi  = createApi({
     reducerPath: "AuthReducer",
@@ -73,6 +74,6 @@ export const {
     useRegisterMutation, 
     useForgetPasswordMutation,
     useResetPasswordMutation,
-    useVerifyAccountMutation   
+    useVerifyAccountMutation
  } = AuthApi;
 

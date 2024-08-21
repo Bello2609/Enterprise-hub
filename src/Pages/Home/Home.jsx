@@ -1,3 +1,4 @@
+/* eslint-disable react/no-unescaped-entities */
 import {useEffect, useState} from "react";
 import { Link } from "react-router-dom";
 import { motion } from "framer-motion";
@@ -298,8 +299,8 @@ const Home = ()=>{
                             <p className="flex justify-center w-[145px] font-medium text-base text-[#616161] mt-5">Private Calls</p>
                         </motion.div>
                         {/* 3 */}
-                        <div class="grid grid-cols-subgrid col-span-3 sm:col-span-2">
-                            <div class="col-start-2 sm:col-start-1">
+                        <div className="grid grid-cols-subgrid col-span-3 sm:col-span-2">
+                            <div className="col-start-2 sm:col-start-1">
                                 <motion.div 
                                     whileHover={{scale: 1.1}}
                                     whileTap={{scale: 0.9}}
@@ -309,7 +310,7 @@ const Home = ()=>{
                                     <p className="flex justify-center w-[145px] font-medium text-base text-[#616161]">Photocopying</p>
                                 </motion.div>
                             </div>
-                            <div class="col-start-3 sm:col-start-2">
+                            <div className="col-start-3 sm:col-start-2">
                                 <motion.div
                                     whileHover={{scale: 1.1}}
                                     whileTap={{scale: 0.9}}

@@ -1,48 +1,28 @@
-import React, { useState } from "react";
+// import React, { useState } from "react";
 import Select from "react-dropdown-select";
+const FormSelect = ({options, label, width, field,form, ...props})=>{
 
-const style = {
-   height: "44px"
-}
-const FormSelect = ({options, label, width})=>{
-   const [selectedOption, setSelectedOption] = useState("Hustle Hall (Co-working Hub)");
     return(
       <>
          <div className="flex flex-col gap-5 w-full mt-3">
             <div className="flex">
                <label className="font-medium text-[#252524]">{label}</label>
             </div>
-         <div className="border-solid rounded-lg  h-11 w-full ">
-            {/* <input
-               className="w-full h-full border-0 outline-0"
-               placeholder={placeholder}
-               type={type}
-               {...(register && {
-                  ...register(name, {
-                     required: `This field is required`,
-                     // Add other validation rules as needed
-                  }),
-               })}
-               onChange={onChange}
-               value={value}
-            /> */}
-            {/* <Select
-            defaultValue={selectedOption}
-            onChange={setSelectedOption}
-            options={options}
-            className={style}
-            /> */}
-            <Select options={options} onChange={(values) => console.log(values) } style={{
-               width: width,
-               border: "1px solid #DFDFDF",
-               height: "50px",
-               borderRadius: "8px",
-               // color: options[0] ? "#81C167" : null
+         <div className="border-solid rounded-lg  h-11 w-full">
+           
+            <Select 
+               {...props}
+               name={field.name}
+               options={options} 
+               value={ options ? options.find(option => option.value === field.value) : "" }
+               onChange={(option)=> form.setFieldValue(field.name, option[0].value)}
+               style={{
+                  width: width,
+                  border: "1px solid #DFDFDF",
+                  height: "50px",
+                  borderRadius: "8px",
             }} />
          </div>
-         {/* {error && error[name] && (
-            <p className="error text-danger m-0">{error[name].message}</p>
-         )} */}
       </div>
       </>
     );

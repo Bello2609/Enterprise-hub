@@ -1,5 +1,5 @@
 /* eslint-disable react/jsx-key */
-
+import { useState } from "react";
 import * as images from "../../image"
 import { useDisclosure } from "@chakra-ui/react";
 import QuoteModal from "../../Components/Modal/QuoteModal/QuoteModal";
@@ -38,6 +38,11 @@ const professionalData = [
 ]
 const Professional = ()=>{
     const { isOpen, onOpen, onClose  } = useDisclosure();
+    const [ modalText, setModalText ] = useState();
+
+    const handleModalText = (text)=>{
+        setModalText(text);
+    }
     return(
         <>
             <div className="flex flex-col w-full items-center">
@@ -62,7 +67,14 @@ const Professional = ()=>{
                                         <h4 className="font-sans font-normal text-base text-[#616161] w-[312px] my-5">
                                             {data.professionInfo}
                                         </h4>
-                                        <button onClick={onOpen} type="submit" className="text-[#fff] bg-[#E8332C] w-[277px] h-[45px]">
+                                        <button 
+                                            onClick={()=>{
+                                                onOpen();
+                                                handleModalText(data.professionTitle.toLowerCase())
+                                            }} 
+                                            type="submit" 
+                                            className="text-[#fff] bg-[#E8332C] w-[277px] h-[45px]"
+                                        >
                                             Get a quote
                                         </button>
                                     </div>
@@ -71,7 +83,7 @@ const Professional = ()=>{
                         })
                     }
                 </div>
-                <QuoteModal isOpen={isOpen} onClose={onClose} />
+                <QuoteModal isOpen={isOpen} onClose={onClose} modalText={modalText} />
             </div>
         </>
     );

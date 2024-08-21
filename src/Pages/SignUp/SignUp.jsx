@@ -1,3 +1,4 @@
+/* eslint-disable no-unused-vars */
 // import React from 'react'
 import FormInput from "../../Components/FormInput/FormInput";
 import CustomButton from "../../Components/customButton";
@@ -11,6 +12,7 @@ import { toast, ToastContainer } from "react-toastify";
 import 'react-toastify/dist/ReactToastify.css';
 
 const SignUp = () => {
+   // eslint-disable-next-line no-unused-vars
    const [ register, { isSuccess, isError, isLoading, error } ] = useRegisterMutation();
    // const phoneRegExp = `/^((\\+[1-9]{1,4}[ \\-]*)|(\\([0-9]{2,3}\\)[ \\-]*)|([0-9]{2,4})[ \\-]*)*?[0-9]{3,4}?[ \\-]*[0-9]{3,4}?$/`
    const registerSchema = Yup.object({

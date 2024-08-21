@@ -1,4 +1,3 @@
-
 const END_POINT = {
     LOGIN: "/accounts/auth/login/",
     REGISTER: "/accounts/auth/register/",
@@ -7,14 +6,8 @@ const END_POINT = {
     VERIFY: "/accounts/auth/verify_account/"
     
 }
-const API_METHOD = {
-    GET: "GET",
-    POST: "POST",
-    PUT: "PUT",
-    PATCH: "PATCH"
 
-}
 
 export {
-    END_POINT, API_METHOD
+    END_POINT
 }
