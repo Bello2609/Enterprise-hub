@@ -1,5 +1,5 @@
 /* eslint-disable no-unused-vars */
-import { useState } from 'react';
+import { useState, useRef } from 'react';
 import {
     Modal,
     ModalOverlay,
@@ -20,6 +20,8 @@ import * as Yup from "yup";
 const screenWidth = window.screen.width < "768px";
 console.log(screenWidth);
 const QuoteModal = ({isOpen, onClose, modalText})=>{
+    const [ img, setImg ]  = useState("");
+    const [ imgName, setImgName ] = useState("");
     const quoteValidation = Yup.object({
         nameOfProject: Yup.string().required("please enter the name of your project"),
         brief: Yup.string().required("Please give us a brief about your project"),
@@ -35,9 +37,24 @@ const QuoteModal = ({isOpen, onClose, modalText})=>{
         },
         validationSchema: quoteValidation,
         onSubmit: (values)=>{
-
+            const data = {
+                nameOfProject: values.nameOfProject,
+                brief: values.brief,
+                name: values.name,
+                email: values.email,
+                images: img
+            }
         }
     })
+    const hiddenRefInput = useRef(null);
+    const handleClick = ()=>{
+        hiddenRefInput.current.click();
+    }
+    const handleChange = (e)=>{
+        console.log(e.target.files[0]);
+        setImg(e.target.files[0]);
+        setImgName(e.target.files[0].name);
+    }
     return(
         <>
             <Modal isOpen={isOpen} onClose={onClose}>
@@ -63,12 +80,21 @@ const QuoteModal = ({isOpen, onClose, modalText})=>{
                                         <FormInput type="text" label="Name" />
                                         <FormInput type="email" label="Email" />
                                         <div className="flex flex-col items-center justify-center bg-[#F6F6F6] text-[#616161] w-[483px] sm:w-full h-[120px] my-5">
-                                            <div className="flex items-center">
-                                                <p><IoIosAddCircle /></p>
-                                                <p className="font-normal text-base">Set Image</p>
+                                            <div className="flex flex-col items-center">
+                                                <label onClick={handleClick} htmlFor="set image" className="font-normal text-base flex items-center cursor-pointer">
+                                                    <IoIosAddCircle />Set Image
+                                                </label>
+                                                <input 
+                                                    type="file" 
+                                                    ref={hiddenRefInput}
+                                                    accept="images/*" 
+                                                    name="image" 
+                                                    onChange={handleChange}
+                                                    className="hidden w-full"
+                                                    />
                                             </div>
-                                            <p className="text-xs">Max:2MB</p>
-                                    </div>
+                                            <p className="text-xs">{imgName ? `${imgName} is uploaded` : "Max:10MB"}</p>
+                                        </div>
                                     </div>
                                         {/* <PhoneInput
                                             country={'ng'}
