@@ -2,7 +2,7 @@
 import PhoneInput from 'react-phone-number-input';
 import 'react-phone-number-input/style.css';
 
-const FormNumber = ({placeholder, label, value, onChange})=>{
+const FormNumber = ({ label, field, form, ...props})=>{
     // const [value, setValue] = useState()
     return(
         <>
@@ -17,12 +17,11 @@ const FormNumber = ({placeholder, label, value, onChange})=>{
                             border: "none",
                             height: "100%"
                         }}
-                                            
-                        placeholder={placeholder}
-                        value={value}
+                        {...props}
+                        value={field.value}
                         defaultCountry="NG"
-                        onChange={onChange}
-                        name={name} 
+                        onChange={value=> form.setFieldValue(field.name, value)}
+                        name={field.name} 
                         />
                 </div>
             </div>
