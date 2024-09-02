@@ -1,10 +1,11 @@
-import { createApi, fetchBaseQuery } from "@reduxjs/toolkit/query/react";
+import { createApi } from "@reduxjs/toolkit/query/react";
 import { END_POINT } from "../../Config/Blog";
 import { API_METHOD } from "../../Config/ApiMethod";
+import { baseQueryReauth } from "./BaseApi";
 
 export const BlogApi = createApi({
     reducerPath: "BlogReducer",
-    baseQuery: fetchBaseQuery({ baseUrl: "https://enterprisehubs.onrender.com/"  }),
+    baseQuery: baseQueryReauth,
     tagTypes: ["Blog"],
     endpoints: (build)=>({
         createBlog: build.mutation({

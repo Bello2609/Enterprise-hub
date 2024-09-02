@@ -1,10 +1,11 @@
-import { createApi, fetchBaseQuery } from "@reduxjs/toolkit/query/react";
+import { createApi } from "@reduxjs/toolkit/query/react";
 import { END_POINT } from "../../Config/Testimonial";
 import { API_METHOD } from "../../Config/ApiMethod";
+import { baseQueryReauth } from "./BaseApi";
 
 export const TestimonialApi = createApi({
     reducerPath: "TestimonialReducer",
-    baseQuery: fetchBaseQuery({ baseUrl: "https://enterprisehubs.onrender.com/" }),
+    baseQuery: baseQueryReauth,
     tagTypes: ["Testimonial"],
     endpoints: (build)=>({
         newTestimonial: build.mutation({
@@ -44,11 +45,26 @@ export const TestimonialApi = createApi({
                     }
                 }
             }
+        }),
+        postCloud: build.mutation({
+            query: ({ title, file, type })=>{
+                return {
+                    url: END_POINT.POST_TO_CLOUD,
+                    method: API_METHOD.POST,
+                    body: {
+                        title,
+                        file,
+                        type
+                    }
+                }
+            }
         })
     })
 })
 
 export const { 
     useNewTestimonialMutation,
-    useGetTestimonialQuery
+    useGetTestimonialQuery,
+    usePostServiceMutation,
+    usePostCloudMutation
 } = TestimonialApi

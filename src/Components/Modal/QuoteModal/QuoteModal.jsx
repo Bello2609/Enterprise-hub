@@ -1,5 +1,6 @@
 /* eslint-disable no-unused-vars */
 import { useState, useRef } from 'react';
+import { useCloud } from '../../../Hooks/useCloud';
 import {
     Modal,
     ModalOverlay,
@@ -13,6 +14,7 @@ import FormInput from "../../FormInput/FormInput";
 import { IoIosAddCircle } from "react-icons/io";
 import FormNumber from '../../FormNumber/FormNumber';
 import { useFormik, Field, FormikProvider } from 'formik';
+import { usePostServiceMutation } from '../../../RTK/Reducers/TestimonialApi';
 import * as Yup from "yup";
 
 
@@ -20,6 +22,8 @@ const screenWidth = window.screen.width < "768px";
 const QuoteModal = ({isOpen, onClose, modalText})=>{
     const [ img, setImg ]  = useState("");
     const [ imgName, setImgName ] = useState("");
+    const [ postService, { isLoading } ] = usePostServiceMutation();
+    const { uploadImageToCloud } = useCloud()
     const quoteValidation = Yup.object({
         nameOfProject: Yup.string().required("please enter the name of your project"),
         brief: Yup.string().required("Please give us a brief about your project"),
@@ -35,17 +39,26 @@ const QuoteModal = ({isOpen, onClose, modalText})=>{
             phone: ""
         },
         validationSchema: quoteValidation,
-        onSubmit: (values)=>{
-            const data = {
-                project_name: values.nameOfProject,
-                brief: values.brief,
-                name: values.name,
-                email: values.email,
-                file: img,
-                phone: values.phone,
-                s_type: modalText
+        onSubmit: async (values)=>{
+            try{
+                const cloudResponse = await uploadImageToCloud(img);
+                console.log(cloudResponse);
+                const data = {
+                    project_name: values.nameOfProject,
+                    brief: values.brief,
+                    name: values.name,
+                    email: values.email,
+                    file: img,
+                    phone: values.phone,
+                    s_type: modalText
+                }
+                console.log(data);
+                const responses = await postService(data);
+                console.log(responses);
+            }catch(err){
+                console.log(err);
+                throw err;
             }
-            console.log(data);
         }
     })
     const hiddenRefInput = useRef(null);
