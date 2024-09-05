@@ -13,6 +13,7 @@ const authSlice = createSlice({
     initialState,
     reducers: {
         updateToken: (state, action)=>{
+            // console.log(action);
             state.access_token = action.payload.access;
             state.refresh_token = action.payload.refresh
         },
@@ -27,8 +28,8 @@ const authSlice = createSlice({
             AuthApi.endpoints.login.matchFulfilled, (state, {payload})=>{
                 console.log(payload);
                 state.isAuthenticated = true;
-                state.access_token = payload.access;
-                state.refresh_token = payload.refresh;
+                state.access_token = payload.tokens?.access;
+                state.refresh_token = payload.tokens?.refresh;
                 state.first_name = payload.first_name;
                 state.last_name = payload.last_name
             }
