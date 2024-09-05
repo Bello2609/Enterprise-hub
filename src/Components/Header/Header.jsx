@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import { useState, useEffect } from "react";
 import * as Images from "../../image";
 import { NavLink, Link } from "react-router-dom";
 import { AiOutlineClose, AiOutlineMenu, AiFillInstagram } from 'react-icons/ai';
@@ -23,9 +23,6 @@ const Header = ()=>{
   const handleNav = () => {
     setNav(!nav);
   };
-  const style = {
-    color: "#DE2223"
-  }
   const { pathname } = useLocation();
   useEffect(()=>{
     setNav(false)

@@ -1,6 +1,5 @@
 /* eslint-disable no-unused-vars */
 import { useState, useRef } from 'react';
-import { useCloud } from '../../../Hooks/useCloud';
 import {
     Modal,
     ModalOverlay,
@@ -9,13 +8,15 @@ import {
     ModalCloseButton,
     Button,
   } from '@chakra-ui/react';
+import * as Yup from "yup";
+import { useFormik, Field, FormikProvider } from 'formik';
 import * as images from "../../../image";
 import FormInput from "../../FormInput/FormInput";
 import { IoIosAddCircle } from "react-icons/io";
 import FormNumber from '../../FormNumber/FormNumber';
-import { useFormik, Field, FormikProvider } from 'formik';
 import { usePostServiceMutation } from '../../../RTK/Reducers/TestimonialApi';
-import * as Yup from "yup";
+import { useCloud } from '../../../Hooks/useCloud';
+
 
 
 const screenWidth = window.screen.width < "768px";
@@ -23,7 +24,7 @@ const QuoteModal = ({isOpen, onClose, modalText})=>{
     const [ img, setImg ]  = useState("");
     const [ imgName, setImgName ] = useState("");
     const [ postService, { isLoading } ] = usePostServiceMutation();
-    const { uploadImageToCloud } = useCloud()
+    const { uploadImageToCloud } = useCloud();
     const quoteValidation = Yup.object({
         nameOfProject: Yup.string().required("please enter the name of your project"),
         brief: Yup.string().required("Please give us a brief about your project"),

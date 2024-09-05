@@ -2,27 +2,28 @@ import { createSlice } from "@reduxjs/toolkit";
 import { AuthApi } from "../Reducers/AuthApi";
 
 const initialState = {
-    isAuthenticated: "",
+    isAuthenticated: false,
     access_token: "",
     refresh_token: "",
     first_name: "",
     last_name:""
 }
 const authSlice = createSlice({
-    name: "Auth",
+    name: "auth",
     initialState,
     reducers: {
-        updateToken: (state, payload)=>{
-            state.access_token = payload.access;
-            state.refresh_token = payload.refresh
+        updateToken: (state, action)=>{
+            state.access_token = action.payload.access;
+            state.refresh_token = action.payload.refresh
         },
         logout: (state)=>{
             state.isAuthenticated = false;
-            state.token = ""
+            state.access_token = "";
+            state.refresh_token = ""
         }
     },
-    extraReducers: (build)=>{
-        build.addMatcher(
+    extraReducers: (builder)=>{
+        builder.addMatcher(
             AuthApi.endpoints.login.matchFulfilled, (state, {payload})=>{
                 console.log(payload);
                 state.isAuthenticated = true;
@@ -34,5 +35,5 @@ const authSlice = createSlice({
         );
     }
 })
-export const { logout } = authSlice.actions
+export const { logout, updateToken } = authSlice.actions
 export default authSlice.reducer

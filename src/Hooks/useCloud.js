@@ -1,6 +1,4 @@
 import { usePostCloudMutation } from "../RTK/Reducers/TestimonialApi";
-
-
 export const useCloud = () =>{
     const [ postCloud ] = usePostCloudMutation();
     const uploadImageToCloud = async (image)=>{
