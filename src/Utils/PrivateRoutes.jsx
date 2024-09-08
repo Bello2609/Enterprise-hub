@@ -4,11 +4,12 @@ import { Navigate } from "react-router-dom";
 
 const PrivateRoute = ({children})=>{
     const { isAuthenticated } = useSelector(state=> state.auth);
-    console.log(isAuthenticated);
     return (
         <>
             {
-                isAuthenticated ? children : <Navigate to="/sign-in" />
+                isAuthenticated ? 
+                children : 
+                <Navigate to="/sign-in" state={{previousLocationPathName: window.location.pathname}} />
             }
         </>
     )

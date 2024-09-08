@@ -18,7 +18,7 @@ import {
         answer: "We have a range of price points which vary depending on the type of office space you need. These are determined by its size, location, and where it's situated in the center (by the windows or in the interior of the building). Our office space experts can help you find the right rental solution for your needs at the right price."
     },
     {
-        question: "Can you rent office space to yourself?",
+        question: "Can you rent office space to yourself?/",
         answer: "We have a range of price points which vary depending on the type of office space you need. These are determined by its size, location, and where it's situated in the center (by the windows or in the interior of the building). Our office space experts can help you find the right rental solution for your needs at the right price."
     },
     {

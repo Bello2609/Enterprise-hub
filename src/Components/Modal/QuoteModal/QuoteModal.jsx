@@ -14,6 +14,7 @@ import * as images from "../../../image";
 import FormInput from "../../FormInput/FormInput";
 import { IoIosAddCircle } from "react-icons/io";
 import FormNumber from '../../FormNumber/FormNumber';
+import CustomButton from '../../customButton';
 import { usePostServiceMutation } from '../../../RTK/Reducers/TestimonialApi';
 import { useCloud } from '../../../Hooks/useCloud';
 
@@ -53,7 +54,6 @@ const QuoteModal = ({isOpen, onClose, modalText})=>{
                     phone: values.phone,
                     s_type: modalText
                 }
-                console.log(data);
                 const responses = await postService(data);
                 console.log(responses);
             }catch(err){
@@ -144,7 +144,12 @@ const QuoteModal = ({isOpen, onClose, modalText})=>{
                                             
                                         </div>
                                         <div className="flex flex-wrap w-[483px] sm:w-full mt-2">
-                                            <Button type="submit" width="584px" bgColor="#81C167" color="#fff">Submit</Button>
+                                            {/* <Button type="submit" width="584px" bgColor="#81C167" color="#fff">
+                                                {
+                                                    isLoading ? "Loading" : "Submit"
+                                                 }
+                                            </Button> */}
+                                            <CustomButton isSignInBtn>{ isLoading ? "Loading..." : "Submit" }</CustomButton>
                                         </div>
                                         <p className="text-[#616161] text-base mt-5">Want to skip the wait?</p>
                                         <p className="text-[#616161] text-center text-base">Contact us through any of the phone numbers provided below</p>

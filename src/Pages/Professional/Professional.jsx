@@ -58,7 +58,7 @@ const Professional = ()=>{
                     {
                         professionalData.map(data=>{
                             return (
-                                <div className="flex flex-col rounded-xl border border-[#DFDFDF] w-[360px] h-fit">
+                                <div key={data.professionTitle} className="flex flex-col rounded-xl border border-[#DFDFDF] w-[360px] h-fit">
                                     <img src={data.img} alt="A man carrying a bag" className="rounded-t-xl" />
                                     <div className="p-8">
                                         <p className="font-sans text-base text-[#81C167] font-bold">

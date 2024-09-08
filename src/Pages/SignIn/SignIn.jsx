@@ -7,9 +7,13 @@ import * as Yup from "yup";
 import { useFormik } from "formik";
 import { useLoginMutation } from "../../RTK/Reducers/AuthApi";
 import { toast, ToastContainer } from "react-toastify";
+import { useLocation } from "react-router-dom";
 import 'react-toastify/dist/ReactToastify.css';
 const SignIn = () => {
    const [ login, { data, isLoading } ] = useLoginMutation();
+   const navigate = useLocation().state?.previousLocationPathName
+   ;
+   console.log(navigate);
    const loginSchema = Yup.object({
       email: Yup.string().email("please enter a valid email").required("Email is required"),
       password: Yup.string()
@@ -32,7 +36,11 @@ const SignIn = () => {
          .then(res=>{
             console.log(res);
             toast.success("You are logged in successfully");
-            window.location.href = "/user-profile"
+            if(navigate !== "/" || navigate !==""){
+               window.location.href = "/user-profile"
+            }
+            return window.location.href = navigate;
+            
          })
          .catch(err=>{
             console.log(err);

@@ -33,7 +33,7 @@ export const TestimonialApi = createApi({
         postService: build.mutation({
             query: ({name, phone, email, project_name, brief, file, s_type})=>{
                 return{
-                    url: `${END_POINT.POST_SERVICE}/${s_type}`,
+                    url: `${END_POINT.POST_SERVICE}${s_type}/`,
                     method: API_METHOD.POST,
                     body: {
                         name,
