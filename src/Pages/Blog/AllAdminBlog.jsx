@@ -1,4 +1,5 @@
 import * as images from "../../image";
+import { Link } from "react-router-dom";
 
 const AllAdminBlog = ()=>{
     const AllBlogItems = [
@@ -42,6 +43,9 @@ const AllAdminBlog = ()=>{
                         <h4 className="flex-wrap w-[517px] sm:text-left text-6xl font-bold text-[#252524]">
                             All Blogs
                         </h4>
+                        <div className=" mx-4 bg-[#DE2223] text-[#ffffff] w-40 h-12 rounded-md">
+                            <Link to="/admin/add-blog" className="flex justify-center items-center w-full h-full">Add New Blog</Link>
+                        </div>
                     </div>
                   
                 </div>
