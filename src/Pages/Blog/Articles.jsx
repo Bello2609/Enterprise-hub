@@ -1,4 +1,3 @@
-import React from "react";
 import * as images from "../../image";
 import { FaArrowRight } from "react-icons/fa6";
 

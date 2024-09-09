@@ -1,20 +1,20 @@
 /* eslint-disable no-unused-vars */
 import { useRef, useState } from "react";
-import {
-    Button
-} from "@chakra-ui/react"
 import * as images from "../../image"
 import { IoIosAddCircle } from "react-icons/io";
 import FormInput from "../../Components/FormInput/FormInput";
 import { useFormik } from "formik";
 import * as Yup from "yup";
 import { useNewTestimonialMutation } from "../../RTK/Reducers/TestimonialApi";
+import { useCloud } from "../../Hooks/useCloud";
+import CustomButton from "../../Components/customButton";
 
 
 const AddTestimonial = ()=>{
     const [ img, setImg ]  = useState("");
     const [ imgName, setImgName ] = useState("");
     const [ newTestimonial, { isLoading } ] = useNewTestimonialMutation();
+    const { uploadImageToCloud } = useCloud();
     const hiddenRefInput = useRef(null);
     const handleClick = ()=>{
         hiddenRefInput.current.click();
@@ -39,22 +39,24 @@ const AddTestimonial = ()=>{
             content: ""
         },
         validationSchema: testimonialValidation,
-        onSubmit: (values)=>{
-            const data = {
-                name: values.name,
-                position: values.position,
-                company: values.company,
-                content: values.content,
-                image: img
+        onSubmit: async (values)=>{
+            try{
+                const cloudResponse = await uploadImageToCloud(img);
+                const data = {
+                    name: values.name,
+                    position: values.position,
+                    company: values.company,
+                    content: values.content,
+                    image: cloudResponse.data?.media_url
+                }
+                console.log(data);
+                const response = await newTestimonial(data);
+                console.log(response);
+            }catch(error){
+                console.log(error);
             }
-            newTestimonial(data)
-            .unwrap()
-            .then(res=>{
-                console.log(res);
-            })
-            .catch(err=>{
-                console.log(err);
-            })
+            
+           
         }
     })
     return(
@@ -72,7 +74,7 @@ const AddTestimonial = ()=>{
                                 <input 
                                     type="file" 
                                     ref={hiddenRefInput}
-                                    accept="images/*" 
+                                    accept="image/*" 
                                     name="image" 
                                     onChange={handleChange}
                                     className="hidden w-full"
@@ -122,7 +124,8 @@ const AddTestimonial = ()=>{
                             </div>
                         </div>
                         <div className="flex justify-evenly flex-wrap w-[483px] mt-2">
-                            <Button type="submit" width="394px" bgColor="#81C167" color="#fff">Add Testimonial</Button>
+                           
+                            <CustomButton isSignInBtn>{ isLoading ? "Loading..." : "Add Testimonial" }</CustomButton>
                         </div>
                     </div>
                 </form>

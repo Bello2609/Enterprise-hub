@@ -6,7 +6,7 @@ export const useCloud = () =>{
         try{
             const formData = new FormData();
             formData.append("file", image);
-            formData.append("title", image.title || "untitled image");
+            formData.append("title", image.name || "untitled image");
             formData.append("type", "IMAGE");
             const response = await postCloud(formData);
             console.log("cloud");

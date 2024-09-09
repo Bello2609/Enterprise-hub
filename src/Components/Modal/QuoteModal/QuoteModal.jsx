@@ -50,7 +50,7 @@ const QuoteModal = ({isOpen, onClose, modalText})=>{
                     brief: values.brief,
                     name: values.name,
                     email: values.email,
-                    file: img,
+                    file: cloudResponse.data?.media_url,
                     phone: values.phone,
                     s_type: modalText
                 }
@@ -80,7 +80,7 @@ const QuoteModal = ({isOpen, onClose, modalText})=>{
                         <ModalCloseButton />
                         <ModalBody>
                             {/* <div className="flex justify-center items-center sm:justify-center py-10 w-full sm:w-fit border border-red-500"> */}
-                            <form encType='multipart/form-data' onSubmit={formik.handleSubmit}>
+                            <form onSubmit={formik.handleSubmit} encType="multipart/form-data">
                                     <div className="flex flex-col items-center justify-center sm:items-center w-[583px] sm:w-[340px]  h-fit bg-[#fff]">
                                         <img src={images.Enterprise} className="w-[145px] h-[51px]" />
                                         <h4 className="text-[#56923E] text-center font-bold text-2xl  w-full sm:w-full">
@@ -127,7 +127,7 @@ const QuoteModal = ({isOpen, onClose, modalText})=>{
                                                     <input 
                                                         type="file" 
                                                         ref={hiddenRefInput}
-                                                        accept="images/*" 
+                                                        accept="image/*" 
                                                         name="image" 
                                                         onChange={handleChange}
                                                         className="hidden w-full"
@@ -144,11 +144,6 @@ const QuoteModal = ({isOpen, onClose, modalText})=>{
                                             
                                         </div>
                                         <div className="flex flex-wrap w-[483px] sm:w-full mt-2">
-                                            {/* <Button type="submit" width="584px" bgColor="#81C167" color="#fff">
-                                                {
-                                                    isLoading ? "Loading" : "Submit"
-                                                 }
-                                            </Button> */}
                                             <CustomButton isSignInBtn>{ isLoading ? "Loading..." : "Submit" }</CustomButton>
                                         </div>
                                         <p className="text-[#616161] text-base mt-5">Want to skip the wait?</p>

@@ -30,7 +30,8 @@ const AddTestimonials = lazy(()=> import("./Pages/AddTestimonials/AddTestimonial
 const Gallery = lazy(()=>import("./Pages/Gallery/Gallery.jsx"));
 const Subscription = lazy(()=> import("./Pages/Subscription/Subscription.jsx"));
 const ResetPassword = lazy(()=> import("./Pages/ResetPassword/ResetPassword.jsx"));
-const Verify = lazy(()=>import("./Pages/Verify/Verify.jsx"))
+const Verify = lazy(()=>import("./Pages/Verify/Verify.jsx"));
+const AdminBlog = lazy(()=> import("./Pages/Blog/AllAdminBlog.jsx"))
 
 
 
@@ -155,6 +156,17 @@ const Router = () => {
                   <Suspense>
                      <Layout>
                            <AddBlog />
+                     </Layout>
+                  </Suspense>
+               }
+            />
+            <Route
+               path="/admin/all-blog"
+               exact
+               element={
+                  <Suspense>
+                     <Layout>
+                           <AdminBlog />
                      </Layout>
                   </Suspense>
                }

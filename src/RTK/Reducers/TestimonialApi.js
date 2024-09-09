@@ -47,15 +47,11 @@ export const TestimonialApi = createApi({
             }
         }),
         postCloud: build.mutation({
-            query: ({ title, file, type })=>{
+            query: (formData)=>{
                 return {
                     url: END_POINT.POST_TO_CLOUD,
                     method: API_METHOD.POST,
-                    body: {
-                        title,
-                        file,
-                        type
-                    }
+                    body: formData
                 }
             }
         })
