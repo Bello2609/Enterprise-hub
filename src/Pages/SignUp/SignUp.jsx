@@ -1,20 +1,20 @@
 /* eslint-disable no-unused-vars */
-// import React from 'react'
-import FormInput from "../../Components/FormInput/FormInput";
-import CustomButton from "../../Components/customButton";
+import { useState } from "react";
 import { Link } from "react-router-dom";
 import * as images from "../../image"
-import FormNumber from "../../Components/FormNumber/FormNumber";
 import { useFormik } from "formik";
 import * as Yup from "yup";
+import { useDisclosure } from "@chakra-ui/react";
 import { useRegisterMutation } from "../../RTK/Reducers/AuthApi";
-import { toast, ToastContainer } from "react-toastify";
-import 'react-toastify/dist/ReactToastify.css';
+import FormInput from "../../Components/FormInput/FormInput";
+import CustomButton from "../../Components/customButton";
+import Notification from "../../Components/Modal/Notification/Notification";
+
 
 const SignUp = () => {
-   // eslint-disable-next-line no-unused-vars
    const [ register, { isSuccess, isError, isLoading, error } ] = useRegisterMutation();
-   // const phoneRegExp = `/^((\\+[1-9]{1,4}[ \\-]*)|(\\([0-9]{2,3}\\)[ \\-]*)|([0-9]{2,4})[ \\-]*)*?[0-9]{3,4}?[ \\-]*[0-9]{3,4}?$/`
+   const [ isOpen, onOpen, onClose ] = useDisclosure();
+   const [ errMessage, setErrMessage ] = useState("");
    const registerSchema = Yup.object({
       email: Yup.string().email("Please enter a valid email address").required("Enter your email address"),
       password: Yup.string()
@@ -53,20 +53,17 @@ const SignUp = () => {
          })
          .unwrap()
          .then(res=>{
-            toast.success("Your account have been created successfully you will redirected to the login page");
-            window.location.href = "/sign-in";
+            onOpen();
          }).catch(err=>{
-            console.log(err);
+            onOpen();
             const errorMessage = err.data?.email.map(msg=> { return msg });
-            console.log(errorMessage.toString());
-            toast.error(errorMessage.toString());
+            setErrMessage(errorMessage.toString());
          });
       }
    })
 
    return (
       <div className="w-[569px] sm:w-screen sm:px-5 flex flex-col my-10">
-         <ToastContainer />
          <div className="flex flex-col items-center">
             {/* <img /> */}
             <img src={images.Enterprise} alt="enterprise" />
@@ -177,6 +174,21 @@ const SignUp = () => {
                </p>
             </div>
          </form>
+         <Notification 
+            isOpen={isOpen} 
+            onClose={()=>{
+               onOpen();
+               if(isSuccess){
+                  window.location.href = "/sign-in";
+               }else{
+                  return false;
+               }
+            }} 
+            message={ 
+               isSuccess ? "Your account have been created successfully you will redirected to the login page" 
+               :  errMessage
+               }
+          />
       </div>
    );
 };
