@@ -1,3 +1,4 @@
+/* eslint-disable react/no-unescaped-entities */
 
 import {
     Modal,
@@ -6,8 +7,6 @@ import {
     ModalBody,
     ModalCloseButton,
     Button,
-    Checkbox,
-    Stack
   } from '@chakra-ui/react';
 import { Link } from "react-router-dom";
 import * as images from "../../../image";

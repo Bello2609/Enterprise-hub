@@ -1,18 +1,23 @@
 /* eslint-disable no-unused-vars */
+import { useState } from "react";
 import { Link } from "react-router-dom";
-import FormInput from "../../Components/FormInput/FormInput";
-import CustomButton from "../../Components/customButton";
+import { toast, ToastContainer } from "react-toastify";
+import 'react-toastify/dist/ReactToastify.css';
 import * as images from "../../image";
 import * as Yup from "yup";
 import { useFormik } from "formik";
-import { useLoginMutation } from "../../RTK/Reducers/AuthApi";
-import { toast, ToastContainer } from "react-toastify";
+import { useDisclosure } from "@chakra-ui/react";
 import { useLocation } from "react-router-dom";
-import 'react-toastify/dist/ReactToastify.css';
+import Notification from "../../Components/Modal/Notification/Notification";
+import FormInput from "../../Components/FormInput/FormInput";
+import CustomButton from "../../Components/customButton";
+import { useLoginMutation } from "../../RTK/Reducers/AuthApi";
+
 const SignIn = () => {
-   const [ login, { data, isLoading } ] = useLoginMutation();
-   const navigate = useLocation().state?.previousLocationPathName
-   ;
+   const [ login, { data, isLoading, isSuccess } ] = useLoginMutation();
+   const [ errMessage, setErrMessage ] = useState("");
+   const navigate = useLocation().state?.previousLocationPathName;
+   const { isOpen, onOpen, onClose } = useDisclosure();
    console.log(navigate);
    const loginSchema = Yup.object({
       email: Yup.string().email("please enter a valid email").required("Email is required"),
@@ -35,18 +40,13 @@ const SignIn = () => {
          .unwrap()
          .then(res=>{
             console.log(res);
-            toast.success("You are logged in successfully");
-            if(navigate !== "/" || navigate !==""){
-               window.location.href = "/user-profile"
-            }
-            return window.location.href = navigate;
-            
+            onOpen();
          })
          .catch(err=>{
+            onOpen();
+            const errorMessage = err.data.message;
             console.log(err);
-            const errorMessage = err.data.detail;
-            console.log(errorMessage.toString());
-            toast.error(errorMessage);
+            setErrMessage(errorMessage);
          })
       }
    })
@@ -68,6 +68,10 @@ const SignIn = () => {
                   onChange={formik.handleChange}
                   value={formik.values.email}
                />
+               { formik.touched.email && formik.errors.email ? 
+                  <p className="text-red-500 text-sm">{formik.errors.email}</p> 
+                  : null 
+               }
                <FormInput
                   type="password"
                   label="Password"
@@ -75,8 +79,11 @@ const SignIn = () => {
                   name="password"
                   onChange={formik.handleChange}
                   value={formik.values.password}
-
                />
+               { formik.touched.password && formik.errors.password ?
+                <p className="text-red-500 text-sm">{formik.errors.password}</p> 
+                : null
+               }
 
                <div className="flex items-center gap-3">
                   <div className="w-full h-[1px] bg-[#DFDFDF]"></div>
@@ -108,6 +115,22 @@ const SignIn = () => {
                </p>
             </div>
          </form>
+         <Notification 
+            isOpen={isOpen} 
+            onClose={()=>{
+               onClose();
+               if(isSuccess){
+                  if(navigate == "/" || navigate == undefined){
+                     window.location.href = "/user-profile"
+                  }else{
+                     return window.location.href = navigate;
+                  }
+               }else{
+                  return false;
+               }
+            }} 
+            message={ isSuccess ? "You are logged in successfully" : errMessage }
+          />
       </div>
    );
 };

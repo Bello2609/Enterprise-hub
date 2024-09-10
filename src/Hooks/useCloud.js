@@ -9,9 +9,7 @@ export const useCloud = () =>{
             formData.append("title", image.name || "untitled image");
             formData.append("type", "IMAGE");
             const response = await postCloud(formData);
-            console.log("cloud");
             return response;
-            
         }catch(error){
             console.log(error);
             throw error;

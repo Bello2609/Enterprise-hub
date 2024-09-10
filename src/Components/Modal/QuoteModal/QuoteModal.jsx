@@ -16,7 +16,7 @@ import { IoIosAddCircle } from "react-icons/io";
 import FormNumber from '../../FormNumber/FormNumber';
 import CustomButton from '../../customButton';
 import { usePostServiceMutation } from '../../../RTK/Reducers/TestimonialApi';
-import { useCloud } from '../../../Hooks/useCloud';
+// import { useCloud } from '../../../Hooks/useCloud';
 
 
 
@@ -25,7 +25,7 @@ const QuoteModal = ({isOpen, onClose, modalText})=>{
     const [ img, setImg ]  = useState("");
     const [ imgName, setImgName ] = useState("");
     const [ postService, { isLoading } ] = usePostServiceMutation();
-    const { uploadImageToCloud } = useCloud();
+    // const { uploadImageToCloud } = useCloud();
     const quoteValidation = Yup.object({
         nameOfProject: Yup.string().required("please enter the name of your project"),
         brief: Yup.string().required("Please give us a brief about your project"),
@@ -43,17 +43,18 @@ const QuoteModal = ({isOpen, onClose, modalText})=>{
         validationSchema: quoteValidation,
         onSubmit: async (values)=>{
             try{
-                const cloudResponse = await uploadImageToCloud(img);
-                console.log(cloudResponse);
+                // const cloudResponse = await uploadImageToCloud(img);
+                // console.log(cloudResponse);
                 const data = {
                     project_name: values.nameOfProject,
                     brief: values.brief,
                     name: values.name,
                     email: values.email,
-                    file: cloudResponse.data?.media_url,
+                    file: img,
                     phone: values.phone,
                     s_type: modalText
                 }
+                console.log(data);
                 const responses = await postService(data);
                 console.log(responses);
             }catch(err){
@@ -67,7 +68,6 @@ const QuoteModal = ({isOpen, onClose, modalText})=>{
         hiddenRefInput.current.click();
     }
     const handleChange = (e)=>{
-        console.log(e.target.files[0]);
         setImg(e.target.files[0]);
         setImgName(e.target.files[0].name);
     }
