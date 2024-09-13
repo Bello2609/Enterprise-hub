@@ -338,7 +338,9 @@ const Router = () => {
                element={
                   <Suspense>
                         <PrivateRoute>
-                           <Subscription />
+                           <SignUpLayout>
+                              <Subscription />
+                           </SignUpLayout>
                         </PrivateRoute>
                   </Suspense>
                }

@@ -1,19 +1,24 @@
 /* eslint-disable no-unused-vars */
 import { useRef, useState } from "react";
-import * as images from "../../image"
 import { IoIosAddCircle } from "react-icons/io";
-import FormInput from "../../Components/FormInput/FormInput";
 import { useFormik } from "formik";
 import * as Yup from "yup";
+import * as images from "../../image";
+import { useDisclosure } from "@chakra-ui/react";
 import { useNewTestimonialMutation } from "../../RTK/Reducers/TestimonialApi";
 import { useCloud } from "../../Hooks/useCloud";
 import CustomButton from "../../Components/customButton";
+import FormInput from "../../Components/FormInput/FormInput";
+import Notification from "../../Components/Modal/Notification/Notification";
 
 
 const AddTestimonial = ()=>{
     const [ img, setImg ]  = useState("");
     const [ imgName, setImgName ] = useState("");
-    const [ newTestimonial, { isLoading } ] = useNewTestimonialMutation();
+    const [ errMessage, setErrMessage ] = useState("");
+    const [ successMessage, setSuccessMessage ] = useState();
+    const [ newTestimonial, { isLoading, isSuccess } ] = useNewTestimonialMutation();
+    const { isOpen, onOpen, onClose } = useDisclosure();
     const { uploadImageToCloud } = useCloud();
     const hiddenRefInput = useRef(null);
     const handleClick = ()=>{
@@ -52,11 +57,14 @@ const AddTestimonial = ()=>{
                 console.log(data);
                 const response = await newTestimonial(data);
                 console.log(response);
+                onOpen();
             }catch(error){
                 console.log(error);
+                onOpen();
+                const message = error.data?.image.map(msg=> { return msg });
+                setErrMessage(message.toString());
+                
             }
-            
-           
         }
     })
     return(
@@ -129,6 +137,13 @@ const AddTestimonial = ()=>{
                         </div>
                     </div>
                 </form>
+                <Notification 
+                    isOpen={isOpen} 
+                    onClose={onClose} 
+                    message={ 
+                        isSuccess ? successMessage : errMessage
+                    }
+                />
             </div>
         </>
     );
