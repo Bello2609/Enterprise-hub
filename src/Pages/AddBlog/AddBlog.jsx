@@ -106,7 +106,7 @@ const AddBlog = ()=>{
                                         type="file"  
                                         ref={hiddenFileInput}
                                         onChange={handleChange}
-                                        accept="images/*" 
+                                        accept="image/*" 
                                         name="image" 
                                         style={{ visibility: "hidden" }}  
                                         className="border-2 border-red-500 w-full" 

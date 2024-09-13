@@ -1,4 +1,5 @@
 /* eslint-disable no-unused-vars */
+import { useRef, useState } from "react";
 import { Link } from "react-router-dom";
 import FormInput from "../../Components/FormInput/FormInput";
 import FormSelect from "../../Components/FormSelect/FormSelect";
@@ -21,6 +22,29 @@ const genderOption = [
 ]
 
 const Subscription = () => {
+   const [ cac, setCac ] = useState();
+   const [ cacName, setCacName ] = useState();
+   const [ validId, setValidId ] = useState();
+   const [ validIdName, setValidIdName ] = useState();
+
+   const hiddenFileInputCac = useRef(null);
+   const handleClickCac = ()=>{
+      hiddenFileInputCac.current.click();
+  }
+   const handleChangeCac = (e)=>{
+      console.log(e.target.files[0]);
+      setCac(e.target.files[0]);
+      setCacName(e.target.files[0].name);
+  }
+  const hiddenFileInputId = useRef(null);
+   const handleClickId = ()=>{
+      hiddenFileInputId.current.click();
+  }
+   const handleChangeId = (e)=>{
+      console.log(e.target.files[0]);
+      setValidId(e.target.files[0]);
+      setValidIdName(e.target.files[0].name);
+  }
 
    const subscriptionValidation = Yup.object({
       gender: Yup.string().required("Please select your gender"),
@@ -124,12 +148,46 @@ const Subscription = () => {
                      value={formik.values.companyName}
                   />
                </div>
-               <Link className="flex justify-center items-center my-5 w-full h-[57px] text-[#252524] font-medium bg-[#F4F4F4] p-3 w-40 h-12 rounded-md ">
+               {/* <Link className="flex justify-center items-center my-5 w-full h-[57px] text-[#252524] font-medium bg-[#F4F4F4] p-3 w-40 h-12 rounded-md ">
                   <span className="mr-2"><LuUpload /></span>CAC Registration.pdf
-            </Link>
-            <Link className="flex justify-center items-center w-full h-[57px] text-[#252524] font-medium bg-[#F4F4F4] p-3 w-40 h-12 rounded-md ">
-                  <span className="mr-2"><LuUpload /></span>Valid Card.pdf
-            </Link>
+               </Link> */}
+               <div className="flex flex-col items-center justify-center bg-[#F6F6F6] text-[#616161] w-full h-auto mb-3 py-5 mt-5">
+                  <div className="flex flex-col items-center w-full">
+                     {/* <p className="pointer-cursor" ></p> */}
+                     <label className="font-normal text-base flex items-center cursor-pointer" onClick={handleClickCac}>
+                           <LuUpload />CAC Document
+                     </label>
+                     <input 
+                           type="file"  
+                           ref={hiddenFileInputCac}
+                           onChange={handleChangeCac}
+                           accept="image/*" 
+                           name="image" 
+                           className="hidden" 
+                     />
+                  </div>
+                  <p className="text-xs">{cacName ? `${cacName} is uploaded` : "Max:10MB"}</p>
+               </div>
+               <div className="flex flex-col items-center justify-center bg-[#F6F6F6] text-[#616161] w-full h-auto mb-3 py-5 mt-5">
+                  <div className="flex flex-col items-center w-full">
+                     {/* <p className="pointer-cursor" ></p> */}
+                     <label className="font-normal text-base flex items-center cursor-pointer" onClick={handleClickId}>
+                           <LuUpload />Upload Valid Identity
+                     </label>
+                     <input 
+                           type="file"  
+                           ref={hiddenFileInputId}
+                           onChange={handleChangeId}
+                           accept="image/*" 
+                           name="image" 
+                           className="hidden" 
+                     />
+                  </div>
+                  <p className="text-xs">{validIdName ? `${validIdName} is uploaded` : "Max:10MB"}</p>
+               </div>
+               {/* <Link className="flex justify-center items-center w-full h-[57px] text-[#252524] font-medium bg-[#F4F4F4] p-3 w-40 h-12 rounded-md ">
+                     <span className="mr-2"><LuUpload /></span>Upload Valid Identity *
+               </Link> */}
             <CustomButton isSignInBtn>Submit</CustomButton>
             </form>
          </div>
