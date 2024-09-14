@@ -1,13 +1,10 @@
-import React, { useState } from "react";
+/* eslint-disable no-unused-vars */
 import DatePicker, { DateObject } from "react-multi-date-picker";
 import { FaCalendarAlt } from "react-icons/fa";
 
 
-const FormDate = ({label}) => {
-   const [values, setValues] = useState([
-      new DateObject().subtract(4, "days"),
-      new DateObject().add(4, "days")
-    ])
+const FormDate = ({label, field, value, change, ...props}) => {
+  
    
     return (
        <div className="flex flex-col gap-3">
@@ -17,14 +14,15 @@ const FormDate = ({label}) => {
  
           <div className="flex justify-between items-center border-solid border border-[#DFDFDF] rounded-lg px-2 h-[46px]">
           <DatePicker
-            value={values}
-            onChange={setValues}
+            {...props}
+            value={value}
+            name={field.name}
+            onChange={change}
             numberOfMonths={2}
             range
             style={{
                height: "43px",
                marginTop: "0px",
-               // width: {width},
                border: "none",
                outline: "none"
             }}

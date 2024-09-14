@@ -1,6 +1,5 @@
 /* eslint-disable no-unused-vars */
 import { useRef, useState } from "react";
-import { Link } from "react-router-dom";
 import FormInput from "../../Components/FormInput/FormInput";
 import FormSelect from "../../Components/FormSelect/FormSelect";
 import FormNumber from "../../Components/FormNumber/FormNumber";
@@ -45,7 +44,6 @@ const Subscription = () => {
       setValidId(e.target.files[0]);
       setValidIdName(e.target.files[0].name);
   }
-
    const subscriptionValidation = Yup.object({
       gender: Yup.string().required("Please select your gender"),
       designation: Yup.string().required("Enter whether you are a mr, miss or mrs "),
@@ -76,7 +74,7 @@ const Subscription = () => {
                <img src={images.Enterprise} width="145px" height="90px" alt="enterprise" />
                <h3 className="font-bold text-3xl text-[#56923E] my-5">Get Your Virtual Address</h3>
             </div>
-            <form>
+            <form onSubmit={formik.handleSubmit}>
                <div className="flex sm:flex-col">
                   <div className="flex border border-[#DFDFDF] p-4 w-fit rounded-sm items-start mr-2 sm:mb-2">
                      <div  className="mr-4">
@@ -104,6 +102,7 @@ const Subscription = () => {
                      component={FormSelect} 
                      label="Gender" 
                      options={genderOption}
+                     name="gender"
                       
                   />
                   <FormInput
@@ -138,6 +137,7 @@ const Subscription = () => {
                      name="phoneNumber"
                      component={FormNumber}
                      label="Phone Number"
+                     
                   />
                   <FormInput
                      type="text"
@@ -148,9 +148,6 @@ const Subscription = () => {
                      value={formik.values.companyName}
                   />
                </div>
-               {/* <Link className="flex justify-center items-center my-5 w-full h-[57px] text-[#252524] font-medium bg-[#F4F4F4] p-3 w-40 h-12 rounded-md ">
-                  <span className="mr-2"><LuUpload /></span>CAC Registration.pdf
-               </Link> */}
                <div className="flex flex-col items-center justify-center bg-[#F6F6F6] text-[#616161] w-full h-auto mb-3 py-5 mt-5">
                   <div className="flex flex-col items-center w-full">
                      {/* <p className="pointer-cursor" ></p> */}
@@ -161,7 +158,7 @@ const Subscription = () => {
                            type="file"  
                            ref={hiddenFileInputCac}
                            onChange={handleChangeCac}
-                           accept="image/*" 
+                           accept="image/*"
                            name="image" 
                            className="hidden" 
                      />
@@ -170,7 +167,6 @@ const Subscription = () => {
                </div>
                <div className="flex flex-col items-center justify-center bg-[#F6F6F6] text-[#616161] w-full h-auto mb-3 py-5 mt-5">
                   <div className="flex flex-col items-center w-full">
-                     {/* <p className="pointer-cursor" ></p> */}
                      <label className="font-normal text-base flex items-center cursor-pointer" onClick={handleClickId}>
                            <LuUpload />Upload Valid Identity
                      </label>
@@ -185,9 +181,6 @@ const Subscription = () => {
                   </div>
                   <p className="text-xs">{validIdName ? `${validIdName} is uploaded` : "Max:10MB"}</p>
                </div>
-               {/* <Link className="flex justify-center items-center w-full h-[57px] text-[#252524] font-medium bg-[#F4F4F4] p-3 w-40 h-12 rounded-md ">
-                     <span className="mr-2"><LuUpload /></span>Upload Valid Identity *
-               </Link> */}
             <CustomButton isSignInBtn>Submit</CustomButton>
             </form>
          </div>
