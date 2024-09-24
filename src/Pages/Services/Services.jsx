@@ -1,7 +1,6 @@
-import React from "react";
+/* eslint-disable react/no-unescaped-entities */
 import * as images from "../../image";
 import { Link } from "react-router-dom";
-import { motion } from "framer-motion";
 
 const Services = ()=>{
     return(

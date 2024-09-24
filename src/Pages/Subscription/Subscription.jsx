@@ -59,7 +59,8 @@ const Subscription = () => {
          firstName: "",
          lastName: "",
          phoneNumber: "",
-         companyName: ""
+         companyName: "",
+         plan: ""
       },
       validationSchema: subscriptionValidation,
       onSubmit: async (values) =>{
@@ -78,7 +79,20 @@ const Subscription = () => {
                <div className="flex sm:flex-col">
                   <div className="flex border border-[#DFDFDF] p-4 w-fit rounded-sm items-start mr-2 sm:mb-2">
                      <div  className="mr-4">
-                        <input type="radio" id="virtual" style={{ accentColor: "green", borderColor: "green", width: "15px", height: "15px" }} />
+                        <input 
+                           name="plan"
+                           onChange={formik.handleChange}
+                           value="Enterprise Hubs Virtual Office"
+                           checked={formik.values.plan === "Enterprise Hubs Virtual Office"}
+                           type="radio" 
+                           id="virtual" 
+                           style={{ 
+                              accentColor: "green", 
+                              borderColor: "green", 
+                              width: "15px", 
+                              height: "15px" }}
+                           
+                         />
                      </div>
                      <div className="flex flex-col justify-start">
                         <p className="font-bold text-base text-[#56923E]">Enterprise Hubs Virtual Office</p>
@@ -87,7 +101,19 @@ const Subscription = () => {
                   </div>
                   <div className="flex border border-[#DFDFDF] p-4 w-fit rounded-sm items-start">
                      <div  className="mr-4">
-                        <input type="radio" id="later" style={{ accentColor: "green", borderColor: "green", width: "15px", height: "15px" }} />
+                        <input 
+                           name="plan"
+                           onChange={formik.handleChange}
+                           value="Skip Payment"
+                           checked={formik.values.plan === "Skip Payment"}
+                           type="radio" 
+                           id="later" 
+                           style={{ 
+                              accentColor: "green", 
+                              borderColor: "green", 
+                              width: "15px", 
+                              height: "15px" }}
+                         />
                      </div>
                      <div className="flex flex-col justify-start">
                         <p className="font-bold text-base text-[#56923E]">Skip Payment</p>
