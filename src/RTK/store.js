@@ -1,6 +1,6 @@
 import { configureStore } from "@reduxjs/toolkit";
 import { setupListeners } from "@reduxjs/toolkit/query";
-import { AuthApi, BlogApi, TestimonialApi } from "./Reducers/index"
+import { AuthApi, BlogApi, TestimonialApi, BookingApi } from "./Reducers/index"
 import AuthReducer from "./Slices/AuthSlices";
 import storage from "redux-persist/lib/storage";
 import { persistReducer, persistStore } from "redux-persist";
@@ -17,12 +17,13 @@ export const store = configureStore({
         [AuthApi.reducerPath]: AuthApi.reducer,
         [BlogApi.reducerPath]: BlogApi.reducer,
         [TestimonialApi.reducerPath]: TestimonialApi.reducer,
+        [BlogApi.reducerPath]: BookingApi.reducer,
         auth: persistedReducer
     },
     middleware: (getDefaultMiddleware) =>
         getDefaultMiddleware({
             serializableCheck: false,
-          }).concat(AuthApi.middleware, BlogApi.middleware, TestimonialApi.middleware),
+          }).concat(AuthApi.middleware, BlogApi.middleware, TestimonialApi.middleware, BookingApi.middleware),
     devTools: true
     
 })

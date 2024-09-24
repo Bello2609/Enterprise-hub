@@ -51,7 +51,9 @@ const BookSpace = ()=>{
     //     category: Yup.string().required("Please select category"),
     //     unit: Yup.string().required("Select the required unit"),
     //     email: Yup.string().required("Enter a valid email"),
-    //     date: Yup.array().of(Yup.date()).required("please pick a date"),
+    //     // date: Yup.array()
+    //     // .of(Yup.date().required("Please select a valid date"))
+    //     // .min(1, "Please select a valid date range"),
     //     fullName: Yup.string().required("Enter your full name"),
     //     phoneNumber: Yup.string().required("Enter you phone number")
     // })
@@ -92,7 +94,9 @@ const BookSpace = ()=>{
                                         <div className="flex items-center mr-4">
                                             <input 
                                                 name="location"
-                                                onClick={formik.handleChange}
+                                                onChange={formik.handleChange}
+                                                value="Atlantic Center, Lagos"
+                                                checked={formik.values.location === "Atlantic Center, Lagos"}
                                                 type="radio" 
                                                 id="virtual"  
                                                 style={
@@ -109,7 +113,9 @@ const BookSpace = ()=>{
                                         <div  className="flex items-center mr-4">
                                             <input 
                                                 name="location"
-                                                onClick={formik.handleChange}
+                                                onChange={formik.handleChange}
+                                                value="QSC, Abuja"
+                                                checked={formik.values.location === "QSC, Abuja"}
                                                 type="radio" 
                                                 id="later" 
                                                 style={
@@ -125,7 +131,9 @@ const BookSpace = ()=>{
                                         <div  className="flex items-center mr-4">
                                             <input 
                                                 name="location"
-                                                onClick={formik.handleChange}
+                                                onChange={formik.handleChange}
+                                                value="Kano"
+                                                checked={formik.values.location === "Kano"}
                                                 type="radio" 
                                                 id="later" 
                                                 style={
@@ -145,7 +153,10 @@ const BookSpace = ()=>{
                                         name="category"
                                         label="Category" 
                                         options={categoryOption} 
-                                        width="300px" />
+                                        width="300px"
+                                     />
+                                    { formik.touched.category && formik.errors.category ? <p>{ formik.errors.category }</p> : null  }
+
                                     <Field
                                         component={FormSelect} 
                                         name="unit"
@@ -153,6 +164,7 @@ const BookSpace = ()=>{
                                         options={unitOption} 
                                         width="300px"
                                     />
+                                    { formik.touched.unit && formik.errors.unit ? <p>{ formik.errors.unit }</p> : null  }
                                 </div>
                                 <div className="flex flex-col sm:flex-col sm:w-[80vw] my-5">
                                     <FormInput 
@@ -163,13 +175,15 @@ const BookSpace = ()=>{
                                         name="email"
                                         onChange={formik.handleChange}
                                     />
+                                    { formik.touched.email && formik.errors.email ? <p>{ formik.errors.email }</p> : null  }
                                     <Field 
                                         value={values}
                                         change={setValues}
                                         label="Booking Date" 
-                                        name="date"
+                                        name="dateRange"
                                         component={FormDate}
                                      />
+                                     { formik.touched.date && formik.errors.data ? <p>{ formik.errors.date }</p> : null  }
                                         
                                 </div>
                                 <div className="flex sm:flex-col justify-evenly sm:w-[80vw] my-5">
@@ -182,6 +196,7 @@ const BookSpace = ()=>{
                                             name="fullName"
                                             onChange={formik.handleChange}
                                         />
+                                        { formik.touched.fullName && formik.errors.fullName ? <p>{ formik.errors.fullName }</p> : null  }
                                     </div>
                                     <div className="w-full">
                                     <Field

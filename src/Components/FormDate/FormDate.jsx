@@ -4,7 +4,6 @@ import { FaCalendarAlt } from "react-icons/fa";
 
 
 const FormDate = ({label, field, value, change, ...props}) => {
-  
    
     return (
        <div className="flex flex-col gap-3">
