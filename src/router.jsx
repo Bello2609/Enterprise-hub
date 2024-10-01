@@ -177,7 +177,9 @@ const Router = () => {
                element={
                   <Suspense>
                      <Layout>
+                        <PrivateRoute>
                            <AddTestimonials />
+                        </PrivateRoute>
                      </Layout>
                   </Suspense>
                }

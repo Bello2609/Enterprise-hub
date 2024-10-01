@@ -48,13 +48,12 @@ const AddTestimonial = ()=>{
             try{
                 const cloudResponse = await uploadImageToCloud(img);
                 const data = {
-                    name: values.name,
+                    full_name: values.name,
                     position: values.position,
-                    company: values.company,
-                    content: values.content,
+                    company_name: values.company,
+                    comment: values.content,
                     image: cloudResponse.data?.media_url
                 }
-                console.log(data);
                 const response = await newTestimonial(data);
                 console.log(response);
                 onOpen();

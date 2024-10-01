@@ -1,6 +1,6 @@
 const END_POINT = {
-    NEW_TESTIMONIAL: "/onboarding/new_testimonial/",
-    GET_TESTIMONIAL: "/onboarding/testimonial_list/",
+    NEW_TESTIMONIAL: "/blogs/testimonials/",
+    GET_TESTIMONIAL: "/blogs/testimonials/",
     POST_SERVICE: "/onboarding/post_service/",
     POST_TO_CLOUD: "/cloud-resource/"
 }

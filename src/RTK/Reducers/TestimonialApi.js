@@ -9,7 +9,7 @@ export const TestimonialApi = createApi({
     tagTypes: ["Testimonial"],
     endpoints: (build)=>({
         newTestimonial: build.mutation({
-            query: ({ name, position, company, content, image })=>{
+            query: ({ full_name, position, company_name, comment, image })=>{
                 return{
                     url: END_POINT.NEW_TESTIMONIAL,
                     method: API_METHOD.POST,
