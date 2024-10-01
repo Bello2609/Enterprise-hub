@@ -1,17 +1,20 @@
 /* eslint-disable no-unused-vars */
 import { useState, useRef } from "react";
 import {
-    Button
+    Button,
+    useDisclosure
 } from "@chakra-ui/react"
 import * as images from "../../image"
 import { IoIosAddCircle } from "react-icons/io";
 import { useFormik, Field, FormikProvider } from "formik";
-import FormInput from "../../Components/FormInput/FormInput";
-import FormSelect from "../../Components/FormSelect/FormSelect";
 import ReactQuill from 'react-quill';
 import 'react-quill/dist/quill.snow.css';
 import * as Yup from "yup";
+import FormInput from "../../Components/FormInput/FormInput";
+import FormSelect from "../../Components/FormSelect/FormSelect";
 import { useCreateBlogMutation } from "../../RTK/Reducers/BlogApi";
+import { useCloud } from "../../Hooks/useCloud";
+import Notification from "../../Components/Modal/Notification/Notification";
 const categoryOption = [
     {
         value: "Select Category", label: "Select Category"
@@ -46,7 +49,11 @@ const AddBlog = ()=>{
     const [ value, setValue ] = useState('');
     const [ img, setimg ] = useState('');
     const [ imgName, setImgName ] = useState("");
-    const [ createBlog, { data, isLoading,  } ] = useCreateBlogMutation();
+    const [ errMessage, setErrMessage ] = useState("");
+    const [ successMessage, setSuccessMessage ] = useState();
+    const [ createBlog, { data, isLoading, isSuccess } ] = useCreateBlogMutation();
+    const { isOpen, onOpen, onClose } = useDisclosure();
+    const { uploadImageToCloud } = useCloud();
     const hiddenFileInput = useRef(null);
     const blogSchema = Yup.object({
         blogTitle: Yup.string().required("Enter blog title")
@@ -60,24 +67,24 @@ const AddBlog = ()=>{
 
         },
         validationSchema: blogSchema,
-        onSubmit: (values)=>{
-            // console.log(values);
-            const data = {
-                title: values.blogTitle,
-                category: values.category,
-                author: values.author,
-                image: img,
-                content: value
+        onSubmit: async(values)=>{
+            try{
+                const cloudResponse = await uploadImageToCloud(img);
+                const data = {
+                    title: values.blogTitle,
+                    category: values.category,
+                    author: values.author,
+                    image: cloudResponse.data?.media_url,
+                    content: value
+                }
+                const response  = await createBlog(data);
+                console.log(response);
+                onOpen();
+            }catch(error){
+                onOpen();
+                console.log(error);
             }
-            console.log(data);
-            createBlog(data)
-            .unwrap()
-            .then(res=>{
-                console.log(res);
-            })
-            .catch(err=>{
-                console.log(err);
-            })
+
         }
     })
     const handleClick = ()=>{
@@ -165,6 +172,13 @@ const AddBlog = ()=>{
                             </div>
                         </form>
                     </div>
+                    <Notification 
+                    isOpen={isOpen} 
+                    onClose={onClose} 
+                    message={ 
+                        isSuccess ? successMessage : errMessage
+                    }
+                />
 
                 </div>
             </FormikProvider>

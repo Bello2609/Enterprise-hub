@@ -14,10 +14,10 @@ export const TestimonialApi = createApi({
                     url: END_POINT.NEW_TESTIMONIAL,
                     method: API_METHOD.POST,
                     body: {
-                        name,
+                        full_name,
                         position,
-                        company,
-                        content,
+                        company_name,
+                        comment,
                         image
                     }
                 }
