@@ -50,24 +50,23 @@ const AddTestimonial = ()=>{
                 if(!cloudResponse){
                     throw Error("Image upload failed");
                 }
-                console.log("cloud :", cloudResponse);
                 const data = {
-                    full_name: values.name,
+                    // full_name: values.name,
                     position: values.position,
                     company_name: values.company,
                     comment: values.content,
                     image: cloudResponse.data?.id
                 }
-                console.log("server data: ", data);
                 const response = await newTestimonial(data);
                 if(response.error){
-                    console.log(response.error?.error);
                     setErrMessage(response.error?.error);
                 }
-                console.log("new testimonial: ", response);
+                if(response.error.status){
+                    setErrMessage(Object.keys(response.error?.data) + ": " +response.error?.data[Object.keys(response.error?.data)]);
+                }
                 setSuccessMessage("You have successfully uploaded a testimonial")
                 onOpen();
-            } catch (error){
+            } catch(error){
                 console.log("error in the try block: ",error);
                 onOpen();
                 // const message = error.data?.image.map(msg=> { return msg });
