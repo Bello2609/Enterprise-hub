@@ -19,7 +19,7 @@ const AddTestimonial = ()=>{
     const [ successMessage, setSuccessMessage ] = useState();
     const [ newTestimonial, { isLoading, isSuccess } ] = useNewTestimonialMutation();
     const { isOpen, onOpen, onClose } = useDisclosure();
-    const { uploadImageToCloud } = useCloud();
+    const { uploadImageToCloud, load } = useCloud();
     const hiddenRefInput = useRef(null);
     const handleClick = ()=>{
         hiddenRefInput.current.click();
@@ -47,21 +47,31 @@ const AddTestimonial = ()=>{
         onSubmit: async (values)=>{
             try{
                 const cloudResponse = await uploadImageToCloud(img);
+                if(!cloudResponse){
+                    throw Error("Image upload failed");
+                }
+                console.log("cloud :", cloudResponse);
                 const data = {
                     full_name: values.name,
                     position: values.position,
                     company_name: values.company,
                     comment: values.content,
-                    image: cloudResponse.data?.media_url
+                    image: cloudResponse.data?.id
                 }
+                console.log("server data: ", data);
                 const response = await newTestimonial(data);
-                console.log(response);
+                if(response.error){
+                    console.log(response.error?.error);
+                    setErrMessage(response.error?.error);
+                }
+                console.log("new testimonial: ", response);
+                setSuccessMessage("You have successfully uploaded a testimonial")
                 onOpen();
-            }catch(error){
-                console.log(error);
+            } catch (error){
+                console.log("error in the try block: ",error);
                 onOpen();
-                const message = error.data?.image.map(msg=> { return msg });
-                setErrMessage(message.toString());
+                // const message = error.data?.image.map(msg=> { return msg });
+                // setErrMessage(message.toString());
                 
             }
         }
@@ -85,6 +95,7 @@ const AddTestimonial = ()=>{
                                     name="image" 
                                     onChange={handleChange}
                                     className="hidden w-full"
+                                    required
                                     />
                             </div>
                             <p className="text-xs">{imgName ? `${imgName} is uploaded` : "Max:10MB"}</p>
@@ -132,7 +143,7 @@ const AddTestimonial = ()=>{
                         </div>
                         <div className="flex justify-evenly flex-wrap w-[483px] mt-2">
                            
-                            <CustomButton isSignInBtn>{ isLoading ? "Loading..." : "Add Testimonial" }</CustomButton>
+                            <CustomButton isSignInBtn>{ isLoading || load ? "Loading..." : "Add Testimonial" }</CustomButton>
                         </div>
                     </div>
                 </form>
