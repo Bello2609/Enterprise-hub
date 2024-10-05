@@ -51,18 +51,19 @@ const AddTestimonial = ()=>{
                     throw Error("Image upload failed");
                 }
                 const data = {
-                    // full_name: values.name,
+                    full_name: values.name,
                     position: values.position,
                     company_name: values.company,
                     comment: values.content,
                     image: cloudResponse.data?.id
                 }
                 const response = await newTestimonial(data);
+                console.log(response);
                 if(response.error){
                     setErrMessage(response.error?.error);
                 }
-                if(response.error.status){
-                    setErrMessage(Object.keys(response.error?.data) + ": " +response.error?.data[Object.keys(response.error?.data)]);
+                if(response.error?.status){
+                    setErrMessage(Object.keys(response.error?.data) + ": " + response.error?.data[Object.keys(response.error?.data)]);
                 }
                 setSuccessMessage("You have successfully uploaded a testimonial")
                 onOpen();
@@ -70,7 +71,7 @@ const AddTestimonial = ()=>{
                 console.log("error in the try block: ",error);
                 onOpen();
                 // const message = error.data?.image.map(msg=> { return msg });
-                // setErrMessage(message.toString());
+                setErrMessage(error);
                 
             }
         }
@@ -132,7 +133,7 @@ const AddTestimonial = ()=>{
                                     name="content"
                                     value={formik.values.content}
                                     onChange={formik.handleChange}
-                                    className="border border-[#DFDFDF] mt-3 rounded-sm" 
+                                    className="border border-[#DFDFDF] mt-3 rounded-sm p-3" 
                                     placeholder="What do you love about Enterprise Hubs?" 
                                     rows="10" 
                                     cols="50">

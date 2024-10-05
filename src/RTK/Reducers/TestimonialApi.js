@@ -54,6 +54,13 @@ export const TestimonialApi = createApi({
                     body: formData
                 }
             }
+        }),
+        getFromCloud: build.query({
+            query: ({ id })=>{
+                return {
+                    url: `${END_POINT.GET_FROM_CLOUD}${id}/`
+                }
+            }
         })
     })
 })
@@ -62,5 +69,6 @@ export const {
     useNewTestimonialMutation,
     useGetTestimonialQuery,
     usePostServiceMutation,
-    usePostCloudMutation
+    usePostCloudMutation,
+    useGetFromCloudQuery
 } = TestimonialApi

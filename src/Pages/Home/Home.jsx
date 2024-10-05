@@ -1,3 +1,4 @@
+/* eslint-disable react-hooks/exhaustive-deps */
 /* eslint-disable react/no-unescaped-entities */
 import {useEffect, useState} from "react";
 import { Link } from "react-router-dom";
@@ -7,6 +8,7 @@ import { FaArrowRightLong } from "react-icons/fa6";
 import { IoIosArrowBack } from "react-icons/io";
 import { IoIosArrowForward } from "react-icons/io";
 import Accorddion from "../../Components/Accordion/Accordion";
+import { useGetTestimonialQuery } from "../../RTK/Reducers/TestimonialApi";
 
 
 const backGroundList = [
@@ -17,7 +19,24 @@ const backGroundList = [
 
 const Home = ()=>{
     const [currentBgIndex, setCurrentBgIndex] = useState(1);
-    // const [ bgUrl, setBgUrl ] = useState("url('/src/assets/bg2.png')");
+    // eslint-disable-next-line no-unused-vars
+    const [ testimony, setTestimony ] = useState([]);
+    const { data } = useGetTestimonialQuery();
+
+    useEffect(()=>{
+        const mappedTestimonies = data?.results.map(data=>{
+           return {
+                position: data?.position,
+                comment: data?.comment,
+                company_name: data?.company_name,
+                full_name: data?.full_name,
+           }
+        })
+        console.log(mappedTestimonies);
+        setTestimony(mappedTestimonies);
+        
+        
+    }, []);
     useEffect(()=>{
         const intervalId = setInterval(()=>{
             setCurrentBgIndex(prevState => 
@@ -25,20 +44,6 @@ const Home = ()=>{
             );
         }, 5000);
         return ()=> clearInterval(intervalId);
-        // const intervalId = setInterval(() => {
-        //     setCurrentBgIndex((prevIndex) =>
-        //         prevIndex === backGroundList.length - 1 ? 0 : prevIndex + 1
-        //     );
-        // }, 5000);
-        // console.log(currentBgIndex);
-        // return () => clearInterval(intervalId);
-        // setTimeout(()=>{
-        //     backGroundList.map((data, i)=>{
-        //         const index = Math.floor(Math.random() * backGroundList.length);
-        //         console.log(data.img[0]);
-        //         return setBgData(data[index]);
-        //     })
-        // }, 5000)
     }, []);
     return(
         <>
