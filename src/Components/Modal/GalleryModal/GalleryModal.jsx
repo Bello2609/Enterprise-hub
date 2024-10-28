@@ -1,5 +1,5 @@
 /* eslint-disable react-hooks/exhaustive-deps */
-import { useState, useEffect, useMemo } from 'react';
+import { useState, useEffect } from 'react';
 import {  
     Modal,
     ModalOverlay,

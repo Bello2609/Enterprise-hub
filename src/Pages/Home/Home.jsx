@@ -1,5 +1,7 @@
-/* eslint-disable react-hooks/exhaustive-deps */
 /* eslint-disable react/no-unescaped-entities */
+/* eslint-disable no-unused-vars */
+/* eslint-disable react-hooks/exhaustive-deps */
+/* eslint-disable-next-line no-unused-vars */
 import {useEffect, useState} from "react";
 import { Link } from "react-router-dom";
 import { motion } from "framer-motion";
@@ -16,27 +18,14 @@ const backGroundList = [
         images.bg2,
         images.bg3
 ]
-
 const Home = ()=>{
     const [currentBgIndex, setCurrentBgIndex] = useState(1);
-    // eslint-disable-next-line no-unused-vars
-    const [ testimony, setTestimony ] = useState([]);
+    const [ testimony, setTestimony ] = useState();
+    const [ myTestimony, setMyTestimony ] = useState([]);
+    const [ testimonyIndex, setTestimonyIndex ] = useState();
     const { data } = useGetTestimonialQuery();
 
-    useEffect(()=>{
-        const mappedTestimonies = data?.results.map(data=>{
-           return {
-                position: data?.position,
-                comment: data?.comment,
-                company_name: data?.company_name,
-                full_name: data?.full_name,
-           }
-        })
-        console.log(mappedTestimonies);
-        setTestimony(mappedTestimonies);
-        
-        
-    }, []);
+
     useEffect(()=>{
         const intervalId = setInterval(()=>{
             setCurrentBgIndex(prevState => 
@@ -45,6 +34,36 @@ const Home = ()=>{
         }, 5000);
         return ()=> clearInterval(intervalId);
     }, []);
+    useEffect(()=>{
+        
+            const myData = data?.results.map(data=>({
+                position: data?.position,
+                comment: data?.comment,
+                company_name: data?.company_name,
+                full_name: data?.full_name,
+            }))
+            console.log("data: ", myData);
+            setTestimony(myData);
+                
+    
+    }, [data]);
+
+    useEffect(()=>{
+        setMyTestimony(testimony[testimonyIndex]);
+    }, [testimonyIndex]);
+
+    const nextTestimony = ()=>{
+        setTestimonyIndex(prevState=>{
+            prevState !== testimony.length - 1 ?  0 : prevState + 1
+        });
+    }
+
+    const prevTestimony = ()=>{
+        setTestimonyIndex(prevState=>{
+            prevState === 0 ?  prevState + testimony.lenght - 1  : prevState - 1
+        })
+    }
+    console.log(myTestimony);
     return(
         <>
             <div className="flex flex-col w-full h-fit font-sans">
@@ -340,20 +359,25 @@ const Home = ()=>{
                                 What our customers are saying
                             </p>
                             <div className="flex lg:flex md:hidden sm:hidden text-2xl">
-                                <p><IoIosArrowBack /></p>
-                                <p className="text-[#DE2223]"><IoIosArrowForward /></p>
+                                <p onClick={prevTestimony}><IoIosArrowBack /></p>
+                                <p onClick={nextTestimony} className="text-[#DE2223]"><IoIosArrowForward /></p>
                             </div>
                         </div>
-                        <div className="flex flex-col md:justify-start sm:justify-start font-sans">
-                            <p className="font-normal  text-xl w-[520px] sm:w-fit sm:mt-3">
-                                Working from Enterprise Hubs has been amazing, the facilities and staff are great, 
-                                likewise the working space is comfortable with good ambience
-                            </p>
-                            <div className="flex flex-col mt-5">
-                                <p className="text-lg font-bold text-[#FF4B4D]">Funmi Osibaja</p>
-                                <p className="text-base font-medium text-[#616161]">Stargate Chauffeur</p>
-                            </div>
-                        </div>
+                        {/* {
+                            myTestimony.map(data=>(
+                                <>
+                                    <div className="flex flex-col md:justify-start sm:justify-start font-sans">
+                                        <p className="font-normal  text-xl w-[520px] sm:w-fit sm:mt-3">
+                                            {data.comment}
+                                        </p>
+                                        <div className="flex flex-col mt-5">
+                                            <p className="text-lg font-bold text-[#FF4B4D]">{data.full_name}</p>
+                                            <p className="text-base font-medium text-[#616161]">{data.position}</p>
+                                        </div>
+                                    </div>
+                                </>
+                            ))
+                        } */}
                         <div className="flex md:hidden sm:hidden flex-col font-sans bg-[#ffffff] opacity-25">
                             <p className="font-normal text-xl w-[400px] text-[#202020]">
                                 The offices at Enterprise Hubs are airy, well-lit and very serene. 
@@ -369,8 +393,8 @@ const Home = ()=>{
                             </div>
                         </div>   
                         <div className="hidden md:flex sm:flex justify-between text-2xl mt-5 mx-5">
-                                <p><IoIosArrowBack /></p>
-                                <p className="text-[#DE2223]"><IoIosArrowForward /></p>
+                                <p onClick={prevTestimony}><IoIosArrowBack /></p>
+                                <p onClick={nextTestimony} className="text-[#DE2223]"><IoIosArrowForward /></p>
                         </div>
                     </div>
                   </div>

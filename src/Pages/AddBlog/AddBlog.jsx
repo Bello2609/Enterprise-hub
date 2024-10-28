@@ -74,7 +74,7 @@ const AddBlog = ()=>{
                     title: values.blogTitle,
                     category: values.category,
                     author: values.author,
-                    image: cloudResponse.data?.media_url,
+                    image: cloudResponse.data?.id,
                     content: value
                 }
                 const response  = await createBlog(data);
