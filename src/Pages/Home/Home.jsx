@@ -20,9 +20,9 @@ const backGroundList = [
 ]
 const Home = ()=>{
     const [currentBgIndex, setCurrentBgIndex] = useState(1);
-    const [ testimony, setTestimony ] = useState();
+    const [ testimony, setTestimony ] = useState([]);
     const [ myTestimony, setMyTestimony ] = useState([]);
-    const [ testimonyIndex, setTestimonyIndex ] = useState();
+    const [ testimonyIndex, setTestimonyIndex ] = useState(0);
     const { data } = useGetTestimonialQuery();
 
 
@@ -35,7 +35,7 @@ const Home = ()=>{
         return ()=> clearInterval(intervalId);
     }, []);
     useEffect(()=>{
-        
+        if(data && data.results){
             const myData = data?.results.map(data=>({
                 position: data?.position,
                 comment: data?.comment,
@@ -44,25 +44,43 @@ const Home = ()=>{
             }))
             console.log("data: ", myData);
             setTestimony(myData);
-                
+        }    
     
     }, [data]);
 
-    useEffect(()=>{
+    // useEffect(()=>{
+    //     setMyTestimony(testimony[testimonyIndex]);
+    // }, [testimonyIndex]);
+    useEffect(() => {
+        if (testimony.length > 0) {
         setMyTestimony(testimony[testimonyIndex]);
-    }, [testimonyIndex]);
+        }
+    }, [testimonyIndex, testimony]);
 
-    const nextTestimony = ()=>{
-        setTestimonyIndex(prevState=>{
-            prevState !== testimony.length - 1 ?  0 : prevState + 1
-        });
-    }
 
-    const prevTestimony = ()=>{
-        setTestimonyIndex(prevState=>{
-            prevState === 0 ?  prevState + testimony.lenght - 1  : prevState - 1
-        })
-    }
+    // const nextTestimony = ()=>{
+    //     setTestimonyIndex(prevState=>{
+    //         prevState === testimony.length - 1 ?  0 : prevState + 1
+    //     });
+    // }
+
+    // const prevTestimony = ()=>{
+    //     setTestimonyIndex(prevState=>{
+    //         prevState === 0 ?  prevState + testimony.length - 1  : prevState - 1
+    //     })
+    // }
+    const nextTestimony = () => {
+        setTestimonyIndex(prevState => 
+        prevState === testimony.length - 1 ? 0 : prevState + 1
+        );
+    };
+
+    const prevTestimony = () => {
+        setTestimonyIndex(prevState => 
+        prevState === 0 ? testimony.length - 1 : prevState - 1
+        );
+    };
+
     console.log(myTestimony);
     return(
         <>
@@ -378,6 +396,21 @@ const Home = ()=>{
                                 </>
                             ))
                         } */}
+                         {
+                            myTestimony && (
+                                <>
+                                    <div className="flex flex-col md:justify-start sm:justify-start font-sans">
+                                        <p className="font-normal  text-xl w-[520px] sm:w-fit sm:mt-3">
+                                            {myTestimony.comment}
+                                        </p>
+                                        <div className="flex flex-col mt-5">
+                                            <p className="text-lg font-bold text-[#FF4B4D]">{myTestimony.full_name}</p>
+                                            <p className="text-base font-medium text-[#616161]">{myTestimony.position}</p>
+                                        </div>
+                                    </div>
+                                </>)
+                            
+                        }
                         <div className="flex md:hidden sm:hidden flex-col font-sans bg-[#ffffff] opacity-25">
                             <p className="font-normal text-xl w-[400px] text-[#202020]">
                                 The offices at Enterprise Hubs are airy, well-lit and very serene. 
